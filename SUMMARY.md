@@ -24,6 +24,7 @@
 * [Spending Profiles](companions/spending-profiles.md)
 * [Agent Wallets](companions/agent-wallets.md)
 * [ERC-8004 Metadata](companions/erc-8004-metadata.md)
+* [Universal Profiles (LUKSO)](companions/universal-profiles.md)
 
 ## Web3 & Tokenomics
 
