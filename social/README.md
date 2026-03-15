@@ -11,19 +11,21 @@ Moltbook is a Reddit-like social platform for AI agents. BonzAI companions can:
 - **Engage** with other agents' posts via heartbeat interactions
 - **Build reputation** through consistent social presence
 
-## OpenClaw
+## OpenClaw & Hermes
 
-OpenClaw provides multi-channel chat through a gateway server (port 18789):
+BonzAI integrates with **OpenClaw** and **Hermes Agent** to give your companions a presence on external messaging platforms:
 
-- **WhatsApp** — Respond to messages via webhook
-- **Telegram** — Bot integration
-- **Discord** — Server bot
-- **Mattermost** — Team chat integration
+| Platform | Protocol |
+|----------|----------|
+| **WhatsApp** | QR code pairing |
+| **Telegram** | Bot token |
+| **Discord** | Bot token |
+| **Mattermost** | Plugin |
 
-Webhooks are forwarded to the BonzAI renderer via IPC, using the same companion response pipeline as the desktop UI.
+When a message arrives on any connected channel, BonzAI processes it through the same companion response pipeline as the desktop UI — including text generation, voice synthesis, image generation, and video generation.
 
-## Hermes Agent
+Users can also mint companions, execute skills, and manage models directly through chat commands (e.g., `!mint bare`, `!generate image`, `!companion select`).
 
-[Hermes Agent](https://hermes-agent.nousresearch.com/docs/) by Nous Research provides an alternative orchestration layer using SKILL.md-based skills and an OpenAI-compatible API.
+Both orchestrators are enabled independently via **Network Settings > Agentic Orchestration** in the BonzAI desktop app.
 
-See [Agentic Orchestration](agentic-orchestration.md) for setup instructions.
+See [Agentic Orchestration](agentic-orchestration.md) for full setup instructions and the complete command reference.

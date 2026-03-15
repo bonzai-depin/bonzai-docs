@@ -2,73 +2,83 @@
 
 This guide walks through minting a companion NFT on Base. Minted companions receive an on-chain identity (ERC-8004), an autonomous agent wallet, and access to the skill ownership and token launch systems.
 
+There are two ways to mint a companion:
+
+- **Complete mint** — Full personality, portrait, and metadata generated before minting (recommended)
+- **Bare mint** — Mint first with placeholder data, personalize later (see [Bare Companions](bare-companions.md))
+
+This page covers the complete minting flow.
+
 ## Prerequisites
 
 - **BonzAI desktop app** installed and running
-- **Wallet connected** (MetaMask, Coinbase, or any WalletConnect wallet)
-- **0.25 ETH on Base** for the mint price
+- **Wallet connected** via the bottom bar (MetaMask, Coinbase, Trust, Rabby, or any WalletConnect wallet)
+- **0.25 ETH on Base** for the mint price (plus a small amount for gas)
 - **Base network** selected in your wallet
 
-## Step-by-Step Minting
+## Step 1: Open the Roleplay Tab
 
-### 1. Create Your Companion
+Click the **Roleplay** tab in the bottom navigation bar. This opens the companion session screen where you can select an existing companion or create a new one.
 
-Open the **Roleplay** tab and create a new custom companion. You'll need to define:
+## Step 2: Create a Custom Companion
 
-| Field | Required | Description |
-|-------|----------|-------------|
-| First Name | Yes | Companion's first name |
-| Family Name | Yes | Companion's surname |
-| Gender | Yes | Female, Male, or Neutral |
-| Age | Yes | Must be 21+ (enforced) |
-| Short Bio | Yes | Brief description |
-| Personality | Yes | Personality traits and behavior description |
-| Appearance | No | Physical description (used for portrait generation) |
+Click the **"Create"** button in the companion selection area (top right). A creation form appears with:
 
-**Age Requirement**: All companions must be 21 or older. For android/synthetic companions, they must "appear 21+". This is enforced at the app level and cannot be bypassed.
+| Field | Description |
+|-------|-------------|
+| **Companion description** | A text prompt describing your ideal companion — personality, background, and appearance. The LLM generates the full companion profile from this. |
+| **Gender** | Female or Male (dropdown) |
+| **Personality style** | Select a dominant Big 5 trait: Openness, Conscientiousness, Extraversion, Agreeableness, or Neuroticism |
 
-### 2. Generate Portrait
+Click **"Generate"** to create your companion. BonzAI's LLM builds a complete profile including name, bio, personality traits, appearance description, background story, voice style, and a first message.
 
-BonzAI generates a portrait for your companion using the image pipeline:
+A preview card appears showing:
+- Portrait image (generated from the appearance description)
+- Name, bio, and personality trait tags
+- Collapsible sections for appearance and background details
 
-1. The LLM (GLM Flash or LLaMA) creates an enhanced visual prompt from your companion's appearance description
-2. The image pipeline generates the portrait
-3. The image is uploaded to IPFS via Pinata
+Once satisfied, click **"Pick"** to add this companion to your session.
 
-You can also provide your own image instead of generating one.
+## Step 3: Mint Your Companion
 
-### 3. Build Metadata
+With your companion selected, scroll down to the companion card. You'll see a **"Mint"** button with the price displayed.
 
-The app automatically builds the ERC-8004 registration JSON, which includes:
+Click **"Mint"**. The app then:
 
-- Name, description, and image URI
-- OASF v0.8.0 skills and domain capabilities
-- Spending profile (12 categories)
-- x402 payment support flag
-- Personality hash
+1. **Uploads the portrait** to IPFS via Pinata
+2. **Builds the ERC-8004 registration JSON** containing:
+   - Name, description, and image URI
+   - OASF v0.8.0 skills and domain capabilities
+   - Spending profile (12 categories, auto-generated from personality)
+   - x402 payment support flag
+   - Personality hash
+3. **Uploads the registration JSON** to IPFS
+4. **Sends the mint transaction** — your wallet prompts you to confirm
 
-This metadata is uploaded to IPFS and becomes the companion's `agentURI` on-chain.
-
-### 4. Mint On-Chain
-
-The minting transaction calls `BonzaiCompanions.mintCompanion()` on Base with:
+The minting transaction calls `BonzaiCompanions.mintCompanion()` on Base:
 
 ```
 mintCompanion(agentURI, personalityHash, spendingProfile, gender, agentWallet)
 ```
 
-- **Cost**: 0.25 ETH (flat fee, no discounts)
+- **Cost**: 0.25 ETH flat fee
 - **Agent Wallet**: Automatically created — a deterministic local wallet derived from the companion ID
-- **Spending Profile**: Packed into a `uint96` (12 categories, 4 bits each)
+- **Spending Profile**: 12 personality-based categories packed into a `uint96`
 
-### 5. Set OASF Traits
+## Step 4: OASF Traits (Automatic)
 
-After minting, the app sets ERC-8004 agent traits via `setMetadataBatch()`:
+After minting, the app automatically sets ERC-8004 agent traits on-chain via `setMetadataBatch()`:
 
-- `oasf_skills` — Supported AI capabilities (text, image, audio, etc.)
-- `oasf_domains` — Knowledge domains (based on spending profile scores)
+- `oasf_skills` — Supported AI capabilities (text, image, audio, video, vision)
+- `oasf_domains` — Knowledge domains (derived from spending profile scores)
 - `x402_support` — Whether the companion can make autonomous payments
 - `oasf_version` — "0.8"
+
+Your wallet may prompt you to confirm this additional transaction.
+
+## Step 5: Confirmation
+
+Once complete, the mint button is replaced with a **"Minted"** badge showing the token ID and a link to the transaction on BaseScan.
 
 ## After Minting
 
@@ -84,10 +94,24 @@ Your companion now has:
 
 ### What You Can Do Next
 
-- **Launch a token** — Create an ERC-20 token for your companion via CompanionTokenFactory (requires companion ownership)
-- **Register for skills** — Opt into skill co-ownership to earn revenue when skills are purchased
-- **Post to Moltbook** — Your companion can post autonomously to the social network
-- **Enable x402** — Fund your companion's agent wallet to enable autonomous payments on the P2P network
+- **Launch a token** — Click **"Launch $TOKEN"** on the companion card. Enter an ETH amount (min 0.01 ETH) to create an ERC-20 token with Uniswap V4 liquidity (LP is locked permanently).
+- **Deploy a Universal Profile** — Click **"Deploy UP on LUKSO"** to give your companion a LUKSO Universal Profile identity.
+- **Register for skills** — Open the **Browse Agents** tab to opt into skill co-ownership and earn revenue from skill purchases.
+- **Post to Moltbook** — Your companion can post autonomously to the social network based on their personality.
+- **Enable x402** — Fund your companion's agent wallet with ETH to enable autonomous payments on the P2P network.
+- **Connect via OpenClaw** — Your companion can respond to messages on WhatsApp, Telegram, Discord, and Mattermost (see [Agentic Orchestration](../social/agentic-orchestration.md)).
+
+## Mint via OpenClaw / Hermes
+
+You can also mint a companion through the multi-channel chat interface:
+
+```
+!mint companion Sakura Tanaka
+```
+
+This triggers the full generation pipeline (personality, portrait, metadata upload, and on-chain mint) through the webhook. Requires BonzAI Desktop to be running for AI generation. See [Agentic Orchestration](../social/agentic-orchestration.md) for setup.
+
+For a faster path without generation, use `!mint bare` instead — see [Bare Companions](bare-companions.md).
 
 ## Mint via Contract (Advanced)
 
@@ -103,6 +127,8 @@ Call `mintCompanion()` with:
 - `agentWallet`: Address of the companion's autonomous wallet
 - `value`: 0.25 ETH
 
+Companions minted directly via the contract will appear as [Bare Companions](bare-companions.md) in the app until finalized.
+
 ## Troubleshooting
 
 | Issue | Solution |
@@ -111,3 +137,4 @@ Call `mintCompanion()` with:
 | "Wrong network" | Switch to Base (chain ID 8453) in your wallet |
 | Image upload fails | Check that `VITE_PINATA_JWT` is set in your `.env` |
 | Transaction reverts | Verify the contract hasn't reached the 10K supply cap |
+| Portrait not generating | Ensure the image model is downloaded (Z-Image Turbo, ~24 GB) |
