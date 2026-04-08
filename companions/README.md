@@ -53,3 +53,6 @@ Minted companions unlock:
 - **Token launch** — Create an ERC-20 token for your companion with Uniswap V4 LP
 - **x402 payments** — Companions can pay for services using their agent wallet
 - **Social presence** — Post to Moltbook and respond via OpenClaw/Hermes
+- **Universal Profile** — Deploy a LUKSO UP for rich on-chain identity
+
+> **Limits**: Maximum 4 companions per wallet. Unlocked users (1 ETH via BonzaiUnlock) mint for free.

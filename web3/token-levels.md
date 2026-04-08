@@ -36,15 +36,18 @@ Pay **1 ETH** via the BonzaiUnlock contract on Base to unlock **all 6 levels per
 - Contract: [`0xeDadE2f8fa659817E000b887f3d8222c4AC687B8`](https://basescan.org/address/0xeDadE2f8fa659817E000b887f3d8222c4AC687B8)
 - Proceeds split: 50% Foundation / 50% Liquidity
 - One-time payment — no recurring fees
+- **Free minting**: Unlocked users pay 0 ETH for all content NFT mints and companion mints
 
 ## MintPool Revenue
 
 Each level corresponds to an epoch-based revenue pool managed by the BonzaiMintPool contract:
 
-- **Weekly epochs** (604,800 seconds)
+- **Bi-weekly epochs** (1,209,600 seconds / 2 weeks)
 - BONZAI holders register per epoch with their token balance
+- Pool thresholds are **snapshotted** on first registration — mid-epoch threshold changes don't affect registered users
 - After an epoch ends, registered holders claim a proportional share of pool revenue
-- Revenue comes from content mint fees (20%) and Uniswap V4 hook fees
+- Revenue comes from content mint fees (20%), Uniswap V4 hook fees, and companion token swap fees
+- Unclaimed funds are swept to the **treasury** (not the contract owner) after the claim window closes
 - **256-block gap enforcement** prevents flash loan attacks
 
 ### Pool Thresholds

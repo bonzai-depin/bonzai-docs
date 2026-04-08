@@ -16,9 +16,9 @@ When someone swaps a companion token or fine-tune model token on Uniswap V4:
 
 | Recipient | Share |
 |-----------|-------|
-| Treasury | 33% |
-| Companion NFT owner | 33% |
 | Companion agent wallet | 34% |
+| Companion NFT owner | 33% |
+| LVL6 MintPool (training) | 33% |
 
 ### Fine-Tune Model Tokens
 
@@ -34,7 +34,7 @@ When someone swaps a companion token or fine-tune model token on Uniswap V4:
 
 1. Call `launchToken()` with your companion's token ID
 2. Factory creates an ERC-20 token (1 billion supply)
-3. 96% of supply goes to Uniswap V4 LP, 4% to the companion owner
+3. 96% of supply goes to Uniswap V4 LP, 4% to the companion wallet
 4. LP position is locked at the dead address (`0x...dEaD`) — unruggable
 5. The hook is automatically registered for the new pool
 

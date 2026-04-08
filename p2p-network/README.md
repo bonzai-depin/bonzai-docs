@@ -26,12 +26,23 @@ Consumer                        Provider                       Base Chain
 - **Remote (Consumer)** — Send requests to providers on the network. Costs ETH/USDC.
 - **Provider** — Share your GPU and earn ETH/USDC for processing requests.
 
+## Inference Modes
+
+### Standard (v1) — Fast, Trust-Based
+
+Single provider processes the full request. Fast but provider sees everything.
+
+### Private Pipeline (v2) — Structurally Private
+
+Splits inference across multiple peers via pipeline parallelism. No single peer sees the prompt or output. Uses llama.cpp's RPC backend tunneled through libp2p. See [Private Inference](private-inference.md) for details.
+
 ## Contracts
 
-| Contract | Purpose |
-|----------|---------|
-| BonzaiProviderRegistry | Registration, staking, capability listing |
-| BonzaiPayment | ETH/USDC payment processing with EIP-712 signatures |
+| Contract | Address | Purpose |
+|----------|---------|---------|
+| BonzaiProviderRegistry | [`0x683d0B11...`](https://basescan.org/address/0x683d0B11a2553E9D4B338935e2D935873439e8bB) | Registration, staking, shard capabilities |
+| BonzaiPayment | [`0x438A73FC...`](https://basescan.org/address/0x438A73FC0e0DA882BFdD007aF41415769Af33F1d) | Single-provider ETH/USDC payments (x402) |
+| BonzaiPipelinePayment | [`0xB45D1D63...`](https://basescan.org/address/0xB45D1D635192Aa223Ce28d9F3cC047A13D8850Bd) | Multi-payee atomic pipeline payments |
 
 ## Supported Pipelines
 
@@ -49,6 +60,7 @@ Providers can offer any combination of these pipelines:
 | 8 | MUSIC | Music generation |
 | 9 | VIDEO_FAST | Video generation |
 | 10 | VISION | Vision analysis |
+| 11 | PIPELINE_SHARD | Pipeline shard provider (private inference) |
 
 ## Platform Fee
 

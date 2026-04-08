@@ -35,7 +35,7 @@ Call `mintCompanion()` on the [BonzaiCompanions contract](https://basescan.org/a
 - `spendingProfile`: `0`
 - `gender`: `0` (neutral), `1` (female), or `2` (male)
 - `agentWallet`: your own address (will be replaced during finalization)
-- `value`: 0.25 ETH
+- `value`: 0.25 ETH (free for unlocked users)
 
 ## What a Bare Companion Looks Like
 

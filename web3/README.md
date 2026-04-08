@@ -9,7 +9,7 @@ BonzAI is a multi-chain application with smart contracts deployed across Ethereu
 | **Ethereum** | 1 | BONZAI token (primary) |
 | **Arbitrum** | 42161 | BONZAI token (L2) |
 | **Base** | 8453 | Protocol contracts, companion NFTs, content NFTs, Uniswap V4 |
-| **LUKSO** | 42 | LSP8 content NFTs, Universal Profiles |
+| **LUKSO** | 42 | Universal Profiles only |
 
 ## Core Protocol (Base)
 

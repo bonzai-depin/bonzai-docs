@@ -4,16 +4,18 @@ Every minted companion receives an autonomous wallet — an Ethereum address con
 
 ## Wallet Modes
 
-BonzAI supports two wallet creation modes, selected automatically based on how the user authenticated:
+BonzAI supports three wallet creation modes, selected automatically based on how the user authenticated:
 
-### Local Deterministic (Default)
+### Open Wallet Standard (Primary)
 
 For users who connect via MetaMask, Coinbase, or other Reown wallets:
 
-- Wallet is derived deterministically: `keccak256(masterSecret + companionId)`
-- Private key stored locally in Electron Store (encrypted)
-- Fully self-custodied — only you have the private key
-- Works offline
+- Wallet created in a local OWS vault (encrypted with scrypt/AES-256-GCM)
+- Native Rust bindings via NAPI-RS — runs entirely in-process, no server
+- Policy-based spending controls (chain allowlists, daily limits, expiry)
+- Scoped API keys for autonomous agent operations
+- EIP-712 signing support
+- Fully self-custodied — vault stored locally in the app data directory
 
 ### Privy Server Wallets
 
@@ -22,6 +24,13 @@ For users who authenticate via Privy (email/social login):
 - Wallet created via Privy's server wallet API
 - Managed by Privy's infrastructure with optional spending policies
 - No private key management required from the user
+
+### Local Deterministic (Legacy)
+
+- Wallet derived deterministically: `keccak256(masterSecret + companionId)`
+- Private key stored locally in Electron Store
+- Still supported for existing companions — new companions use OWS
+- Can be migrated to OWS via the "Migrate to OWS" button in Browse Agents
 
 ## What Agent Wallets Can Do
 
@@ -47,8 +56,10 @@ Only the NFT owner can set or change the agent wallet.
 
 ## LUKSO Universal Profiles
 
-On LUKSO, companion agent wallets can be deployed as Universal Profiles (LSP0) via the LSP23 factory. The local deterministic wallet becomes an LSP6 controller on the Universal Profile, enabling:
+On LUKSO, companions can optionally receive a Universal Profile (LSP0) deployed via the LSP23 factory. The companion's agent wallet (OWS, Privy, or legacy) is set as an LSP6 controller on the Universal Profile, enabling:
 
 - Rich on-chain metadata (LSP3 profile)
 - Multi-controller permissions
 - Cross-chain replay of deployment calldata
+
+See [Universal Profiles](universal-profiles.md) for full details.

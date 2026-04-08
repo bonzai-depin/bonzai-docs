@@ -18,7 +18,7 @@ Companion UP deployment uses the **LSP23 Linked Contracts Factory** at [`0x23000
 1. **Universal Profile (LSP0)** — the companion's on-chain account
 2. **Key Manager (LSP6)** — permission controller for the UP
 
-The companion's **agent wallet** (local deterministic or Privy) is set as the LSP6 controller, giving it full permissions to operate the UP.
+The companion's **agent wallet** (OWS, Privy, or legacy deterministic) is set as the LSP6 controller, giving it full permissions to operate the UP. No wallet migration is required — any wallet type can serve as the LSP6 controller.
 
 ## Deploying a UP
 
@@ -73,8 +73,11 @@ Base (8453)                    LUKSO (42)                  Other Chains
             (LSP6 controller on all chains)
 ```
 
+## Scope
+
+LUKSO integration in BonzAI is strictly for **Universal Profiles**. There is no companion NFT minting, no content/collectible minting, and no x402 payments on LUKSO. All NFT minting and payments happen on Base.
+
 ## Current Limitations
 
-- **LUKSO-native companion minting is not yet available** — the LSP8 companion contract has not been deployed. Companions are minted on Base only.
 - **UP deployment is optional** — companions work fully without a Universal Profile
 - **Gas required on LUKSO** — you need LYX to pay for the deployment transaction

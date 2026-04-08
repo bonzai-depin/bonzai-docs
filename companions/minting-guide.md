@@ -13,8 +13,9 @@ This page covers the complete minting flow.
 
 - **BonzAI desktop app** installed and running
 - **Wallet connected** via the bottom bar (MetaMask, Coinbase, Trust, Rabby, or any WalletConnect wallet)
-- **0.25 ETH on Base** for the mint price (plus a small amount for gas)
+- **0.25 ETH on Base** for the mint price (plus a small amount for gas) — **free for unlocked users** who paid 1 ETH via [BonzaiUnlock](../web3/smart-contracts.md)
 - **Base network** selected in your wallet
+- **Maximum 4 companions per wallet** — you can transfer companions to free up slots
 
 ## Step 1: Open the Roleplay Tab
 
@@ -61,8 +62,8 @@ The minting transaction calls `BonzaiCompanions.mintCompanion()` on Base:
 mintCompanion(agentURI, personalityHash, spendingProfile, gender, agentWallet)
 ```
 
-- **Cost**: 0.25 ETH flat fee
-- **Agent Wallet**: Automatically created — a deterministic local wallet derived from the companion ID
+- **Cost**: 0.25 ETH (free for unlocked users)
+- **Agent Wallet**: Automatically created (OWS vault for standard users, Privy server wallet for Privy users, or local deterministic as legacy fallback)
 - **Spending Profile**: 12 personality-based categories packed into a `uint96`
 
 ## Step 4: OASF Traits (Automatic)
@@ -133,7 +134,8 @@ Companions minted directly via the contract will appear as [Bare Companions](bar
 
 | Issue | Solution |
 |-------|----------|
-| "Insufficient ETH" | Ensure you have at least 0.25 ETH on Base (plus gas) |
+| "Insufficient ETH" | Ensure you have at least 0.25 ETH on Base (plus gas), or unlock all levels with 1 ETH for free minting |
+| "Max companions per wallet reached" | You already have 4 companions — transfer one to free up a slot |
 | "Wrong network" | Switch to Base (chain ID 8453) in your wallet |
 | Image upload fails | Check that `VITE_PINATA_JWT` is set in your `.env` |
 | Transaction reverts | Verify the contract hasn't reached the 10K supply cap |

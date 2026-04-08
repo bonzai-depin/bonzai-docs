@@ -2,54 +2,74 @@
 
 All protocol contracts are deployed on **Base** (chain ID 8453).
 
-## MVP Contracts
+## Protocol Contracts (v3)
 
 | Contract | Address | Purpose |
 |----------|---------|---------|
-| BonzaiMintPool | [`0xB9423Ef7cedAAC87419511Fa1E24DE65C19c7CD2`](https://basescan.org/address/0xB9423Ef7cedAAC87419511Fa1E24DE65C19c7CD2) | Epoch-based revenue pools for LVL holders |
-| BonzaiContent | [`0xdcCF8d2A328F87eDC304898a35F9798ad5Bf87e9`](https://basescan.org/address/0xdcCF8d2A328F87eDC304898a35F9798ad5Bf87e9) | ERC-721 content NFT with fee splitting |
-| BonzaiRoyaltySplitter | [`0x5B63AD58034D7396e7024F4Bebf8E5D86D668399`](https://basescan.org/address/0x5B63AD58034D7396e7024F4Bebf8E5D86D668399) | Secondary royalty distribution |
-| BonzaiCompanions | [`0xb3ea09922E8227cCa6331346ed31D0f5F173BDe3`](https://basescan.org/address/0xb3ea09922E8227cCa6331346ed31D0f5F173BDe3) | ERC-721 + ERC-8004 companion NFT |
-| BonzaiUniswapHook | See config | V4 afterSwap hook (1% fee) |
-| CompanionTokenFactory | [`0xdD6Ba1f369C38A4D3ea02e81c7400B36A84E6099`](https://basescan.org/address/0xdD6Ba1f369C38A4D3ea02e81c7400B36A84E6099) | Atomic companion ERC-20 + V4 LP |
-| FineTuneTokenFactory | [`0x54Ee513a7a6809c109408EA20dA9E7e424A6e36c`](https://basescan.org/address/0x54Ee513a7a6809c109408EA20dA9E7e424A6e36c) | Atomic model ERC-20 + V4 LP |
-| BonzaiUnlock | [`0xeDadE2f8fa659817E000b887f3d8222c4AC687B8`](https://basescan.org/address/0xeDadE2f8fa659817E000b887f3d8222c4AC687B8) | 1 ETH all-level unlock |
+| BonzaiMintPool | [`0x5D823Ae792f13e1e2cC2dF52D468fe81852b9b0a`](https://basescan.org/address/0x5D823Ae792f13e1e2cC2dF52D468fe81852b9b0a) | Epoch-based revenue pools for LVL holders (2-week epochs, threshold snapshots) |
+| BonzaiCollectibles | [`0x44f1675eBeB7f7A4Ac3E99E4A4652b34515F1F36`](https://basescan.org/address/0x44f1675eBeB7f7A4Ac3E99E4A4652b34515F1F36) | ERC-721 content NFT implementation (ERC-1167 clone per user) |
+| BonzaiCollectiblesFactory | [`0xCF5d739674A9daf91Da83CF84eDE1456B7f17BC2`](https://basescan.org/address/0xCF5d739674A9daf91Da83CF84eDE1456B7f17BC2) | Factory deploying per-user collection clones |
+| BonzaiRoyaltySplitter | [`0x798Bcae41E3A08B216D0Df6f03Be1e4eBEED9f24`](https://basescan.org/address/0x798Bcae41E3A08B216D0Df6f03Be1e4eBEED9f24) | Secondary royalty distribution (2/3 treasury, 1/3 pools weighted by activity) |
+| BonzaiCompanions | [`0x0889B53F810aF1bFc83EFFD459E945a1a4D79c38`](https://basescan.org/address/0x0889B53F810aF1bFc83EFFD459E945a1a4D79c38) | ERC-721 + ERC-8004 companion NFT, 10K max supply |
+| BonzaiUniswapHook | [`0x0d4B1d95ec00A6BC794B4bE18D1dF4136D524090`](https://basescan.org/address/0x0d4B1d95ec00A6BC794B4bE18D1dF4136D524090) | V4 afterSwap hook (1% fee capture) |
+| CompanionTokenFactory | [`0x0cD90Ef3a38Ab8E845D3538Dc55EB9bd9C9e0477`](https://basescan.org/address/0x0cD90Ef3a38Ab8E845D3538Dc55EB9bd9C9e0477) | Atomic companion ERC-20 + V4 LP (96/4 split, LP locked) |
+| FineTuneTokenFactory | [`0x9bd9621b8F77e501063b0ec8CD15e6f53bDc6B34`](https://basescan.org/address/0x9bd9621b8F77e501063b0ec8CD15e6f53bDc6B34) | Atomic model ERC-20 + V4 LP |
+| BonzaiUnlock | [`0x7A33a9843C1740Ea73594fA2468Fb210a7fd7968`](https://basescan.org/address/0x7A33a9843C1740Ea73594fA2468Fb210a7fd7968) | 1 ETH all-level unlock (50/50 foundation/liquidity split) |
 
-## P2P Network Contracts
+## Skill Economy Contracts
 
-| Contract | Status | Purpose |
-|----------|--------|---------|
-| BonzaiProviderRegistry | Pending deployment | P2P provider registration and staking |
-| BonzaiPayment | Pending deployment | ETH/USDC payment processing with EIP-712 |
+| Contract | Address | Purpose |
+|----------|---------|---------|
+| BonzaiSkillRegistry | [`0x7b346cEDf9a72648B905B34CfaA7869eC84A7C79`](https://basescan.org/address/0x7b346cEDf9a72648B905B34CfaA7869eC84A7C79) | Skill marketplace (80% to co-owners, 20% platform) |
+| BonzaiSkillOwnership | [`0xa1f80ABCe763De90eB873990C5841F7B1770383C`](https://basescan.org/address/0xa1f80ABCe763De90eB873990C5841F7B1770383C) | Companion co-ownership with weighted revenue distribution |
+
+## P2P Inference Contracts
+
+| Contract | Address | Purpose |
+|----------|---------|---------|
+| BonzaiProviderRegistry | [`0x683d0B11a2553E9D4B338935e2D935873439e8bB`](https://basescan.org/address/0x683d0B11a2553E9D4B338935e2D935873439e8bB) | Provider registration, staking, shard capabilities |
+| BonzaiPayment | [`0x438A73FC0e0DA882BFdD007aF41415769Af33F1d`](https://basescan.org/address/0x438A73FC0e0DA882BFdD007aF41415769Af33F1d) | Single-provider ETH/USDC payments with EIP-712 (x402) |
+| BonzaiPipelinePayment | [`0xB45D1D635192Aa223Ce28d9F3cC047A13D8850Bd`](https://basescan.org/address/0xB45D1D635192Aa223Ce28d9F3cC047A13D8850Bd) | Multi-payee atomic pipeline payments for private inference |
 
 ## Cross-Contract Wiring
 
 ```
-Content  → MintPool, RoyaltySplitter
-MintPool → Content, RoyaltySplitter, FeeHook
-Hook     → CompanionFactory (authorized), FineTuneFactory (authorized)
-CompanionFactory → Companions (NFT ownership check)
-FineTuneFactory  → Content (NFT ownership check)
-Payment  ↔ ProviderRegistry (bidirectional)
+Content  --> MintPool (20% of mint fees), RoyaltySplitter
+MintPool --> CollectiblesFactory, RoyaltySplitter, FeeHook, CompanionNFT
+Hook     --> CompanionFactory (authorized), FineTuneFactory (authorized)
+CompanionFactory --> Companions (NFT ownership check)
+FineTuneFactory  --> Collectibles (NFT ownership check)
+SkillRegistry <--> SkillOwnership (bidirectional)
+SkillOwnership --> USDC token
+Payment <--> ProviderRegistry (bidirectional)
+PipelinePayment --> ProviderRegistry
 ```
 
 ## Key Parameters
 
 | Parameter | Value |
 |-----------|-------|
-| Companion mint price | 0.25 ETH |
+| Companion mint price | 0.25 ETH (free for unlocked users) |
 | Companion max supply | 10,000 |
-| Content mint fee | 0.0025 ETH |
+| Companions per wallet | 4 max |
+| Companion token supply split | 96% liquidity pool, 4% companion wallet |
+| Content mint fees | 0.0005-0.005 ETH per type (free for unlocked) |
+| Content fee split | 80% treasury, 20% MintPool |
 | Content royalties (ERC-2981) | 7.5% |
-| Unlock price | 1 ETH |
-| MintPool epoch duration | 7 days |
-| Flash loan protection gap | 256 blocks |
+| Royalty split | 2/3 treasury, 1/3 pools (weighted by activity) |
+| Unlock price | 1 ETH (unlocks all levels permanently) |
+| MintPool epoch duration | 2 weeks (1,209,600 seconds) |
+| Flash loan protection | 256 blocks (~8.5 minutes on Base) |
 | Hook swap fee | 1% |
+| Companion hook fee split | 34% wallet, 33% owner, 33% LVL6 pool |
+| FineTune hook fee split | 80% creator, 10% treasury, 10% LVL6 pool |
+| Skill purchase split | 80% co-owners (weighted), 20% author |
 | P2P platform fee | 2.5% |
+| Pipeline max providers | 16 per session |
 
 ## Solidity Version
 
-All contracts compile with Solidity `0.8.20`, optimizer enabled (200 runs, viaIR).
+All contracts compile with Solidity `0.8.34`, optimizer enabled (200 runs, viaIR), EVM target `cancun`.
 
 ## Uniswap V4 Addresses (Base)
 
@@ -58,3 +78,10 @@ All contracts compile with Solidity `0.8.20`, optimizer enabled (200 runs, viaIR
 | PoolManager | `0x498581ff718922c3f8e6a244956af099b2652b2b` |
 | PositionManager | `0x7c5f5a4bbd8fd63184577525326123b519429bdc` |
 | Permit2 | `0x000000000022D473030F116dDEE9F6B43aC78BA3` |
+
+## Treasury Wallets
+
+| Wallet | Address |
+|--------|---------|
+| Foundation / Treasury | `0x8Ff3b2e823b33BeE30e699bB1b6BBc8F622fEa89` |
+| Liquidity | `0x4135d59f0BfF96560b7aD5cfCe81154AB1810B93` |

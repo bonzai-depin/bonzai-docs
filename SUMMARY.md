@@ -37,6 +37,7 @@
 ## P2P Network
 
 * [Overview](p2p-network/README.md)
+* [Private Inference (Pipeline)](p2p-network/private-inference.md)
 * [Provider Guide](p2p-network/provider-guide.md)
 * [Payment Flow (x402)](p2p-network/payment-flow.md)
 
