@@ -6,7 +6,7 @@ All protocol contracts are deployed on **Base** (chain ID 8453).
 
 | Contract | Address | Purpose |
 |----------|---------|---------|
-| BonzaiMintPool | [`0x5D823Ae792f13e1e2cC2dF52D468fe81852b9b0a`](https://basescan.org/address/0x5D823Ae792f13e1e2cC2dF52D468fe81852b9b0a) | Epoch-based revenue pools for LVL holders (2-week epochs, threshold snapshots) |
+| BonzaiMintPool | [`0x3a31aE7F6E03E095D5D68a4D6c7165Ba2b2E6D4c`](https://basescan.org/address/0x3a31aE7F6E03E095D5D68a4D6c7165Ba2b2E6D4c) | Epoch-based revenue pools (2-week epochs, threshold snapshots, unlocked users bypass thresholds) |
 | BonzaiCollectibles | [`0x44f1675eBeB7f7A4Ac3E99E4A4652b34515F1F36`](https://basescan.org/address/0x44f1675eBeB7f7A4Ac3E99E4A4652b34515F1F36) | ERC-721 content NFT implementation (ERC-1167 clone per user) |
 | BonzaiCollectiblesFactory | [`0xCF5d739674A9daf91Da83CF84eDE1456B7f17BC2`](https://basescan.org/address/0xCF5d739674A9daf91Da83CF84eDE1456B7f17BC2) | Factory deploying per-user collection clones |
 | BonzaiRoyaltySplitter | [`0x798Bcae41E3A08B216D0Df6f03Be1e4eBEED9f24`](https://basescan.org/address/0x798Bcae41E3A08B216D0Df6f03Be1e4eBEED9f24) | Secondary royalty distribution (2/3 treasury, 1/3 pools weighted by activity) |
@@ -20,7 +20,7 @@ All protocol contracts are deployed on **Base** (chain ID 8453).
 
 | Contract | Address | Purpose |
 |----------|---------|---------|
-| BonzaiSkillRegistry | [`0x7b346cEDf9a72648B905B34CfaA7869eC84A7C79`](https://basescan.org/address/0x7b346cEDf9a72648B905B34CfaA7869eC84A7C79) | Skill marketplace (80% to co-owners, 20% platform) |
+| BonzaiSkillRegistry | [`0xeeB6B8A73B13141013416D74A327180905AFdF3F`](https://basescan.org/address/0xeeB6B8A73B13141013416D74A327180905AFdF3F) | Skill marketplace (80% co-owners, 20% platform, free for unlocked users) |
 | BonzaiSkillOwnership | [`0xa1f80ABCe763De90eB873990C5841F7B1770383C`](https://basescan.org/address/0xa1f80ABCe763De90eB873990C5841F7B1770383C) | Companion co-ownership with weighted revenue distribution |
 
 ## P2P Inference Contracts
