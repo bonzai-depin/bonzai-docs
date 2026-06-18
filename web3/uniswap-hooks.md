@@ -1,61 +1,53 @@
 # Uniswap V4 Hooks
 
-BonzAI uses a custom Uniswap V4 `afterSwap` hook to capture fees from companion and model token swaps. The hook is deployed via CREATE2 to ensure the contract address has the correct permission bits.
+BonzAI uses a custom Uniswap V4 `afterSwap` hook to capture fees from companion token and fine-tune/model token swaps. Hook fees are accumulated and claimed/distributed through contract functions rather than being a normal offchain payment flow.
 
-## How It Works
+## Companion Token Hook Split
 
-When someone swaps a companion token or fine-tune model token on Uniswap V4:
-
-1. The swap executes normally on the PoolManager
-2. The `afterSwap` hook fires and captures **1% of the swap value**
-3. The fee is distributed according to the token type
-
-## Fee Distribution
-
-### Companion Tokens
+When a companion token swap generates hook fees:
 
 | Recipient | Share |
-|-----------|-------|
-| Companion agent wallet | 34% |
-| Companion NFT owner | 33% |
-| LVL6 MintPool (training) | 33% |
-
-### Fine-Tune Model Tokens
-
-| Recipient | Share |
-|-----------|-------|
-| Model creator | 80% |
+| --- | ---: |
+| Companion agent wallet | 40% |
+| Companion NFT owner | 40% |
 | Treasury | 10% |
-| MintPool (LVL6 training pool) | 10% |
+| MintPool | 10% |
 
-## Token Launch Flow
+The MintPool share is spread across all six content buckets according to hook logic.
 
-### Companion Tokens (via CompanionTokenFactory)
+## Fine-Tune / Model Token Hook Split
 
-1. Call `launchToken()` with your companion's token ID
-2. Factory creates an ERC-20 token (1 billion supply)
-3. 96% of supply goes to Uniswap V4 LP, 4% to the companion wallet
-4. LP position is locked at the dead address (`0x...dEaD`) — unruggable
-5. The hook is automatically registered for the new pool
+When a fine-tune or model token swap generates hook fees:
 
-**Requirement**: Must own the companion NFT (BonzaiCompanions token).
+| Recipient | Share |
+| --- | ---: |
+| Model/fine-tune creator | 80% |
+| Treasury | 10% |
+| MintPool | 10% |
 
-### Fine-Tune Model Tokens (via FineTuneTokenFactory)
+The MintPool share is spread across all six content buckets.
 
-Same flow as companion tokens, but:
-- Requires owning the fine-tuned model content NFT (BonzaiContent)
-- Hook fees go 80% to creator, 10% treasury, 10% to LVL6 MintPool
+## Companion Token Launch
 
-## Hook Permissions
+The companion token factory creates an ERC-20 token and initializes Uniswap V4 liquidity. The current launch pattern uses:
 
-The hook address is mined via CREATE2 to contain the correct permission bits:
+- 1 billion total supply.
+- 96% paired into Uniswap V4 liquidity.
+- 4% sent to the companion wallet.
+- LP effectively locked/burned at the dead address.
 
-- **Bit 7**: `afterSwap` — captures fees after each swap
-- **Bit 4**: `afterSwapReturnDelta` — modifies output amounts
-- **Address flags**: `0x0090` (last 14 bits)
+The companion NFT owner must own the companion to launch its token.
 
-## Claiming Fees
+## Claiming Hook Fees
 
-- **Companion owners**: Call `claimBeneficiaryFees()` on the hook contract
-- **Treasury**: Call `claimTreasuryFees()`
-- **MintPool**: Distributed automatically via `distributeMintPoolFees()`
+Hook fees accrue inside the hook accounting system. Claim functions route accumulated shares to beneficiaries, treasury, and pools.
+
+## Why This Matters
+
+The hook makes companion and model tokens economically useful beyond trading. Swaps can route value to:
+
+- The companion's autonomous wallet.
+- The companion owner.
+- The model/fine-tune creator.
+- Treasury.
+- MintPool participants and providers.

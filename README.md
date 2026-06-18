@@ -1,39 +1,47 @@
 # Welcome to BonzAI
 
-**BonzAI** is a decentralized, privacy-preserving desktop application that combines AI inference, blockchain integration, and a peer-to-peer network into a single platform.
+BonzAI is a local-first AI product suite and onchain economy. It combines private browser AI, a browser extension for capture and dataset creation, a desktop production studio, autonomous AI companions, P2P inference, creator minting, and contribution-based rewards.
 
-All AI generation runs **locally on your machine** — your data never leaves your device.
+The product suite has three main surfaces:
 
-## What You Can Do
+| Product | What it does | Where it fits |
+| --- | --- | --- |
+| **BonzAI Web** | Local browser chat and public product surface | The front door for private AI, onboarding, downloads, and product education |
+| **BonzAI+** | Browser assistant extension with Chat, Live, Imagine, and Dataset modes | Captures useful text, images, video context, generated images, and metadata from the web |
+| **BonzAI Desktop** | Electron studio for local inference, training, minting, companions, P2P, and onchain actions | Turns local AI work into datasets, models, assets, companion identities, and rewards |
 
-- **Generate** text, images, audio, music, video, and 3D assets using state-of-the-art open-source models
-- **Mint** your AI-generated content as NFTs on Base and LUKSO
-- **Create** AI companions with on-chain identity (ERC-8004), autonomous wallets, and personality
-- **Earn** by sharing your GPU with the P2P inference network
-- **Trade** companion and model tokens on Uniswap V4 with custom hook fee distribution
+BonzAI is not just "a local model app." The long-term primitive is **Proof-of-Contribution AI**: useful AI assets should carry provenance, ownership, quality signals, and reward routes from the moment they are captured to the moment they are trained, generated, minted, served, or reused.
 
-## Key Principles
+```mermaid
+flowchart LR
+  Web["BonzAI Web<br/>local browser AI + onboarding"]
+  Plus["BonzAI+<br/>capture, live transcript, image generation, datasets"]
+  Desktop["BonzAI Desktop<br/>local inference, training, minting, companions"]
+  Registry["Contribution + asset registries<br/>hashes, licenses, ownership, attribution"]
+  Economy["BONZAI economy<br/>levels, pools, providers, companions, skills, model tokens"]
 
-| Principle | What It Means |
-|-----------|---------------|
-| **Local-First** | All inference runs on your hardware. No cloud dependency. |
-| **Free Generation** | Every AI pipeline is free to use. Levels only gate NFT minting. |
-| **Multi-Chain** | Ethereum, Arbitrum, Base, and LUKSO supported. |
-| **Open Models** | 21 LLMs, 4 image pipelines, TTS, music, video, and vision — all open-source. |
-| **Self-Custody** | Your wallet, your keys. Companions get their own deterministic wallets. |
-
-## Architecture at a Glance
-
-```
-Vue 3 Renderer  ←→  Electron Main Process  ←→  Inference Backends
-  (UI + Pinia)        (IPC, P2P, Store)         (OpenClaw :3002, Flask :65000)
-       ↕                    ↕
-   Web3 Services        Python ML Server
-  (Base, LUKSO)       (Image, Audio, Video)
+  Web --> Plus
+  Plus --> Desktop
+  Desktop --> Registry
+  Registry --> Economy
+  Economy --> Desktop
 ```
 
-## Links
+## Core Principles
 
-- **Website**: [bonzai.sh](https://bonzai.sh)
-- **Token**: BONZAI on [Ethereum](https://etherscan.io/token/0xDdA9Ff241C7160be8295EF9Eca2e782361467666) · [Base](https://basescan.org/token/0xc4d137def384ee0f8857887f5950669ba04984ec) · [Arbitrum](https://arbiscan.io/token/0x0a84edf70f30325151631ce7a61307d1f4d619a3)
-- **Companion NFT**: [BaseScan](https://basescan.org/address/0xb3ea09922E8227cCa6331346ed31D0f5F173BDe3)
+- **Local-first AI**: Generation runs on the user's machine or browser whenever the selected product and device support it.
+- **Free generation**: BONZAI levels do not gate normal generation. Levels gate minting rights, participation, publishing, and economic surfaces.
+- **User-owned outputs**: Users can keep work private, export it, mint it, publish it, or route it into training workflows.
+- **Contribution provenance**: Dataset samples, evaluations, model adapters, generated assets, provider time, and companion actions can become signed contribution records.
+- **Onchain rewards**: Revenue can flow through mint pools, provider-side pool shares, companion token hooks, skill co-ownership, model/fine-tune tokens, and future contribution registries.
+
+## Storage Policy
+
+BonzAI does **not** use Irys at all. When content or metadata must be published off-device, the current product documentation assumes IPFS pinning through Pinata or another IPFS-compatible path configured by the app. If older source names or variables mention Irys, treat them as legacy naming only, not as the active storage architecture.
+
+## Read This First
+
+- To understand the products, start with [Product Suite](products/README.md).
+- To understand real user flows, start with [Scenario Map](user-scenarios/README.md).
+- To understand token levels and rewards, start with [Reward Structure & Epochs](web3/reward-structure.md).
+- To understand the new economic thesis, start with [Proof-of-Contribution AI](proof-of-contribution/README.md).

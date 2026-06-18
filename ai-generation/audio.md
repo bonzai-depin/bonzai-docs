@@ -40,4 +40,8 @@ Each companion can have a distinct voice persona based on their personality and 
 
 ## Minting Audio NFTs
 
-Generated audio can be minted on Base or LUKSO. Requires **LVL2** (5,000 BONZAI held).
+Generated audio can be minted through the configured Desktop content NFT path. Requires **LVL2** (5,000 BONZAI held) or permanent unlock.
+
+- Audio mint fee: 0.001 ETH unless unlocked
+- Metadata/media: IPFS/Pinata or configured IPFS-compatible storage
+- LUKSO: Universal Profiles only unless a content contract is explicitly configured

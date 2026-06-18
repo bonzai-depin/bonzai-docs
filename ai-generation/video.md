@@ -49,4 +49,7 @@ In the roleplay system, companions can generate contextual videos:
 
 ## Minting Video NFTs
 
-Generated videos can be minted on Base. Requires **LVL4** (25,000 BONZAI held).
+Generated videos can be minted through the configured Desktop content NFT path. Requires **LVL4** (25,000 BONZAI held) or permanent unlock.
+
+- Video mint fee: 0.0025 ETH unless unlocked
+- Metadata/media: IPFS/Pinata or configured IPFS-compatible storage

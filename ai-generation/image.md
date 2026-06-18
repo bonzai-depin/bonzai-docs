@@ -52,11 +52,12 @@ When generating images for companions, BonzAI uses a multi-step pipeline:
 
 1. **GLM Flash** (primary) or **LLaMA** (fallback) enhances the text prompt with visual details
 2. The enhanced prompt is sent to the selected image pipeline
-3. Generated images are uploaded to IPFS (Pinata) for on-chain metadata
+3. Generated images stay local unless the user mints, publishes, or explicitly uploads metadata/media
 
 ## Minting as NFTs
 
-Generated images can be minted as NFTs on Base (ERC-721) or LUKSO (LSP8). Requires **LVL3** (10,000 BONZAI held).
+Generated images can be minted as content NFTs through the configured Desktop minting path. Requires **LVL3** (10,000 BONZAI held) or permanent unlock.
 
-- Base mint fee: 0.0025 ETH
-- LUKSO mint fee: 15 LYX
+- Image mint fee: 0.0015 ETH unless unlocked
+- Metadata/media: IPFS/Pinata or configured IPFS-compatible storage
+- LUKSO: Universal Profiles only unless a content contract is explicitly configured

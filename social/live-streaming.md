@@ -2,7 +2,7 @@
 
 Connect your live stream chat to BonzAI. Viewers generate AI content — images, speech, music, video — directly from chat commands. Results appear on stream via OBS Studio. All generation is free.
 
-**Price:** 19.99 USDC (lifetime access)
+**Price:** Marketplace-configured skill price
 **Skill ID:** `live-streaming-v1.0.0`
 
 ---
@@ -35,7 +35,7 @@ Stream output (viewers see the result)
 1. Open BonzAI Desktop
 2. Go to **Smart Agent** tab
 3. Find **Live Streaming Playground** in the marketplace
-4. Click **Preview** to explore the UI, or **Purchase** (19.99 USDC on Base)
+4. Click **Preview** to explore the UI, or **Purchase** if the skill is listed as a paid skill in your configured marketplace
 
 ### Step 2: Connect a Chat Platform
 

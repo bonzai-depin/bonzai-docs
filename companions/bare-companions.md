@@ -5,7 +5,7 @@ Bare companions are a pre-reveal minting flow that lets you mint a companion NFT
 ## Why Mint Bare?
 
 - **Speed** — Mint in seconds, no AI generation needed
-- **External minting** — Mint via BaseScan, OpenClaw, or another dApp, then set up in BonzAI
+- **External minting** — Mint through the configured contract explorer, OpenClaw, or another dApp, then set up in BonzAI
 - **Batch minting** — Secure multiple token IDs quickly, personalize each one later
 - **Deferred decisions** — Lock in your spot now, decide on personality and appearance later
 
@@ -27,9 +27,9 @@ The system mints immediately with placeholder metadata. You'll receive a confirm
 - Transaction hash
 - A link to bonzai.sh to complete the setup
 
-### Option B: Via BaseScan
+### Option B: Via Contract Explorer
 
-Call `mintCompanion()` on the [BonzaiCompanions contract](https://basescan.org/address/0xb3ea09922E8227cCa6331346ed31D0f5F173BDe3) with:
+Call `mintCompanion()` on the configured `BonzaiCompanions` contract with:
 - `agentURI`: any placeholder URI (e.g., `ipfs://pending`)
 - `personalityHash`: `0x0`
 - `spendingProfile`: `0`
@@ -93,7 +93,7 @@ Review a read-only summary of everything you've entered:
 - Appearance and style
 - Portrait preview
 
-A notice explains that finalization requires multiple on-chain transactions. Make sure you have enough ETH on Base for gas.
+A notice explains that finalization requires multiple on-chain transactions. Make sure you have enough native gas token on the configured app chain.
 
 Click **"Confirm"** to begin finalization.
 

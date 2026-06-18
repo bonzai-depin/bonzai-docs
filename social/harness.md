@@ -104,7 +104,7 @@ Shows full network status: mode, P2P state, selected providers, and available pi
 | Command | Description |
 |---|---|
 | `!bonzai generate image <prompt>` | Fast image (FLUX Klein) |
-| `!bonzai generate image_quality <prompt>` | Quality image (Z-Image Turbo) |
+| `!bonzai generate image_quality <prompt>` | Quality image |
 | `!bonzai generate image_standard <prompt>` | Standard image (SDXL) |
 | `!bonzai generate video <prompt>` | Video (LTX-2) |
 | `!bonzai generate audio <text>` | Fast TTS (Kokoro) |
@@ -116,7 +116,7 @@ Shows full network status: mode, P2P state, selected providers, and available pi
 
 | Command | Description |
 |---|---|
-| `!bonzai mint bare [gender]` | Mint a bare companion NFT on Base |
+| `!bonzai mint bare [gender]` | Mint a bare companion NFT on the configured app chain |
 | `!bonzai mint companion <name>` | Mint a complete companion with metadata |
 | `!bonzai mint status` | Check mint status and owned companions |
 | `!bonzai mint finalize <tokenId>` | Finalize a bare companion setup |

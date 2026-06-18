@@ -1,28 +1,34 @@
 # AI Generation
 
-BonzAI provides **free, unlimited, local** AI generation across six modalities. All inference runs on your machine — nothing is sent to external servers.
+BonzAI generation is local-first. Normal generation is free and does not require a wallet. Wallets and BONZAI levels matter when the user mints, publishes, participates in pools, launches tokens, or claims rewards.
 
-## Pipelines
+## Product Surfaces
 
-| Modality | Models | Local Port |
-|----------|--------|------------|
-| [Text (LLM)](text.md) | 21 models via OpenClaw | 3002 |
-| [Image](image.md) | 4 pipelines (FLUX, SDXL, Z-Image) | 65000 |
-| [Audio & Music](audio.md) | Kokoro TTS, Qwen3-TTS, ACE-Step | 65000 |
-| [Video](video.md) | LTX-2 (text-to-video, image-to-video) | 65000 |
-| [3D](3d.md) | AI-generated Three.js code | — |
+| Product | Generation role |
+| --- | --- |
+| BonzAI Web | Browser local chat where supported |
+| BonzAI+ | Side-panel chat, live video/screen understanding, in-browser image generation, dataset smart analysis |
+| BonzAI Desktop | Full local generation studio for text, image, audio, music, video, vision, and 3D scene generation |
 
-## How It Works
+## Desktop Pipelines
 
-BonzAI runs two local inference backends:
+| Type | Backend | Notes |
+| --- | --- | --- |
+| Text | OpenClaw | OpenAI-compatible chat completions through the local OpenClaw server |
+| Image | Flask | Turbo, quality, standard, and advanced image endpoints |
+| Audio | Flask | Kokoro fast TTS, Qwen-style persona TTS |
+| Music | Flask | ACE-Step music generation |
+| Video | Flask | LTX-2 text-to-video and image-to-video |
+| Vision | Flask | Visual analysis endpoint |
+| 3D | Renderer + LLM | AI-generated Three.js code and WebGL preview, not TRELLIS mesh generation |
 
-1. **OpenClaw** (port 3002) — Handles all LLM text generation via an OpenAI-compatible API (`/v1/chat/completions`)
-2. **Flask Server** (port 65000) — Handles image, audio, music, video, and vision pipelines
+## Minting Generated Outputs
 
-Models are downloaded on first use to `~/bonzai-models/` and cached for future sessions.
+Generated outputs can remain private. If the user chooses to mint:
 
-## Generation vs. Minting
+1. Desktop checks wallet and BONZAI level/unlock status.
+2. Metadata/media is uploaded to IPFS/Pinata or configured IPFS-compatible storage.
+3. The user confirms the mint transaction.
+4. Fees route according to the content type and reward structure.
 
-**All generation is free** — you don't need tokens or a wallet to use any AI pipeline.
-
-Levels (requiring BONZAI token holdings) only gate **minting** your generated content as NFTs. See [Token & Levels](../web3/token-levels.md) for details.
+BonzAI does not use Irys.

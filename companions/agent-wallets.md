@@ -35,7 +35,7 @@ For users who authenticate via Privy (email/social login):
 ## What Agent Wallets Can Do
 
 - **Receive ETH/tokens** — fund the wallet to enable autonomous transactions
-- **x402 payments** — companions can pay for P2P inference services
+- **Autonomous payments** — companions can pay for enabled onchain actions, including optional/legacy direct-payment rails where the product exposes them
 - **Skill purchases** — companions can autonomously purchase skills
 - **Social actions** — fund Moltbook posts and interactions
 - **Token holdings** — BONZAI balance influences skill co-ownership weight

@@ -1,79 +1,44 @@
 # Provider Guide
 
-Share your GPU with the BonzAI network and earn ETH or USDC for processing inference requests.
+Provider mode lets you share your local machine with the BonzAI network and become eligible for provider-side rewards.
 
-## Registration
+## Start Provider Mode
 
-### Via the App
+1. Open BonzAI Desktop.
+2. Go to the P2P or Network settings.
+3. Select **Provider** mode.
+4. Choose which pipelines your machine can serve.
+5. Start advertising locally and/or through the configured provider registry.
 
-1. Open **Network Settings** in BonzAI
-2. Switch to **Provider** mode
-3. Select the pipelines you want to offer (LLM, Image, Audio, etc.)
-4. Set your price per 1,000 tokens
-5. Choose your payment currency (ETH or USDC)
-6. Click **Register** — this sends a transaction to the BonzaiProviderRegistry on Base
+## What Providers Advertise
 
-### On-Chain Details
+Provider records can include:
 
-Registration calls `BonzaiProviderRegistry.register()` with:
+- Peer ID.
+- Multiaddresses.
+- Supported pipelines.
+- Relay information.
+- Shard/private inference capabilities.
+- Optional pricing or legacy payment metadata where enabled.
 
-| Parameter | Description |
-|-----------|-------------|
-| `peerId` | Your libp2p peer ID (auto-generated) |
-| `multiaddrs` | Your libp2p multiaddresses for dialing |
-| `pipelines` | Array of pipeline IDs you support (0-10) |
-| `pricePerToken` | Price per 1,000 tokens in wei |
-| `isRelay` | Whether you also act as a relay node |
+## Earnings
 
-Registration requires a minimum ETH stake (sent as `msg.value`).
+The current default earning path is provider-side MintPool rewards:
 
-## Provider Lifecycle
-
-| Action | Function | Description |
-|--------|----------|-------------|
-| Register | `register()` | Join the network, set capabilities |
-| Heartbeat | `heartbeat()` | Update `lastSeenAt` timestamp |
-| Update | `updateProvider()` | Change pipelines, pricing, or peerId |
-| Deactivate | `deactivate()` | Stop accepting jobs |
-| Activate | `activate()` | Resume accepting jobs |
-| Withdraw Stake | `withdrawStake()` | Recover staked ETH (must deactivate first) |
-
-## Earning Revenue
-
-When you process an inference request:
-
-1. Consumer pays via BonzaiPayment (ETH or USDC)
-2. **2.5% platform fee** is sent to treasury
-3. **97.5%** is credited to your pending withdrawals
-4. Your `totalEarnings` and `completedJobs` are updated in the registry
-
-### Withdrawing Earnings
-
-- **ETH earnings**: Call `withdrawETHEarnings()` on BonzaiPayment
-- **USDC earnings**: Call `withdrawEarnings()` on BonzaiPayment
-
-Both can be done via the Network Settings UI or directly on the contract.
-
-## Pipeline Categories
-
-When registering, specify which pipelines you support using their numeric IDs:
-
-```
-0: LLM (all 21 models)
-1: IMAGE_TURBO        6: AUDIO_TURBO
-2: IMAGE_QUALITY      7: AUDIO_QUALITY
-3: IMAGE_STANDARD     8: MUSIC
-4: IMAGE_ADVANCED     9: VIDEO_FAST
-                     10: VISION
+```text
+your service seconds / total provider service seconds * provider-side pool amount
 ```
 
-## Hardware Recommendations
+Claiming requires the epoch to finalize and the configured provider eligibility checks to pass.
 
-| Pipeline | Minimum VRAM | Recommended |
-|----------|-------------|-------------|
-| LLM (small models) | 4 GB | 8 GB |
-| LLM (large models) | 16 GB | 24 GB |
-| Image | 6 GB | 12 GB |
-| Audio | 2 GB | 4 GB |
-| Video | 10 GB | 16 GB |
-| Vision | 6 GB | 8 GB |
+## Operational Tips
+
+- Keep the app running while serving.
+- Only advertise pipelines your machine can actually handle.
+- Monitor model downloads and backend status before accepting heavy workloads.
+- Use LAN provider mode for trusted local setups.
+- Use remote provider mode when you want broader discovery through the registry.
+
+## Relationship To x402
+
+Direct ETH/USDC payment rails may exist as infrastructure, but current provider docs should not promise per-request payment as the default user path. The product economy is centered on service time and pool rewards.

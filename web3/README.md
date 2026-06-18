@@ -1,30 +1,45 @@
-# Web3 & Tokenomics
+# Web3 & Onchain Economy
 
-BonzAI is a multi-chain application with smart contracts deployed across Ethereum, Arbitrum, Base, and LUKSO. The protocol is built around the BONZAI ERC-20 token, which gates NFT minting and revenue pool access.
+BonzAI's Web3 layer turns local AI work into ownable, reusable, and rewardable assets. The token is not needed for ordinary generation. It coordinates minting rights, pool eligibility, provider rewards, companion economics, model/fine-tune tokens, skills, and future contribution registries.
 
-## Supported Networks
+## Core Assets
 
-| Network | Chain ID | Role |
-|---------|----------|------|
-| **Ethereum** | 1 | BONZAI token (primary) |
-| **Arbitrum** | 42161 | BONZAI token (L2) |
-| **Base** | 8453 | Protocol contracts, companion NFTs, content NFTs, Uniswap V4 |
-| **LUKSO** | 42 | Universal Profiles only |
+| Asset | Purpose |
+| --- | --- |
+| BONZAI token | Level thresholds, pool eligibility, curation/reputation weight, provider requirements |
+| Content NFTs | Minted text, audio, image, video, 3D, and training assets |
+| Companion NFTs | ERC-721 + ERC-8004 AI companion identity |
+| Companion tokens | ERC-20 tokens launched for companions with Uniswap V4 liquidity |
+| Fine-tune/model tokens | ERC-20 tokens launched around training/model assets |
+| Contribution records | Hashes, licenses, provenance, and attribution for useful AI work |
 
-## Core Protocol (Base)
+## Economy Loop
 
-Base is the primary chain for all protocol operations:
+```mermaid
+flowchart LR
+  Generate["Generate or capture locally"]
+  Mint["Mint or publish asset"]
+  Pools["MintPool holder/provider rewards"]
+  Companions["Companion skills/tokens/actions"]
+  Providers["P2P providers serve inference"]
+  Contributors["Dataset/model/evaluation contributors"]
 
-- **8 MVP contracts** deployed and wired
-- **Uniswap V4** integration with custom hooks
-- **Companion NFTs** (ERC-8004)
-- **Content NFTs** (ERC-721)
-- **MintPool** revenue distribution
-- **Token factories** for companions and fine-tuned models
+  Generate --> Mint
+  Mint --> Pools
+  Mint --> Contributors
+  Providers --> Pools
+  Companions --> Pools
+  Companions --> Contributors
+```
 
-## Key Concepts
+## Networks
 
-- [BONZAI Token & Levels](token-levels.md) — How token holdings unlock minting tiers
-- [Content NFTs](content-nfts.md) — Minting AI-generated content on-chain
-- [Smart Contracts](smart-contracts.md) — Full contract reference
-- [Uniswap V4 Hooks](uniswap-hooks.md) — Custom swap fee distribution
+BonzAI is multi-chain and configuration-driven. The BONZAI token exists on Ethereum, Arbitrum, and Base. App contracts can be deployed/configured per environment. LUKSO is used for optional Universal Profiles, not as a blanket replacement for minting and payment flows.
+
+## Read Next
+
+- [BONZAI Token & Levels](token-levels.md)
+- [Reward Structure & Epochs](reward-structure.md)
+- [Content NFTs](content-nfts.md)
+- [Smart Contracts](smart-contracts.md)
+- [Uniswap V4 Hooks](uniswap-hooks.md)

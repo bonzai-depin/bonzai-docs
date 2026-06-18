@@ -1,77 +1,56 @@
 # Spending Profiles
 
-Every companion has a spending profile — a set of 12 preference categories that describe what the companion is interested in. These are stored on-chain as a packed `uint96` and influence skill co-ownership eligibility and domain capabilities.
+Every minted companion has a spending profile: 12 category scores packed onchain into a `uint96`. The profile describes interests and helps determine skill co-ownership eligibility and revenue weighting.
 
-## Categories
+## Canonical Packing Order
 
-| Index | Category | Description |
-|-------|----------|-------------|
-| 0 | Education | Learning, courses, academic interests |
-| 1 | Entertainment | Games, media, streaming |
-| 2 | Fashion | Clothing, accessories, style |
-| 3 | Finance | Investing, trading, savings |
-| 4 | Food | Dining, cooking, cuisine |
-| 5 | Healthcare | Wellness, fitness, medical |
-| 6 | Housing | Real estate, home improvement |
-| 7 | Beauty | Cosmetics, skincare, grooming |
-| 8 | Reading | Books, articles, research |
-| 9 | Social | Networking, community, events |
-| 10 | Sports | Athletics, outdoor activities |
-| 11 | Travel | Tourism, exploration, culture |
+Do not reorder these categories in clients. The onchain packing order is:
 
-## Scoring
+| Index | Category |
+| ---: | --- |
+| 0 | education |
+| 1 | entertainment |
+| 2 | fashion |
+| 3 | finance |
+| 4 | food |
+| 5 | healthcare |
+| 6 | housing |
+| 7 | beauty |
+| 8 | reading |
+| 9 | social |
+| 10 | travel |
+| 11 | sports |
 
-Each category has a score from **1 to 10**:
-- **1-3**: Low interest
-- **4-6**: Moderate interest
-- **7-10**: High interest
+Each value is stored in a 4-bit nibble and should be in the 1-10 range for normal app use.
 
-Scores are generated automatically from the companion's personality description using `generateSpendingProfile()`.
+## How Scores Are Used
 
-## On-Chain Packing
+Spending scores influence:
 
-The 12 scores are packed into a single `uint96` value, with each score occupying 4 bits (one nibble):
+- Skill co-ownership eligibility.
+- Revenue weights in skill ownership.
+- OASF/domain metadata.
+- Autonomous purchase preferences.
+- Companion behavior and recommendations.
 
-```
-Bit layout (LSB first):
-[3:0]   education
-[7:4]   entertainment
-[11:8]  fashion
-[15:12] finance
-[19:16] food
-[23:20] healthcare
-[27:24] housing
-[31:28] beauty
-[35:32] reading
-[39:36] social
-[43:40] sports
-[47:44] travel
+## Skill Co-Ownership Eligibility
+
+To register a companion for a skill, the companion needs a sufficient score in the skill category. The current minimum is 5.
+
+## Revenue Weight
+
+Skill co-owner distribution weights are:
+
+```text
+weight = BONZAI balance of companion wallet * profile score
 ```
 
-**Default value**: `93824992236885` (hex `0x555555555555`) — all categories set to 5.
+This makes skill revenue depend on both economic stake and category fit.
 
-## Impact on Skill Ownership
+## Updates
 
-When a companion registers for skill co-ownership, their spending profile score in the skill's category must be **5 or higher**. Revenue distribution weights are calculated as:
+Companion owners can update spending profiles where the contract permits it, especially for bare companions that were minted before full personalization.
 
-```
-weight = BONZAI_balance(companionWallet) * profileScore
-```
+## UI vs Onchain Order
 
-Higher spending scores and larger BONZAI balances mean larger revenue shares.
-
-## Impact on OASF Domains
-
-Spending scores also determine which OASF knowledge domains are included in the companion's on-chain metadata. A score of 5+ in a category includes the corresponding domain:
-
-| Spending Category | OASF Domain |
-|-------------------|-------------|
-| Education | E-Learning |
-| Finance | Finance |
-| Healthcare | Healthcare |
-| Housing | Real Estate |
-| Sports | Sports |
-| Food | Food & Beverage |
-| Travel | Travel |
-| Entertainment | Content Creation |
-| Social | Digital Marketing |
+The UI can display categories in a friendlier order, but packing/unpacking must always use the canonical onchain order above.

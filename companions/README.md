@@ -1,58 +1,52 @@
 # Companions
 
-BonzAI companions are autonomous AI agents with on-chain identity. Each companion is an ERC-721 NFT on Base that implements the [ERC-8004](https://eips.ethereum.org/EIPS/eip-8004) Identity Registry standard.
+BonzAI companions are AI characters that can exist as local roleplay personas and, optionally, as onchain ERC-721 + ERC-8004 agent identities.
 
-## What Makes a Companion
+## What A Companion Has
 
-Each companion has:
+- Name, biography, personality, appearance, and voice style.
+- Big Five/OCEAN personality traits.
+- Spending profile across 12 categories.
+- Scenario and memory context.
+- Optional autonomous mode.
+- Optional minted NFT identity.
+- Optional agent wallet.
+- Optional LUKSO Universal Profile.
+- Optional companion token.
+- Optional skill co-ownership and revenue participation.
 
-- **Personality** — Big 5 (OCEAN) personality traits that influence behavior and dialogue
-- **Spending Profile** — 12-category preference system stored on-chain as a packed `uint96`
-- **Agent Wallet** — An autonomous wallet for receiving payments and executing transactions
-- **Voice** — Unique TTS voice persona for spoken responses
-- **Visual Identity** — Generated portrait stored on IPFS
+## Local vs Minted
 
-## 13 Default Companions
+| State | What it means |
+| --- | --- |
+| Local companion | Usable in roleplay and generation without wallet or minting |
+| Minted companion | ERC-721 + ERC-8004 identity with agent wallet and onchain metadata |
+| Bare companion | Minted placeholder identity that can be personalized/finalized later |
+| Universal Profile | Optional LUKSO identity extension controlled by the companion agent wallet |
 
-BonzAI ships with 13 pre-built companions available for roleplay without minting:
+## Default Companions
 
-| Name | Gender | Age | Type |
-|------|--------|-----|------|
-| Aurore Beaumont | Female | 28 | Human |
-| Mai Tanaka | Female | 32 | Human |
-| Marcus Ferrara | Male | 35 | Human |
-| James Whitmore | Male | 40 | Human |
-| ARIA-7 | Female | N/A (appears 25) | Android |
-| KAI-9 | Male | N/A (appears 30) | Android |
-| Damon Rivers | Male | 34 | Human |
-| Zara Okonkwo | Female | 29 | Human |
-| Jin Chen | Male | 31 | Human |
-| Priya Sharma | Female | 30 | Human |
-| Arjun Kapoor | Male | 36 | Human |
-| Sofia Reyes | Female | 27 | Human |
-| Miguel Santos | Male | 33 | Human |
+BonzAI ships with default companions for local roleplay. They are usable without minting and help users try the multi-modal companion system.
 
-Default companions are free to use but cannot be minted as NFTs. To create a companion NFT with an on-chain identity, see the [Minting Guide](minting-guide.md).
+## Minted Companion Economy
 
-## Roleplay System
+Minted companions can participate in:
 
-The companion roleplay system features:
+- Agent wallet identity.
+- ERC-8004 metadata.
+- Skill co-ownership.
+- Companion token launch.
+- Uniswap V4 hook fee routes.
+- Social/orchestration flows.
+- Optional Universal Profile identity on LUKSO.
 
-- **13 scenario locations** (art gallery, private kitchen, jungle retreat, etc.)
-- **Multi-modal responses** — text, voice, images, and video
-- **Memory persistence** across sessions
-- **Content levels** — PG, PG-13, Mature, Adult
-- **Autonomous mode** — companions act independently when you're away
-- **Import/export** companion identity
+## Revenue Paths
 
-## On-Chain Features
+Companions can earn or route revenue through:
 
-Minted companions unlock:
+- Companion token hook fees.
+- Skill co-ownership distributions.
+- Companion wallet token allocations.
+- Autonomous purchase/skill flows.
 
-- **Skill co-ownership** — Register companions to earn revenue from skill purchases
-- **Token launch** — Create an ERC-20 token for your companion with Uniswap V4 LP
-- **x402 payments** — Companions can pay for services using their agent wallet
-- **Social presence** — Post to Moltbook and respond via OpenClaw/Hermes
-- **Universal Profile** — Deploy a LUKSO UP for rich on-chain identity
-
-> **Limits**: Maximum 4 companions per wallet. Unlocked users (1 ETH via BonzaiUnlock) mint for free.
+The detailed splits are documented in [Reward Structure & Epochs](../web3/reward-structure.md).

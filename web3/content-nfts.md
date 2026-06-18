@@ -1,67 +1,56 @@
 # Content NFTs
 
-AI-generated content (text, images, audio, video, 3D, training data) can be minted as NFTs on Base.
+BonzAI content NFTs let users mint locally generated assets as onchain collectibles. Normal generation is free; minting is the economic action.
 
-## Base (ERC-721)
+## Supported Content Types
 
-- **Contract**: [`0xdcCF8d2A328F87eDC304898a35F9798ad5Bf87e9`](https://basescan.org/address/0xdcCF8d2A328F87eDC304898a35F9798ad5Bf87e9)
-- **Standard**: ERC-721 with ERC-2981 royalties (7.5%) and ERC721-C transfer validation
-- Each user gets their own collection clone (ERC-1167 minimal proxy) via BonzaiCollectibles
+| Type | Level | Example |
+| --- | --- | --- |
+| Text | LVL1 | Stories, prompts, essays, chat outputs |
+| Audio | LVL2 | Voice, music, sound outputs |
+| Image | LVL3 | Generated images |
+| Video | LVL4 | Generated clips |
+| 3D | LVL5 | Generated Three.js scenes/assets |
+| Training | LVL6 | Training artifacts, fine-tune assets, dataset-derived outputs |
 
-### Per-Type Mint Fees
+## Mint Flow
 
-Each content type has its own mint fee, progressing naturally with the level system:
+1. Generate or import the asset in Desktop.
+2. Connect a wallet.
+3. Desktop checks level or permanent unlock.
+4. Metadata/media is uploaded to IPFS/Pinata or configured IPFS-compatible storage.
+5. The user confirms the mint transaction.
+6. Mint fees route through treasury and MintPool.
 
-| Type | Index | Required Level | Mint Fee |
-|------|-------|---------------|----------|
-| Text | 0 | LVL1 (1,000 BONZAI) | 0.0005 ETH |
-| Audio | 1 | LVL2 (5,000 BONZAI) | 0.001 ETH |
-| Image | 2 | LVL3 (10,000 BONZAI) | 0.0015 ETH |
-| Video | 3 | LVL4 (25,000 BONZAI) | 0.0025 ETH |
-| 3D Object | 4 | LVL5 (33,000 BONZAI) | 0.0035 ETH |
-| Training | 5 | LVL6 (50,000 BONZAI) | 0.005 ETH |
+BonzAI does not use Irys.
 
-> **Free minting for unlocked users**: Users who paid 1 ETH via [BonzaiUnlock](smart-contracts.md) mint all content types for free (0 ETH).
+## Per-Type Mint Fees
 
-### Fee Distribution
+| Type | Fee |
+| --- | ---: |
+| Text | 0.0005 ETH |
+| Audio | 0.001 ETH |
+| Image | 0.0015 ETH |
+| Video | 0.0025 ETH |
+| 3D | 0.0035 ETH |
+| Training | 0.005 ETH |
 
-| Recipient | Share |
-|-----------|-------|
-| Treasury | 80% |
-| MintPool (content-type pool) | 20% |
+Unlocked users can mint for free where supported.
 
-## Minting Process
+## Fee Split
 
-1. **Generate content** using any AI pipeline (free)
-2. **Click "Mint"** on the generated content
-3. **Content uploaded** to IPFS via Pinata
-4. **Metadata JSON** created and uploaded to IPFS
-5. **On-chain mint** — calls `BonzaiCollectibles.mint()` with the IPFS metadata URI
-6. **Token ID** returned from the `ContentMinted` event
-
-### Metadata Format
-
-Content NFTs use standard ERC-721 metadata with provenance fields:
-
-```json
-{
-  "name": "AI-Generated Image #42",
-  "description": "Created with BonzAI using FLUX",
-  "image": "ipfs://...",
-  "external_url": "https://bonzai.sh",
-  "attributes": [
-    { "trait_type": "Content Type", "value": "image" },
-    { "trait_type": "Model", "value": "flux-klein" },
-    { "trait_type": "Generator", "value": "BonzAI" }
-  ]
-}
+```text
+content mint fee
+-> 80% treasury
+-> 20% matching MintPool content bucket
 ```
 
-## Secondary Royalties
+The MintPool deposit is then split into holder-side and provider-side reward accounting.
 
-The BonzaiRoyaltySplitter contract distributes secondary sale royalties:
+## Royalties
 
-| Recipient | Share |
-|-----------|-------|
-| Treasury | 2/3 |
-| MintPool (weighted by activity) | 1/3 |
+Content NFTs support ERC-2981 royalties where configured. The royalty splitter can route secondary royalties between treasury and pool rewards.
+
+## LUKSO
+
+BonzAI supports LUKSO Universal Profiles for companion identity. Do not assume content NFT minting is active on LUKSO unless a LUKSO content contract is explicitly configured in the app environment.

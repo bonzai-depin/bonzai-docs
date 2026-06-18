@@ -54,8 +54,8 @@ Each companion's identity is stored as a JSON file on IPFS, referenced by the on
       "beauty": 7,
       "reading": 9,
       "social": 7,
-      "sports": 3,
-      "travel": 8
+      "travel": 8,
+      "sports": 3
     }
   }
 }
@@ -69,7 +69,7 @@ In addition to the IPFS metadata, key traits are stored directly on-chain via `s
 |-----|-------|---------|
 | `oasf_skills` | `10201,10204,10207,206,70102,70103,70201,70105` | OASF skill capability IDs |
 | `oasf_domains` | `10,30,50,...` | OASF knowledge domain IDs |
-| `x402_support` | `true` | Whether companion supports x402 payments |
+| `x402_support` | `true` | Legacy/optional metadata flag for direct payment support where exposed by the product |
 | `oasf_version` | `0.8` | OASF specification version |
 
 ## OASF Skills (Static)

@@ -104,7 +104,7 @@ Once a companion is selected, any unprefixed message triggers a companion respon
 
 ```
 !generate image <prompt>           — Generate an image (FLUX Klein turbo)
-!generate image_quality <prompt>   — Generate a quality image (Z-Image Turbo)
+!generate image_quality <prompt>   — Generate a quality image
 !generate image_standard <prompt>  — Generate an SDXL image (uncensored)
 !generate audio <text>             — Text-to-speech (Kokoro turbo)
 !generate video <prompt>           — Generate a video (LTX-2)
@@ -123,6 +123,8 @@ Once a companion is selected, any unprefixed message triggers a companion respon
 ```
 
 `!mint bare` is instant — no AI generation needed. `!mint companion` requires BonzAI Desktop to be running for portrait and personality generation.
+
+Minting uses the configured BonzAI companion contract and app chain.
 
 ### Skills
 

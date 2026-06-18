@@ -1,6 +1,6 @@
 # Universal Profiles (LUKSO)
 
-After minting a companion on Base, you can deploy a **Universal Profile** on LUKSO to give your companion a rich on-chain identity across multiple chains.
+After minting a companion through the configured BonzAI companion contract, you can deploy a **Universal Profile** on LUKSO to give your companion a rich on-chain identity across multiple chains.
 
 ## What Is a Universal Profile?
 
@@ -24,7 +24,7 @@ The companion's **agent wallet** (OWS, Privy, or legacy deterministic) is set as
 
 ### From Roleplay Chat
 
-1. Mint your companion on Base first
+1. Mint your companion first
 2. Click the **Universal Profile** button on your minted companion
 3. Confirm the network switch to LUKSO
 4. Approve the deployment transaction (gas only, no mint fee)
@@ -61,7 +61,7 @@ Supported replay targets: Base (8453), Ethereum (1).
 ## Architecture
 
 ```
-Base (8453)                    LUKSO (42)                  Other Chains
+App chain                      LUKSO (42)                  Other Chains
 ┌─────────────────┐           ┌─────────────────┐        ┌──────────────┐
 │ BonzaiCompanions│           │ Universal Profile│        │ Same UP addr │
 │ ERC-721 + 8004  │──deploy──►│ (LSP0)          │──replay─►│ (LSP0)      │
@@ -75,7 +75,7 @@ Base (8453)                    LUKSO (42)                  Other Chains
 
 ## Scope
 
-LUKSO integration in BonzAI is strictly for **Universal Profiles**. There is no companion NFT minting, no content/collectible minting, and no x402 payments on LUKSO. All NFT minting and payments happen on Base.
+LUKSO integration in BonzAI is strictly for **Universal Profiles**. There is no companion NFT minting, no content/collectible minting, and no default provider payment flow on LUKSO. NFT minting and payment flows use the configured app-chain contracts, not LUKSO Universal Profiles.
 
 ## Current Limitations
 

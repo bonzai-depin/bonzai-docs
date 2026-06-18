@@ -1,66 +1,63 @@
-# Installation & Setup
+# Getting Started
 
-## Download
+BonzAI can be used without a wallet. A wallet is only needed when you want to mint, publish, register/claim rewards, launch tokens, or use other onchain economy features.
 
-Download the latest release from [bonzai.sh](https://bonzai.sh) or the [GitHub Releases](https://github.com/bonzai-depin/bonzai-desktop-dapp/releases) page.
+## Choose A Product
 
-BonzAI is available as a macOS DMG. Windows and Linux builds are planned.
+| Product | Start here if you want to... |
+| --- | --- |
+| BonzAI Web | Try local browser AI and learn the product suite |
+| BonzAI+ | Capture web text/images, follow video, generate images in-browser, or build datasets |
+| BonzAI Desktop | Run the full local studio, train, mint, manage companions, or provide compute |
 
-## First Launch
+## Desktop Setup
 
-1. **Open the DMG** and drag BonzAI to your Applications folder
-2. **Launch BonzAI** — the app will start the local inference server automatically
-3. **Connect your wallet** (optional) — click the wallet icon in the bottom bar
-
-The app is fully functional without a wallet. You only need a wallet to mint NFTs, purchase companions, or participate in the P2P network.
+1. Download BonzAI Desktop from the official BonzAI site or release channel.
+2. Install the app.
+3. Launch it and let the local backends initialize.
+4. Download the models you want to use.
+5. Generate locally without connecting a wallet, or connect a wallet for onchain features.
 
 ## Development Setup
 
-If you want to build from source:
-
 ```bash
-# Clone the repository
-git clone https://github.com/bonzai-depin/bonzai-desktop-dapp.git
-cd bonzai-desktop-dapp
-
-# Install Node.js dependencies
 npm install
-
-# Install Python dependencies (for ML inference)
 pip install -r src/server/requirements.txt
-
-# Start in development mode (Electron + hot reload + Flask)
 npm run start
 ```
 
-### Environment Variables
+Desktop runs:
 
-Create a `.env` file in the project root:
+- Electron/Vue UI.
+- OpenClaw for LLM chat completions.
+- Flask backend for image, audio, video, music, and vision.
+- Optional P2P node.
 
-```env
-# Required for NFT metadata uploads
-VITE_PINATA_JWT=your_pinata_jwt_token
+## Wallets
 
-# Optional
-BONZAI_SERVER_PORT=65000        # Flask server port (default: 65000)
-OPENCLAW_API_PORT=3002          # OpenClaw LLM port (default: 3002)
-```
+Connect a wallet when you want to:
 
-## Wallet Support
+- Check BONZAI balance/level.
+- Mint content NFTs.
+- Mint companions.
+- Launch companion/model tokens.
+- Register as a provider.
+- Claim MintPool or provider rewards.
+- Publish records to configured contribution registries.
 
-BonzAI supports the following wallets via Reown AppKit:
+## Networks
 
-- MetaMask
-- Coinbase Wallet
-- Trust Wallet
-- Rabby
-- WalletConnect (QR code for mobile wallets)
+BonzAI is multi-chain, but exact contract addresses are configuration-driven. The product currently uses:
 
-## Supported Networks
+| Network | Role |
+| --- | --- |
+| Ethereum | BONZAI token and configurable app-chain deployments |
+| Arbitrum | BONZAI token |
+| Base | BONZAI token, Uniswap V4, and historical/Base deployment paths |
+| LUKSO | Optional Universal Profiles for companions |
 
-| Network | Chain ID | Purpose |
-|---------|----------|---------|
-| Ethereum | 1 | BONZAI token |
-| Arbitrum | 42161 | BONZAI token |
-| Base | 8453 | Protocol contracts, companion NFTs, content NFTs |
-| LUKSO | 42 | LSP8 content NFTs, Universal Profiles |
+LUKSO Universal Profiles are identity extensions. Do not assume every NFT or payment flow runs on LUKSO.
+
+## Storage
+
+BonzAI does not use Irys. Published metadata and media use IPFS/Pinata or an explicitly configured IPFS-compatible path.
