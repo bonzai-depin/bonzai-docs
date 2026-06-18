@@ -8,6 +8,7 @@
 * [BonzAI Web](products/bonzai-web.md)
 * [BonzAI+ Browser Assistant](products/bonzai-plus.md)
 * [BonzAI Desktop](products/bonzai-desktop.md)
+* [Zero-Human Company](products/zero-human-company.md)
 
 ## Getting Started
 
@@ -21,6 +22,7 @@
 * [Capture, Dataset, Training](user-scenarios/dataset-to-training.md)
 * [Publish and Mint Assets](user-scenarios/publish-and-mint.md)
 * [Companion Economy](user-scenarios/companion-economy.md)
+* [Zero-Human Company](user-scenarios/zero-human-company.md)
 * [Provider Rewards](user-scenarios/provider-rewards.md)
 
 ## AI Generation

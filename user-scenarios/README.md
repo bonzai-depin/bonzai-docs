@@ -14,6 +14,7 @@ This section explains BonzAI through user scenarios. The goal is to make the sys
 | Create a companion | Desktop Roleplay/Browse Agents | Companion NFT mint, ERC-8004 metadata |
 | Launch a companion token | Desktop companion card | Companion token factory + Uniswap V4 hook revenue |
 | Co-own skill revenue | Desktop skill ownership flows | Skill registry + skill ownership contract |
+| Run an AI company | Desktop Company mode | Optional later publishing, minting, or reward routing |
 | Earn as a provider | Desktop Provider mode | Provider registry + service-time reward claim |
 
 ## What Stays Local
@@ -26,4 +27,4 @@ The blockchain stores compact economic records: ownership, token balances, minti
 
 ## What Goes To IPFS
 
-When a published/minted asset needs off-device metadata or media, BonzAI uses IPFS-compatible storage through Pinata or configured app services. BonzAI does not use Irys.
+When a published or minted asset needs public metadata or media, BonzAI uses the storage path configured in the app, such as IPFS pinning.

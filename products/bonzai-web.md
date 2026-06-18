@@ -1,33 +1,38 @@
 # BonzAI Web
 
-BonzAI Web is the browser-native product surface for BonzAI. It introduces users to private local AI and mirrors the product personality of BonzAI Desktop without requiring an immediate desktop install.
+BonzAI Web is the easiest way to meet BonzAI.
 
-## What BonzAI Web Does
+It explains the product, lets supported browsers try local chat, and helps users choose the right next step: install the extension, download Desktop, or share a download link to another device.
 
-- Provides a local browser chat experience when the browser/device supports the required engine.
-- Presents BonzAI's product suite, economy, contribution model, and download/share flows.
-- Uses conversation-style onboarding content rather than the deprecated static homepage.
-- Provides desktop binary download and sharing links where appropriate.
-- Acts as the public front door for BonzAI Web, BonzAI+, and BonzAI Desktop.
+## What It Does
+
+- Introduces the BonzAI product suite.
+- Offers local browser chat where the browser supports it.
+- Explains why BonzAI is private, local, and user-owned.
+- Points users to BonzAI+ and BonzAI Desktop.
+- Handles desktop downloads and share links.
 
 ## Mobile Browser Reality
 
-Chrome iOS and Brave iOS use Apple's WebKit engine. In practice, that means they inherit Safari's current local AI/WebGPU limitations. BonzAI Web should not tell mobile iOS users to download BonzAI Desktop as the primary answer. A better flow is:
+Chrome iOS and Brave iOS still use Apple's WebKit engine. If the local chat engine is not supported there, the user should get a clear explanation and useful next steps.
 
-1. Explain that the current browser engine is not supported for local chat.
-2. Offer desktop downloads only from desktop browsers.
-3. Offer share links for X, Telegram, and Discord so the user can send the desktop binary link to another device.
-4. Point mobile users toward supported browser/device combinations where applicable.
+Good mobile behavior:
 
-## How It Fits The Economy
+1. Say the current browser cannot run the local chat engine.
+2. Do not tell a mobile user to download a desktop app as the only answer.
+3. Offer share links for X, Telegram, and Discord.
+4. Let the user send themselves the desktop download link for later.
 
-BonzAI Web is the public economic surface. It should explain:
+## What BonzAI Web Should Communicate
 
-- Why local AI matters.
-- What BONZAI levels unlock.
-- How capture becomes datasets.
-- How datasets become training material.
-- How trained assets can be minted, published, or routed into revenue systems.
-- How companions, providers, skills, model tokens, and contribution registries fit together.
+BonzAI Web should answer simple questions:
 
-BonzAI Web should not overclaim that every economic primitive is already deployed. It should distinguish active product flows from roadmap-backed registry work.
+- What is BonzAI?
+- What problem does it solve?
+- What is BonzAI Web?
+- What is BonzAI+?
+- What is BonzAI Desktop?
+- Why would I use this instead of a normal AI website?
+- What does BONZAI unlock in the economy?
+
+It should not start with contract details. Users should understand the product before they meet the technical pieces.

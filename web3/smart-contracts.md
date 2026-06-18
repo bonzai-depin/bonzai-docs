@@ -48,7 +48,7 @@ These registries are the onchain layer for Proof-of-Contribution AI. The local C
 
 ## Storage
 
-Contracts should store hashes, URIs, rights, routes, and ownership. Large media, metadata, and datasets should be stored offchain through IPFS/Pinata or another configured IPFS-compatible service. BonzAI does not use Irys.
+Contracts should store hashes, URIs, rights, routes, and ownership. Large media, metadata, and datasets should be stored offchain through the storage path configured in the app.
 
 ## Cross-Contract Flow
 

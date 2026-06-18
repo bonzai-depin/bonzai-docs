@@ -31,4 +31,4 @@ Generated outputs can remain private. If the user chooses to mint:
 3. The user confirms the mint transaction.
 4. Fees route according to the content type and reward structure.
 
-BonzAI does not use Irys.
+Published media and metadata use the storage path configured in the app, such as IPFS pinning.

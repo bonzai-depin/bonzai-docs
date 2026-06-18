@@ -1,59 +1,59 @@
-# Proof-of-Contribution AI
+# Proof of Contribution
 
-Proof-of-Contribution AI is BonzAI's economic thesis: useful AI assets should carry an auditable history of who created, captured, curated, trained, evaluated, served, or improved them.
+BonzAI should be able to answer a simple question:
 
-BonzAI's moat is the full lifecycle:
+**Who helped make this AI asset useful?**
+
+That can mean the person who captured the data, cleaned it, rated it, trained with it, generated with it, served the compute, or turned it into something people use.
+
+## Why It Matters
+
+AI work is usually invisible. A dataset sample, prompt, caption, model adapter, evaluation, provider session, or companion action can make an output better, but normal AI products do not remember that work or reward it.
+
+BonzAI is built to keep that trail.
+
+## The BonzAI Loop
 
 ```text
-BonzAI+ captures useful data
--> Desktop imports and trains with it
--> assets are generated, evaluated, minted, or published
--> providers serve inference
--> skills and companions use the outputs
--> revenue flows back to useful contributors
--> BONZAI coordinates access, trust, and rewards
+capture useful material
+-> clean and describe it
+-> train or generate with it
+-> publish or mint the result
+-> use it in companions, companies, skills, or models
+-> route rewards back to the useful contributors
 ```
 
-## Why This Is Different
+## What Can Count As A Contribution
 
-Many AI economies begin at model training or GPU markets. BonzAI starts earlier: the user's browser, desktop, wallet, datasets, companions, prompts, evaluations, generated media, and machines all become possible contribution surfaces.
+- Captured text.
+- Captured images.
+- Video transcript cues.
+- Dataset ratings.
+- Generated media.
+- Model adapters.
+- Skills.
+- Evaluations.
+- Provider compute time.
+- Companion actions.
+- Company deliverables.
 
-## Contribution Types
+## Where Each Product Fits
 
-BonzAI contribution records can represent:
-
-- `dataset_text`
-- `dataset_image`
-- `dataset_video`
-- `appraisal`
-- `generation`
-- `model_adapter`
-- `skill`
-- `evaluation`
-- `provider_time`
-- `companion_action`
-
-## Current Product Mapping
-
-| Layer | Product | Contribution role |
-| --- | --- | --- |
-| Capture | BonzAI+ | Turns web text, images, video transcript cues, and generated images into structured samples |
-| Production | BonzAI Desktop | Imports packs, trains models, mints content, manages companions, runs P2P |
-| Public surface | BonzAI Web | Explains markets, levels, products, contribution economy, and onboarding |
-| Onchain rails | Contracts/registries | Store hashes, ownership, licenses, routes, and rewards |
+| Product | Role |
+| --- | --- |
+| BonzAI+ | Captures useful material from the browser and turns it into dataset records |
+| BonzAI Desktop | Imports records, trains, generates, mints, runs companions, runs companies, and tracks work |
+| BonzAI Web | Explains the system and helps users start with the right product |
+| Onchain records | Store compact proof: hashes, owners, licenses, routes, and rewards |
 
 ## What BONZAI Coordinates
 
-BONZAI should become the coordination layer for:
+BONZAI is useful when work becomes shared, published, minted, served, or monetized. It can coordinate:
 
-- Dataset curation.
-- Model publishing.
-- Fine-tune ownership.
-- Skill publishing.
-- Companion economic identity.
-- P2P provider reputation.
-- Appraisal/evaluation work.
-- Generated media provenance.
-- Revenue routing across contributors.
+- Who can publish higher-value assets.
+- Who gets reputation for useful curation.
+- Who can serve compute.
+- Who earns when a dataset, model, skill, companion, or company output is used.
+- How revenue is routed across the people and machines that contributed.
 
-The goal is not vague governance. The goal is to answer: who contributed what, how useful was it, who can publish it, who earns from it, and how does the network trust it?
+The point is not to make users think about contracts first. The point is to make useful AI work ownable and rewardable.

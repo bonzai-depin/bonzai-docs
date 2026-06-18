@@ -1,33 +1,45 @@
 # Product Suite
 
-BonzAI is one system with three user-facing products. Each product has a different job, but they are designed to form a single local AI lifecycle.
+BonzAI is three products that work together.
 
-## Product Roles
+The easiest way to understand them:
 
-| Product | Primary role | Typical user intent |
-| --- | --- | --- |
-| **BonzAI Web** | Public local AI surface | Try BonzAI, chat locally, learn the product suite, download/share Desktop binaries |
-| **BonzAI+** | Browser capture and assistant layer | Ask about a page, capture text/images, follow video, generate images, curate datasets |
-| **BonzAI Desktop** | Full local production studio | Run larger local models, train/fine-tune, mint, manage companions, serve or consume P2P inference |
+```text
+BonzAI Web helps people discover and try BonzAI.
+BonzAI+ helps people capture and understand the web.
+BonzAI Desktop turns private AI work into assets, training runs, companions, companies, and rewards.
+```
 
-## How They Work Together
+## The Three Products
 
-1. A user discovers BonzAI through **BonzAI Web**.
-2. They install **BonzAI+** to capture useful web context.
-3. BonzAI+ turns browsing into structured samples, images, transcripts, generated images, tags, ratings, and contribution metadata.
-4. The user exports those records into **BonzAI Desktop**.
-5. Desktop validates/imports the records, trains or generates with them, and can mint or publish resulting assets.
-6. Onchain systems route rights, revenue, and reputation back to creators, providers, companion owners, skill co-owners, model creators, and future contribution registries.
+| Product | What problem it solves |
+| --- | --- |
+| **BonzAI Web** | "I want to understand BonzAI and try private AI in my browser." |
+| **BonzAI+** | "I want an AI assistant while browsing, and I want to save useful text, images, videos, and metadata." |
+| **BonzAI Desktop** | "I want the full private AI studio on my machine, including generation, training, minting, companions, companies, and P2P." |
 
-## Local-First Does Not Mean One Device Does Everything
+## How They Fit Together
 
-BonzAI is local-first, but different surfaces have different constraints:
+1. A user discovers BonzAI on **BonzAI Web**.
+2. They install **BonzAI+** to use AI inside the browser.
+3. BonzAI+ helps them capture useful web material: text, images, video notes, generated images, tags, ratings, and source links.
+4. They export that material into **BonzAI Desktop**.
+5. Desktop can turn it into training data, generated media, minted assets, companions, company work, or provider activity.
+6. The onchain economy can route ownership and rewards when the user chooses to publish, mint, serve, or sell.
 
-- Browser AI depends on browser APIs, WebGPU/WebNN availability, memory, and mobile WebKit limitations.
-- BonzAI+ runs inside browser extension constraints.
-- Desktop can use larger local models, Python backends, GPU/VRAM detection, and Electron-native storage.
-- P2P provider mode lets users serve local compute to others while keeping the protocol decentralized.
+## Why This Matters
 
-## No Irys
+BonzAI is not just another chat app. It is a workflow for people who want AI to become part of their own creative, business, and ownership stack.
 
-BonzAI does not use Irys. Published metadata and content should be documented as IPFS/Pinata or another explicitly configured IPFS-compatible path.
+With BonzAI, a useful idea can move through the whole lifecycle:
+
+```text
+discover -> capture -> generate -> train -> publish -> mint -> automate -> earn
+```
+
+## Product Map
+
+- [BonzAI Web](bonzai-web.md)
+- [BonzAI+ Browser Assistant](bonzai-plus.md)
+- [BonzAI Desktop](bonzai-desktop.md)
+- [Zero-Human Company](zero-human-company.md)

@@ -1,47 +1,55 @@
 # Welcome to BonzAI
 
-BonzAI is a local-first AI product suite and onchain economy. It combines private browser AI, a browser extension for capture and dataset creation, a desktop production studio, autonomous AI companions, P2P inference, creator minting, and contribution-based rewards.
+BonzAI helps people use AI without giving up ownership of their work.
 
-The product suite has three main surfaces:
+Most AI products ask you to send prompts, files, images, business ideas, and training data to someone else's servers. BonzAI takes the opposite path: chat, generate, capture, train, automate, mint, and earn from your own machine first.
 
-| Product | What it does | Where it fits |
-| --- | --- | --- |
-| **BonzAI Web** | Local browser chat and public product surface | The front door for private AI, onboarding, downloads, and product education |
-| **BonzAI+** | Browser assistant extension with Chat, Live, Imagine, and Dataset modes | Captures useful text, images, video context, generated images, and metadata from the web |
-| **BonzAI Desktop** | Electron studio for local inference, training, minting, companions, P2P, and onchain actions | Turns local AI work into datasets, models, assets, companion identities, and rewards |
+## The Problem BonzAI Solves
 
-BonzAI is not just "a local model app." The long-term primitive is **Proof-of-Contribution AI**: useful AI assets should carry provenance, ownership, quality signals, and reward routes from the moment they are captured to the moment they are trained, generated, minted, served, or reused.
+AI is becoming the new creative and operational layer of the internet, but most users are stuck with a bad tradeoff:
 
-```mermaid
-flowchart LR
-  Web["BonzAI Web<br/>local browser AI + onboarding"]
-  Plus["BonzAI+<br/>capture, live transcript, image generation, datasets"]
-  Desktop["BonzAI Desktop<br/>local inference, training, minting, companions"]
-  Registry["Contribution + asset registries<br/>hashes, licenses, ownership, attribution"]
-  Economy["BONZAI economy<br/>levels, pools, providers, companions, skills, model tokens"]
+- Use powerful cloud tools and give up privacy, control, and upside.
+- Download a local model and get privacy, but no product workflow, no ownership layer, no revenue system, and no way to turn work into reusable assets.
 
-  Web --> Plus
-  Plus --> Desktop
-  Desktop --> Registry
-  Registry --> Economy
-  Economy --> Desktop
-```
+BonzAI fills that gap. It gives users a private AI workspace, a browser assistant, a desktop studio, autonomous companions, company automation, dataset/training tools, and an onchain economy for ownership and rewards.
 
-## Core Principles
+## The Three Products
 
-- **Local-first AI**: Generation runs on the user's machine or browser whenever the selected product and device support it.
-- **Free generation**: BONZAI levels do not gate normal generation. Levels gate minting rights, participation, publishing, and economic surfaces.
-- **User-owned outputs**: Users can keep work private, export it, mint it, publish it, or route it into training workflows.
-- **Contribution provenance**: Dataset samples, evaluations, model adapters, generated assets, provider time, and companion actions can become signed contribution records.
-- **Onchain rewards**: Revenue can flow through mint pools, provider-side pool shares, companion token hooks, skill co-ownership, model/fine-tune tokens, and future contribution registries.
+| Product | Plain-English purpose |
+| --- | --- |
+| **BonzAI Web** | Try BonzAI in the browser, learn what the product does, and get the right download or extension link. |
+| **BonzAI+** | A browser assistant that can chat about pages, capture text/images, follow videos, generate images, and build datasets from the web. |
+| **BonzAI Desktop** | The full local AI studio: generate text/images/audio/video/3D, train with datasets, mint assets, run companions, form Zero-Human Companies, and join the provider economy. |
 
-## Storage Policy
+## What You Can Do With BonzAI
 
-BonzAI does **not** use Irys at all. When content or metadata must be published off-device, the current product documentation assumes IPFS pinning through Pinata or another IPFS-compatible path configured by the app. If older source names or variables mention Irys, treat them as legacy naming only, not as the active storage architecture.
+- Chat privately with local AI.
+- Generate images, audio, music, video, and 3D scenes.
+- Capture useful text and images while browsing.
+- Turn captured material into datasets.
+- Import datasets into Desktop for training and fine-tuning.
+- Mint generated content as ownable assets.
+- Create autonomous AI companions with wallets and onchain identity.
+- Launch companion and model tokens.
+- Form Zero-Human Companies that plan, assign, execute, review, and log work.
+- Share compute as a provider and earn from service-time rewards.
 
-## Read This First
+## Why BONZAI Exists
 
-- To understand the products, start with [Product Suite](products/README.md).
-- To understand real user flows, start with [Scenario Map](user-scenarios/README.md).
-- To understand token levels and rewards, start with [Reward Structure & Epochs](web3/reward-structure.md).
-- To understand the new economic thesis, start with [Proof-of-Contribution AI](proof-of-contribution/README.md).
+BONZAI is not a paywall for basic generation. It coordinates ownership and rewards around useful AI work:
+
+- Who made this?
+- Who captured or curated the data?
+- Who trained or evaluated it?
+- Who served the compute?
+- Who owns the resulting asset?
+- Who should earn when it is used?
+
+That is the larger idea behind BonzAI: private AI that can become ownable, reusable, and economically meaningful.
+
+## Start Here
+
+- New users: [Product Suite](products/README.md)
+- Real examples: [Scenario Map](user-scenarios/README.md)
+- Desktop automation: [Zero-Human Company](products/zero-human-company.md)
+- Rewards and claims: [Reward Structure & Epochs](web3/reward-structure.md)

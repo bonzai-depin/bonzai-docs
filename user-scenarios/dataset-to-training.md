@@ -61,4 +61,4 @@ The user can train locally with the dataset. If they mint or publish an asset:
 
 - Metadata/media is uploaded to IPFS/Pinata where needed.
 - Hashes, licenses, owners, and revenue routes can be written to registries when configured.
-- BonzAI does not use Irys.
+- Publishing uses the storage path configured in the app, such as IPFS pinning.

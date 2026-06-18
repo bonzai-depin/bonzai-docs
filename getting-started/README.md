@@ -60,4 +60,4 @@ LUKSO Universal Profiles are identity extensions. Do not assume every NFT or pay
 
 ## Storage
 
-BonzAI does not use Irys. Published metadata and media use IPFS/Pinata or an explicitly configured IPFS-compatible path.
+Private work stays on the user's device. When the user chooses to publish or mint, metadata and media use the storage path configured in the app, such as IPFS pinning.

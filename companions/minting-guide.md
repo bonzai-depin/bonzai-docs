@@ -30,7 +30,7 @@ You can use companions locally without minting. Mint only when you want onchain 
 6. Confirm the transaction.
 7. The companion NFT receives an ERC-8004 identity and agent wallet data.
 
-BonzAI does not use Irys for companion metadata.
+Companion metadata is published through the storage path configured in the app, such as IPFS pinning.
 
 ## After Minting
 
