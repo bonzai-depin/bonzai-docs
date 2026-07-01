@@ -1,45 +1,31 @@
-# Product Suite
+# The BonzAI Suite
 
-BonzAI is three products that work together.
+BonzAI is one continuous local AI experience across browser and desktop.
 
-The easiest way to understand them:
+## The three products
 
-```text
-BonzAI Web helps people discover and try BonzAI.
-BonzAI+ helps people capture and understand the web.
-BonzAI Desktop turns private AI work into assets, training runs, companions, companies, and rewards.
-```
-
-## The Three Products
-
-| Product | What problem it solves |
+| Product | Plain-English job |
 | --- | --- |
-| **BonzAI Web** | "I want to understand BonzAI and try private AI in my browser." |
-| **BonzAI+** | "I want an AI assistant while browsing, and I want to save useful text, images, videos, and metadata." |
-| **BonzAI Desktop** | "I want the full private AI studio on my machine, including generation, training, minting, companions, companies, and P2P." |
+| **BonzAI Web** | Meet BonzAI and use private browser chat where supported |
+| **BonzAI+** | Work with the page beside you: chat, capture, understand video, generate images, and curate datasets |
+| **BonzAI Desktop** | Create with stronger local models, remember, train, automate, publish, stake, and participate in markets |
 
-## How They Fit Together
+## How work moves
 
-1. A user discovers BonzAI on **BonzAI Web**.
-2. They install **BonzAI+** to use AI inside the browser.
-3. BonzAI+ helps them capture useful web material: text, images, video notes, generated images, tags, ratings, and source links.
-4. They export that material into **BonzAI Desktop**.
-5. Desktop can turn it into training data, generated media, minted assets, companions, company work, or provider activity.
-6. The onchain economy can route ownership and rewards when the user chooses to publish, mint, serve, or sell.
+Example:
 
-## Why This Matters
+1. You discover BonzAI in Web.
+2. BonzAI+ captures useful text/images and records their source and permissions.
+3. Desktop imports the Contribution Pack.
+4. You curate and train a model locally.
+5. The model is validated and receives provenance.
+6. You keep it private or publish/mint/tokenize it.
+7. If it earns, immutable contribution shares and an additive staking bonus route value to eligible participants.
 
-BonzAI is not just another chat app. It is a workflow for people who want AI to become part of their own creative, business, and ownership stack.
+You do not need to use every step. The suite is valuable as a private workspace before any economic action.
 
-With BonzAI, a useful idea can move through the whole lifecycle:
-
-```text
-discover -> capture -> generate -> train -> publish -> mint -> automate -> earn
-```
-
-## Product Map
+## Product links
 
 - [BonzAI Web](bonzai-web.md)
-- [BonzAI+ Browser Assistant](bonzai-plus.md)
+- [BonzAI+](bonzai-plus.md)
 - [BonzAI Desktop](bonzai-desktop.md)
-- [Zero-Human Company](zero-human-company.md)

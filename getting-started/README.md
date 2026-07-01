@@ -1,63 +1,60 @@
-# Getting Started
+# Choose Your BonzAI
 
-BonzAI can be used without a wallet. A wallet is only needed when you want to mint, publish, register/claim rewards, launch tokens, or use other onchain economy features.
+You do not need to understand AI models, blockchains, or computer hardware to begin. Start with what you want to do.
 
-## Choose A Product
+## I want to try BonzAI now
 
-| Product | Start here if you want to... |
-| --- | --- |
-| BonzAI Web | Try local browser AI and learn the product suite |
-| BonzAI+ | Capture web text/images, follow video, generate images in-browser, or build datasets |
-| BonzAI Desktop | Run the full local studio, train, mint, manage companions, or provide compute |
+Open **BonzAI Web** at [bonzai.sh](https://bonzai.sh). It is the quickest introduction and can run private browser chat on supported desktop browsers.
 
-## Desktop Setup
+Choose this when you want to:
 
-1. Download BonzAI Desktop from the official BonzAI site or release channel.
-2. Install the app.
-3. Launch it and let the local backends initialize.
-4. Download the models you want to use.
-5. Generate locally without connecting a wallet, or connect a wallet for onchain features.
+- ask a question without installing the full studio;
+- understand what BonzAI can do;
+- find the correct Desktop download;
+- install the BonzAI+ browser assistant.
 
-## Development Setup
+## I want BonzAI beside every website
 
-```bash
-npm install
-pip install -r src/server/requirements.txt
-npm run start
-```
+Install **BonzAI+** in a Chromium-based desktop browser. It opens in the browser side panel.
 
-Desktop runs:
+Choose this when you want to:
 
-- Electron/Vue UI.
-- OpenClaw for LLM chat completions.
-- Flask backend for image, audio, video, music, and vision.
-- Optional P2P node.
+- chat normally or ask about a selected image or piece of text;
+- save useful material from webpages;
+- understand a video while it plays;
+- generate images inside the browser;
+- prepare clean datasets for BonzAI Desktop.
 
-## Wallets
+## I want the complete private AI studio
 
-Connect a wallet when you want to:
+Install **BonzAI Desktop**.
 
-- Check BONZAI balance/level.
-- Mint content NFTs.
-- Mint companions.
-- Launch companion/model tokens.
-- Register as a provider.
-- Claim MintPool or provider rewards.
-- Publish records to configured contribution registries.
+Choose this when you want to:
 
-## Networks
+- chat with a wider choice of local models;
+- generate images, speech, music, video, and interactive 3D scenes;
+- train or uncensor compatible models;
+- build persistent companion memory;
+- run agentic business teams;
+- mint, stake, publish, provide compute, or participate in BonzAI markets.
 
-BonzAI is multi-chain, but exact contract addresses are configuration-driven. The product currently uses:
+## Do I need a wallet?
 
-| Network | Role |
-| --- | --- |
-| Ethereum | BONZAI token and configurable app-chain deployments |
-| Arbitrum | BONZAI token |
-| Base | BONZAI token, Uniswap V4, and historical/Base deployment paths |
-| LUKSO | Optional Universal Profiles for companions |
+No. A wallet is not needed for normal private creation.
 
-LUKSO Universal Profiles are identity extensions. Do not assume every NFT or payment flow runs on LUKSO.
+Connect one only when you choose an onchain action such as staking, minting, publishing an economic asset, launching a token, registering as a provider, buying an asset, or claiming revenue.
 
-## Storage
+## Do I need to download a model?
 
-Private work stays on the user's device. When the user chooses to publish or mint, metadata and media use the storage path configured in the app, such as IPFS pinning.
+Usually, yes. A model is the part that performs the AI work. BonzAI downloads it to your device the first time you select it, then reuses the cached copy.
+
+Think of this like downloading an offline map: the first use takes longer, but later use does not need to fetch the same map again.
+
+## Recommended path for a new user
+
+1. Visit BonzAI Web and ask one question.
+2. Install BonzAI+ if you spend time researching, watching videos, or collecting examples online.
+3. Install BonzAI Desktop when you want stronger models, media generation, memory, training, companions, business teams, or ownership features.
+4. Connect a wallet later, only when the onchain economy becomes useful to you.
+
+Continue with [Your First 10 Minutes](first-10-minutes.md).

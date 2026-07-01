@@ -22,6 +22,8 @@ BonzAI content NFTs let users mint locally generated assets as onchain collectib
 5. The user confirms the mint transaction.
 6. Mint fees route through treasury and MintPool.
 
+The owner can optionally make an eligible minted generation discoverable in the marketplace. NSFW generations are excluded from marketplace discovery.
+
 Private files stay local until the user chooses to mint. Published metadata and media use the storage path configured in the app, such as IPFS pinning.
 
 ## Per-Type Mint Fees

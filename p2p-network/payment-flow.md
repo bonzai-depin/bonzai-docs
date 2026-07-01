@@ -1,35 +1,28 @@
-# Provider Rewards
+# Payments & Rewards
 
-BonzAI provider rewards are currently best understood as service-time rewards, not direct per-request checkout payments.
+## Direct paid inference
 
-## Current Default: Service-Time Rewards
+For an enabled remote x402 flow:
 
-Provider-side rewards come from the provider share of MintPool deposits.
+1. The consumer selects a provider and priced pipeline.
+2. BonzAI displays the payment requirement.
+3. The wallet signs the structured payment authorization.
+4. The provider performs the accepted inference.
+5. The payment contract settles ETH on the configured network.
+6. The platform retains its configured fee (currently 2.5% in the Desktop service configuration).
+
+Never approve a payment whose provider, chain, amount, or pipeline differs from what you selected.
+
+## Service-time rewards
+
+Where Provider Registry, ServiceTime, and MintPool contracts are configured, completed service time can contribute to provider-side epoch rewards:
 
 ```text
-provider reward = provider seconds / total provider seconds * provider-side pool amount
+provider share = provider eligible seconds / total eligible seconds
 ```
 
-## Provider Claim Flow
+The epoch must finalize before a claim, and block-gap protections apply.
 
-1. Run BonzAI Desktop in Provider mode.
-2. Register or advertise provider capabilities where the registry path is enabled.
-3. Serve inference requests.
-4. Record service time for the epoch.
-5. Wait for the epoch to finalize.
-6. Claim provider rewards from the service-time/MintPool flow.
+## v4 contribution routes
 
-## Funding Source
-
-Whenever funds enter a MintPool bucket, the deposit is split into:
-
-- Holder side.
-- Provider side.
-
-The provider side funds service-time rewards.
-
-## x402 / Direct Payment Rails
-
-BonzAI code may include x402-inspired payment infrastructure for direct ETH/USDC request payments. Treat these as legacy, optional, or future rails unless the product UI explicitly presents them as the active flow.
-
-For current user-facing docs, do not imply that P2P inference always costs ETH/USDC per request.
+Provider time can also become a Proof-of-Contribution record for an asset/job route. This is distinct from direct request payment and legacy MintPool epochs.

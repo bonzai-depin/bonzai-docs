@@ -1,75 +1,66 @@
-# Zero-Human Company
+# Agentic Teams for Business
 
-Zero-Human Company is a BonzAI Desktop mode for turning a mission into an AI-run operation.
+BonzAI's Company area is a local AI back office for small businesses. It helps existing people automate repeatable work without asking them to replace their team, redesign every process, or operate a pretend autonomous corporation.
 
-It is not just a chatbot. A company has a charter, roles, goals, issues, approvals, treasury tracking, connectors, deliverables, and an audit trail.
+## The value in one sentence
 
-## What Problem It Solves
+Describe an outcome your business already needs, connect the tools you already use, approve the important boundaries, and let a small team of companions prepare and carry out the repeatable steps.
 
-A lot of valuable work is not one prompt. It is a loop:
+## Good first outcomes
 
-```text
-set a goal -> break it into tasks -> assign roles -> produce work -> review it -> publish or act -> track what happened
-```
+- qualify and follow up inbound leads;
+- prepare approved quotes and invoices;
+- match payments to invoices;
+- summarize overdue accounts;
+- draft customer replies in the company's voice;
+- prepare weekly sales, finance, or operations updates;
+- turn completed work into reusable process memory.
 
-Most AI tools stop at the first answer. Zero-Human Company is designed for the loop.
+## How a team works
 
-## What A Company Contains
+1. **Outcome:** you describe what “done” means.
+2. **Process:** BonzAI maps the steps to your current way of working.
+3. **Roles:** the team uses existing companions or provisions a role-specific companion.
+4. **Tools:** you connect only the business systems that role needs.
+5. **Boundaries:** you choose what can run, what only notifies, and what needs approval.
+6. **Work:** tasks move through Open, In Progress, Blocked, Done, or Cancelled.
+7. **Evidence:** results, approvals, connector actions, and failures enter the audit history.
+8. **Learning:** useful outcomes enrich isolated team-role memory for future work.
 
-| Part | Plain-English meaning |
+## Multiple teams
+
+One back office can operate several teams at the same time, such as Sales, Finance, Customer Support, and Operations. Each team has its own roles, priorities, permissions, and memory. An all-teams view lets the owner see today's work and bottlenecks across the business.
+
+## Human control
+
+Autonomy is configured by consequence:
+
+| Level | Example |
 | --- | --- |
-| Charter | The company's mission, rules, roles, budgets, and approval policy |
-| Roles | CEO, CFO, CPO, CMO, COO, Counsel, producers, and other operators |
-| Goals | What the company is trying to accomplish |
-| Issues | Work items created from goals |
-| Approvals | Actions that need the owner to approve before they run |
-| Treasury | Local bookkeeping for money in, money out, and spending limits |
-| Catalog | Published outputs and deliverables |
-| Connectors | External tools/accounts the company can use |
-| Audit log | A record of what happened, who did it, and why |
+| Prepare only | Draft an invoice or reply but do not send it |
+| Notify and run | Update a low-risk internal record and report what happened |
+| Approval required | Send money, issue a refund, publish externally, change budgets, or alter team rules |
 
-## How It Works
+The little notification control on a teammate determines whether their activity creates visible alerts; it does not grant new permissions.
 
-1. The user forms a company from a template or advanced form.
-2. BonzAI creates a charter.
-3. The company staffs roles with companions and models.
-4. The CEO turns the mission into goals.
-5. Goals become issues.
-6. Roles work on the issues using local models, skills, and connectors.
-7. Sensitive actions can pause for approval.
-8. Completed work is logged and can be published, exported, or reused.
+## What “Prepare work” means
 
-## Templates
+Prepare work asks the team to turn the selected goal into concrete to-do items, owners, dependencies, expected evidence, and approval needs. It does not silently execute external actions.
 
-BonzAI Desktop includes templates for real company types, such as:
+## Connectors
 
-- UGC Campaign Studio.
-- HVAC Service Company.
-- Print-on-Demand Shop.
-- Solo SaaS Company.
-- Other vertical businesses built from roles, skills, connectors, and goals.
+Production connector credentials are encrypted locally through the operating system where available. Network requests pass through an allowlisted desktop proxy. Available production actions include Stripe, HubSpot, QuickBooks, Sage Accounting, and Slack; other connectors may appear as their production executors are completed.
 
-Templates give users a fast start without designing an operating system from scratch.
+Demo mode is visibly simulated and never pretends a mock action changed a real account.
 
-## Human Control
+## Agent job board
 
-"Zero-Human" does not mean reckless automation. The owner can choose how much control to keep:
+The Jobs area extends the back office beyond owned teams. A business can post an outcome and hire a companion with relevant memory, skills, and verified reputation. Work is milestone-based and evidence-backed.
 
-- Auto-run safe actions.
-- Notify and run medium-risk actions.
-- Require approval for sensitive actions.
+## Memory and improvement
 
-Examples of sensitive actions include large spending, hiring/firing, charter changes, and publishing.
+Each companion keeps identity memory plus separate memory for every team role and job. This separation protects client/business context while allowing the companion to improve within the engagement. Approved outcomes can later support evaluation and reinforcement-learning datasets.
 
-## How It Fits BonzAI
+## Economic layer
 
-Zero-Human Company connects the rest of BonzAI:
-
-- It can use local text, image, audio, video, and 3D generation.
-- It can use companions as operators.
-- It can use skills and connectors.
-- It can produce content that later becomes minted assets.
-- It can track work in an audit log.
-- It can eventually route value through the BonzAI economy.
-
-The big idea: BonzAI is not only for creating assets. It can also run the work that creates, improves, markets, sells, and manages those assets.
+Companion work can carry Proof of Contribution. A deliverable may record the companion, owner, human approval, model, dataset, skill, provider time, and team context that made it possible. If the work earns revenue, the route can reward its recorded contributors; staked `$BONZAI` supplies additive utility and trust weight without replacing contribution ownership.

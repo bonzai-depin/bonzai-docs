@@ -1,53 +1,42 @@
-# Uniswap V4 Hooks
+# Uniswap Markets
 
-BonzAI uses a custom Uniswap V4 `afterSwap` hook to capture fees from companion token and fine-tune/model token swaps. Hook fees are accumulated and claimed/distributed through contract functions rather than being a normal offchain payment flow.
+BonzAI uses Uniswap V4 liquidity and a one-percent contribution hook for companion and validated model tokens.
 
-## Companion Token Hook Split
+## Companion tokens
 
-When a companion token swap generates hook fees:
+The companion factory creates one billion tokens:
 
-| Recipient | Share |
+- 96% enters permanent liquidity;
+- 4% seeds the companion economy;
+- the liquidity position is locked at the dead address.
+
+The one-percent hook contribution is divided:
+
+| Recipient | Share of hook contribution |
 | --- | ---: |
-| Companion agent wallet | 40% |
-| Companion NFT owner | 40% |
+| Companion wallet | 40% |
+| Companion owner | 40% |
 | Treasury | 10% |
-| MintPool | 10% |
+| Contribution/Mint pools | 10% |
 
-The MintPool share is spread across all six content buckets according to hook logic.
+Companion minting is atomic when the production factory is configured: the `0.30 ETH` default mint includes `0.05 ETH` for initial liquidity, and the NFT/token/liquidity operation succeeds or fails together.
 
-## Fine-Tune / Model Token Hook Split
+## Fine-tuned and abliterated model tokens
 
-When a fine-tune or model token swap generates hook fees:
+The model factory also creates one billion tokens with 96% permanent liquidity and 4% creator allocation.
 
-| Recipient | Share |
+The one-percent hook contribution is divided:
+
+| Destination | Share |
 | --- | ---: |
-| Model/fine-tune creator | 80% |
+| Model beneficiary or contribution route | 80% |
 | Treasury | 10% |
-| MintPool | 10% |
+| Training/Mint pool | 10% |
 
-The MintPool share is spread across all six content buckets.
+When the Revenue Router is configured, the model's beneficiary amount can be flushed into its provenance route for downstream contributor revenue.
 
-## Companion Token Launch
+## Markets view
 
-The companion token factory creates an ERC-20 token and initializes Uniswap V4 liquidity. The current launch pattern uses:
+Desktop reads issued factory assets, locates their Uniswap pools, and shows price, liquidity, volume, movement, locally accumulated chart history, and tokenomics. External indexing can take time after launch.
 
-- 1 billion total supply.
-- 96% paired into Uniswap V4 liquidity.
-- 4% sent to the companion wallet.
-- LP effectively locked/burned at the dead address.
-
-The companion NFT owner must own the companion to launch its token.
-
-## Claiming Hook Fees
-
-Hook fees accrue inside the hook accounting system. Claim functions route accumulated shares to beneficiaries, treasury, and pools.
-
-## Why This Matters
-
-The hook makes companion and model tokens economically useful beyond trading. Swaps can route value to:
-
-- The companion's autonomous wallet.
-- The companion owner.
-- The model/fine-tune creator.
-- Treasury.
-- MintPool participants and providers.
+Token markets are risky. Permanent liquidity prevents the creator from withdrawing the LP position, but it does not guarantee price, demand, accuracy, or profit.

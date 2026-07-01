@@ -1,34 +1,27 @@
 # AI Generation
 
-BonzAI generation is local-first. Normal generation is free and does not require a wallet. Wallets and BONZAI levels matter when the user mints, publishes, participates in pools, launches tokens, or claims rewards.
+BonzAI runs generation locally whenever the selected product and device support it. Normal private creation does not require a wallet.
 
-## Product Surfaces
+## Choose the right product
 
-| Product | Generation role |
+| Product | Best generation experience |
 | --- | --- |
-| BonzAI Web | Browser local chat where supported |
-| BonzAI+ | Side-panel chat, live video/screen understanding, in-browser image generation, dataset smart analysis |
-| BonzAI Desktop | Full local generation studio for text, image, audio, music, video, vision, and 3D scene generation |
+| BonzAI Web | Lightweight local browser chat |
+| BonzAI+ | Side-panel chat, target analysis, Live video understanding, and browser image generation |
+| BonzAI Desktop | Complete text, image, speech, music, video, vision, and interactive 3D workspace |
 
-## Desktop Pipelines
+## A generation's lifecycle
 
-| Type | Backend | Notes |
-| --- | --- | --- |
-| Text | OpenClaw | OpenAI-compatible chat completions through the local OpenClaw server |
-| Image | Flask | Turbo, quality, standard, and advanced image endpoints |
-| Audio | Flask | Kokoro fast TTS, Qwen-style persona TTS |
-| Music | Flask | ACE-Step music generation |
-| Video | Flask | LTX-2 text-to-video and image-to-video |
-| Vision | Flask | Visual analysis endpoint |
-| 3D | Renderer + LLM | AI-generated Three.js code and WebGL preview, not TRELLIS mesh generation |
+1. You choose a local model and settings.
+2. BonzAI loads cached weights or downloads them once.
+3. The result is produced on your device.
+4. It enters local history with useful settings and provenance.
+5. You decide whether to keep it private, export it, use it as training data, or publish/mint it.
 
-## Minting Generated Outputs
+## Wallet boundary
 
-Generated outputs can remain private. If the user chooses to mint:
+Wallets matter only when a generation becomes part of the onchain economy: minting, registry publication, token issuance, revenue routing, staking, or claims.
 
-1. Desktop checks wallet and BONZAI level/unlock status.
-2. Metadata/media is uploaded to IPFS/Pinata or configured IPFS-compatible storage.
-3. The user confirms the mint transaction.
-4. Fees route according to the content type and reward structure.
+## Model licenses
 
-Published media and metadata use the storage path configured in the app, such as IPFS pinning.
+Open Help → Licenses in Desktop to read and sort the licenses for installed/supported models. A local model is not automatically unrestricted; its license still applies.

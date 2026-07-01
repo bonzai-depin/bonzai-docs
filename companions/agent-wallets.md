@@ -28,7 +28,7 @@ For users who authenticate via Privy (email/social login):
 ### Local Deterministic (Legacy)
 
 - Wallet derived deterministically: `keccak256(masterSecret + companionId)`
-- Private key stored locally in Electron Store
+- Legacy key material is stored locally and can be migrated to the encrypted OWS vault
 - Still supported for existing companions — new companions use OWS
 - Can be migrated to OWS via the "Migrate to OWS" button in Browse Agents
 
@@ -38,7 +38,7 @@ For users who authenticate via Privy (email/social login):
 - **Autonomous payments** — companions can pay for enabled onchain actions, including optional/legacy direct-payment rails where the product exposes them
 - **Skill purchases** — companions can autonomously purchase skills
 - **Social actions** — fund Moltbook posts and interactions
-- **Token holdings** — BONZAI balance influences skill co-ownership weight
+- **Staked utility** — staked BONZAI can influence skill co-ownership, hiring trust, and reward routing weight
 
 ## On-Chain Storage
 

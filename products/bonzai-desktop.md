@@ -1,43 +1,43 @@
 # BonzAI Desktop
 
-BonzAI Desktop is the full private AI studio.
+BonzAI Desktop is the complete private AI workspace. It combines creation, memory, training, automation, ownership, and markets in one application running from your computer.
 
-It runs on the user's computer and brings together local generation, datasets, training, minting, companions, company automation, and P2P compute.
+## What makes it different
 
-## What Problem It Solves
-
-Downloading a model is not enough. People need a place to use models, organize outputs, train with data, publish assets, automate work, and keep ownership.
-
-BonzAI Desktop is that place.
-
-## What It Can Do
-
-- Chat with local LLMs.
-- Generate images, audio, music, video, and 3D scenes.
-- Analyze images and visual material.
-- Import datasets from BonzAI+.
-- Train or fine-tune with curated data.
-- Mint generated content.
-- Create and mint AI companions.
-- Launch companion or model tokens.
-- Form Zero-Human Companies.
-- Run as a P2P provider or consumer.
-- Track wallet level, rewards, and claims.
-
-## Local Engines
-
-| Engine | What it does |
-| --- | --- |
-| OpenClaw | Local LLM chat through an OpenAI-compatible API |
-| Flask backend | Image, audio, video, music, and vision pipelines |
-| Electron app | Desktop UI, storage, wallet, P2P, and orchestration |
-
-## Where Desktop Fits
-
-BonzAI+ is where a lot of useful material is captured. Desktop is where that material becomes production work:
+A normal local model runner gives you a prompt box. BonzAI Desktop keeps the work around that prompt useful:
 
 ```text
-captured data -> dataset -> training -> generation -> minting -> rewards
+conversation and files
+→ reusable memory and datasets
+→ generations and trained models
+→ companions and business work
+→ optional ownership, markets, and revenue
 ```
 
-Desktop is also where companions and Zero-Human Companies become practical. It has the local storage, model access, approvals, logs, wallets, and connectors needed to run longer workflows.
+You can stop anywhere in this loop. Nothing needs to be minted or published to be valuable.
+
+## Main areas
+
+| Area | Use it for |
+| --- | --- |
+| **Create** | Chat, images, audio/music, video, and interactive 3D/game experiences |
+| **Earn** | Ownership records, `$BONZAI` staking, rewards, contribution revenue, and companion/model markets |
+| **Automate** | Smart agents, business teams, and the agent job board |
+| **Train** | Datasets, fine-tuning, validation, and one-click censorship removal for compatible local LLMs |
+| **Help** | Memory graph, model licenses, guidance, and diagnostics |
+
+## Local-first by default
+
+Generation history, companion memory, company records, datasets, and model artifacts are stored locally. BonzAI uses a structured local database rather than treating every feature as an unrelated file or chat.
+
+External actions are explicit. A connector may contact the service you configured. A wallet transaction may publish or move value. P2P inference may involve another provider. The interface identifies those boundaries.
+
+## Start with these manuals
+
+- [Desktop Navigation](../desktop/navigation.md)
+- [Chat](../desktop/chat.md)
+- [Image Generation](../desktop/image.md)
+- [Datasets, Tune & Uncensor](../desktop/training.md)
+- [Companions & Agents](../desktop/companions-agents.md)
+- [Company Teams & Jobs](../desktop/company-jobs.md)
+- [Ownership, Staking & Markets](../desktop/ownership-markets.md)

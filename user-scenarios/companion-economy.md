@@ -4,7 +4,7 @@ Companions are AI characters with local personality, optional onchain identity, 
 
 ## Scenario
 
-A user creates a companion in Desktop, mints it, lets it use skills, and optionally launches a token.
+A user creates a companion in Desktop, uses it locally, then optionally mints its identity and economy in one transaction.
 
 ## Companion Creation
 
@@ -43,14 +43,14 @@ If no valid co-owner can receive a share, the amount falls back to treasury.
 
 ## Companion Token
 
-A companion owner can launch an ERC-20 token for the companion. The current factory flow uses:
+When the v4 production factory is configured, companion minting atomically launches its ERC-20 token and liquidity. The factory flow uses:
 
 - 1 billion token supply.
 - 96% paired into Uniswap V4 liquidity.
-- 4% sent to the companion wallet.
+- 4% allocated to the companion economy.
 - LP effectively locked/burned at the dead address.
 
-The Uniswap V4 hook routes swap fees across the companion wallet, NFT owner, treasury, and MintPool.
+The one-percent Uniswap V4 hook contribution routes 40% to the companion wallet, 40% to the NFT owner, 10% to treasury, and 10% to contribution/Mint pools.
 
 ## Universal Profiles
 

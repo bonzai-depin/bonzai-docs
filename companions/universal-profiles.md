@@ -49,7 +49,7 @@ The companion's **agent wallet** (OWS, Privy, or legacy deterministic) is set as
 
 Once deployed on LUKSO, the same Universal Profile can be replayed to other chains:
 
-1. The deployment calldata is stored locally in Electron Store
+1. The deployment calldata is stored in BonzAI's local persistent data layer
 2. Call `deployCompanionUPCrossChain(companionId, targetChainId)` to replay
 3. The LSP23 factory at the same address on the target chain deploys the UP
 4. **Same UP address** on every chain (deterministic via salt)

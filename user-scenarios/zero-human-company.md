@@ -1,85 +1,24 @@
-# Zero-Human Company
+# Run Business Teams
 
-This scenario shows how someone uses BonzAI Desktop to run an AI-operated company.
+Example: a small service company wants faster lead follow-up, invoicing, and payment reconciliation without replacing its staff.
 
-## Scenario
+## Set up
 
-A founder wants to launch a small business workflow without manually managing every prompt, task, approval, file, report, and deliverable.
+1. Open Company and create the Sales team.
+2. Describe the existing lead process and what a qualified handoff looks like.
+3. Assign or provision companions for qualification and follow-up.
+4. Connect HubSpot and approved communication tools.
+5. Require approval before external messages during the first weeks.
 
-Instead of asking a chatbot one question at a time, they form a company.
+Create a separate Finance team:
 
-## Step 1: Choose A Template
+1. Connect QuickBooks or Sage Accounting and Stripe as applicable.
+2. Allow draft invoice preparation.
+3. Require approval before sending invoices, refunds, or high-value changes.
+4. Define the weekly overdue-account summary.
 
-The user opens **Company** in BonzAI Desktop and chooses a template, such as:
+## Operate
 
-- UGC Campaign Studio.
-- HVAC Service Company.
-- Print-on-Demand Shop.
-- Solo SaaS Company.
+Use Today to see priorities across both teams. Use Work to filter Open, In Progress, Blocked, Done, and Cancelled tasks. Review Approvals and connector evidence before consequential actions.
 
-The template asks practical setup questions: market, customers, channels, budget, goals, and voice.
-
-## Step 2: BonzAI Builds The Charter
-
-The charter is the company's operating document. It defines:
-
-- Mission.
-- Roles.
-- Budget rules.
-- Approval rules.
-- Initial goals.
-- Skills and connectors.
-- What the company is allowed to do automatically.
-
-## Step 3: Roles Get Staffed
-
-BonzAI assigns companions and models to roles such as:
-
-- CEO for strategy and goal setting.
-- CFO for treasury and reports.
-- CPO for product and quality.
-- CMO for campaigns and channels.
-- COO for operations.
-- Counsel for legal review.
-- Producers for text, image, audio, video, 3D, music, vision, skills, or training.
-
-## Step 4: Work Starts
-
-The company turns its mission into goals, then goals into issues.
-
-Examples:
-
-- Draft a campaign calendar.
-- Generate product images.
-- Write customer emails.
-- Prepare a weekly report.
-- Review a deliverable.
-- Queue a post for approval.
-- Track revenue and spending.
-
-## Step 5: The Owner Keeps Control
-
-The user chooses what happens automatically and what needs approval.
-
-For example:
-
-- Safe text drafts can run automatically.
-- Publishing can notify the owner.
-- Large spending can pause for approval.
-- Hiring, firing, and charter changes can require explicit approval.
-
-## Step 6: Everything Is Logged
-
-The audit log records what happened:
-
-- Which role acted.
-- What it tried to do.
-- Whether it ran, queued, failed, or needed approval.
-- Links to outputs or transactions.
-- Notes explaining the decision.
-
-## Why This Matters
-
-Zero-Human Company makes BonzAI more than a generation app. It lets AI operate a workflow over time, with memory, roles, approvals, money tracking, and deliverables.
-
-That is important for the broader BonzAI economy because companies can create assets, datasets, campaigns, skills, and outputs that later become ownable or rewardable.
+Over time, approved process notes enrich each team role's isolated memory. The owner can inspect the audit history and improve instructions without redesigning the business.

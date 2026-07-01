@@ -1,54 +1,43 @@
-# BONZAI Token & Levels
+# Levels & Utility
 
-BONZAI levels gate minting rights and economic participation. They do not gate ordinary AI generation.
+BonzAI currently contains two related level systems during the v4 transition. They must not be confused.
 
-## Token Addresses
+## Legacy holding/mint levels
 
-| Network | BONZAI token |
+These existing application thresholds gate content mint categories, not local generation:
+
+| Level | Wallet balance | Mint category |
+| ---: | ---: | --- |
+| 1 | 1,000 | Text |
+| 2 | 5,000 | Audio |
+| 3 | 10,000 | Image |
+| 4 | 25,000 | Video |
+| 5 | 33,000 | 3D |
+| 6 | 50,000 | Training/model issuance |
+
+The legacy one-time unlock may bypass compatible mint-level checks where deployed. It does not replace staking utility.
+
+## v4 staking tiers
+
+The deployment script currently initializes these staking thresholds:
+
+| Tier | Staked `$BONZAI` |
+| ---: | ---: |
+| 1 | 1,000 |
+| 2 | 5,000 |
+| 3 | 10,000 |
+| 4 | 25,000 |
+| 5 | 50,000 |
+| 6 | 100,000 |
+
+Contract ownership can update thresholds. The deployed vault is the source of truth.
+
+## Token addresses
+
+| Network | `$BONZAI` |
 | --- | --- |
 | Ethereum | `0xDdA9Ff241C7160be8295EF9Eca2e782361467666` |
 | Arbitrum | `0x0a84edf70f30325151631ce7a61307d1f4d619a3` |
 | Base | `0xc4d137def384ee0f8857887f5950669ba04984ec` |
 
-## Levels
-
-| Level | BONZAI held | Unlocks |
-| --- | ---: | --- |
-| LVL1 | 1,000 | Text NFT minting, text pool eligibility |
-| LVL2 | 5,000 | Audio NFT minting, audio pool eligibility |
-| LVL3 | 10,000 | Image NFT minting, image pool eligibility |
-| LVL4 | 25,000 | Video NFT minting, video pool eligibility |
-| LVL5 | 33,000 | 3D NFT minting, 3D pool eligibility |
-| LVL6 | 50,000 | Training NFT minting, model/fine-tune token issuance, training pool eligibility |
-
-## Permanent Unlock
-
-The unlock contract can grant all levels permanently through a one-time ETH payment. Where supported by the contracts, unlocked users:
-
-- Mint content NFTs for free.
-- Mint companion NFTs for free.
-- Bypass level thresholds for minting rights.
-
-Unlock proceeds route 50% to foundation/treasury and 50% to liquidity according to the configured contract.
-
-## What Levels Do Not Do
-
-Levels do not stop users from:
-
-- Chatting.
-- Generating images/audio/video locally.
-- Using BonzAI+ Chat/Live/Imagine/Dataset modes.
-- Importing or exporting local datasets.
-- Running private local workflows.
-
-## Pool Eligibility
-
-Level thresholds matter for MintPool holder rewards. To claim a content-type pool, a user generally needs:
-
-1. Enough BONZAI for that level.
-2. Epoch registration.
-3. Content-type activity recorded for that epoch.
-4. Claim confirmation after the epoch.
-5. The required block gap before final claim.
-
-For the complete flow, see [Reward Structure & Epochs](reward-structure.md).
+Always use the address shown by an official BonzAI source and verify the selected network.

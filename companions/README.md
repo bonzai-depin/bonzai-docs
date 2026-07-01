@@ -12,7 +12,7 @@ BonzAI companions are AI characters that can exist as local roleplay personas an
 - Optional minted NFT identity.
 - Optional agent wallet.
 - Optional LUKSO Universal Profile.
-- Optional companion token.
+- Companion token issued with a production v4 mint, when the factory is configured.
 - Optional skill co-ownership and revenue participation.
 
 ## Local vs Minted
@@ -35,7 +35,7 @@ Minted companions can participate in:
 - Agent wallet identity.
 - ERC-8004 metadata.
 - Skill co-ownership.
-- Companion token launch.
+- Atomic companion token and permanent-liquidity launch.
 - Uniswap V4 hook fee routes.
 - Social/orchestration flows.
 - Optional Universal Profile identity on LUKSO.
@@ -49,4 +49,4 @@ Companions can earn or route revenue through:
 - Companion wallet token allocations.
 - Autonomous purchase/skill flows.
 
-The detailed splits are documented in [Reward Structure & Epochs](../web3/reward-structure.md).
+The detailed splits are documented in [Reward Structure](../web3/reward-structure.md).

@@ -1,46 +1,28 @@
 # P2P Network
 
-BonzAI Desktop can run in local, consumer, or provider modes. The P2P network lets users discover machines, route inference, and reward providers through service-time accounting and MintPool provider-side rewards.
+The P2P network lets one BonzAI Desktop machine serve supported inference to another.
 
 ## Modes
 
-| Mode | What happens |
+| Mode | Meaning |
 | --- | --- |
-| Local | Requests run on the user's machine |
-| Consumer | Requests can route to selected LAN or remote providers |
-| Provider | The user's machine serves inference to others |
-
-## Provider Economy
-
-The current provider economy is based on service time:
-
-1. Providers run BonzAI Desktop in Provider mode.
-2. Providers advertise pipelines and peer information.
-3. Service time is recorded for eligible providers.
-4. Provider-side MintPool rewards are claimed after epochs finalize.
-
-Older x402-style ETH/USDC payment rails may exist in code or future optional flows, but the default docs should explain provider rewards through the MintPool service-time model.
-
-## Pipelines
-
-Providers can advertise support for combinations of:
-
-- LLM/text.
-- Image.
-- Audio.
-- Music.
-- Video.
-- Vision.
-- Private/sharded inference where supported.
+| **Local** | Work runs only on your machine |
+| **Consumer** | You deliberately route compatible work to a selected LAN or remote provider |
+| **Provider** | Your machine advertises selected pipelines and serves accepted work |
 
 ## Discovery
 
-Provider discovery can use:
+Trusted local providers can be found on the same network. Remote providers use peer information and the configured onchain Provider Registry.
 
-- LAN/mDNS for local network providers.
-- Onchain provider registry for remote providers.
-- App-level selected provider lists for routing.
+## Payments and rewards
+
+BonzAI contains two real provider mechanisms that may be enabled by release configuration:
+
+- direct x402-style signed ETH payments for paid remote inference, with the configured platform fee;
+- provider service-time/MintPool reward accounting where those contracts are deployed.
+
+Staked `$BONZAI` and verified service quality can provide additional trust/routing signals through the v4 contribution economy.
 
 ## Privacy
 
-Local mode keeps requests on the user's machine. Consumer mode can reveal prompts/content to selected providers unless private/sharded inference is used. Users should select providers intentionally.
+Local mode keeps prompts and inputs on your machine. A normal remote provider may see the work it must process. Use only providers you trust unless a supported private/sharded inference mode explicitly protects that workload.

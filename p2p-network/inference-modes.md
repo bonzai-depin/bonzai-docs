@@ -38,4 +38,4 @@ Provider mode turns your machine into a serving node. It advertises capabilities
 
 ## Chat And Social Orchestration
 
-Network mode applies beyond the desktop UI. If external chat/orchestration triggers a BonzAI generation request, it should follow the same selected network mode and provider configuration.
+Network mode also applies to supported external chat/orchestration requests, which follow the selected provider configuration.

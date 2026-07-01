@@ -1,57 +1,34 @@
-# Minting Guide
+# Create & Mint a Companion
 
-This guide covers the companion minting flow in BonzAI Desktop.
+Companions work locally without minting. Mint only when you want portable onchain identity, an agent wallet, jobs/skills economics, or a companion token market.
 
-## Before You Mint
+## Create locally
 
-You can use companions locally without minting. Mint only when you want onchain identity, agent wallet linkage, skill co-ownership, token launch, or other companion economy features.
+1. Open the companion experience.
+2. Choose or create an identity.
+3. Set personality, background, appearance, voice, and boundaries.
+4. Generate or upload a portrait.
+5. Start a conversation and confirm the companion feels right.
 
-## Requirements
+## Before minting
 
-- Wallet connected.
-- Supported app-chain configuration.
-- Enough ETH for the mint, unless permanently unlocked.
-- Maximum 4 companions per wallet, unless a companion is transferred away.
+- Connect the intended owner wallet.
+- Select the configured economy network.
+- Check the displayed mint amount and gas.
+- Review public metadata.
+- Confirm the wallet has not reached its companion cap.
 
-## Mint Types
+## Atomic v4 mint
 
-| Type | Use when |
-| --- | --- |
-| Complete mint | You have generated profile, portrait, voice/personality data, and metadata before minting |
-| Bare mint | You want to mint quickly and finalize identity/metadata later |
+The default contract price is **0.30 ETH**. When the companion token factory is configured, **0.05 ETH** seeds token liquidity and the mint atomically creates:
 
-## Complete Mint Flow
+- the companion NFT/agent identity;
+- its one-billion-supply token;
+- permanent Uniswap liquidity;
+- companion owner/wallet economic links.
 
-1. Open the companion/roleplay or Browse Agents experience.
-2. Create or select a companion.
-3. Generate/confirm personality, appearance, voice, and spending profile.
-4. Click mint.
-5. Desktop uploads metadata to IPFS/Pinata or configured IPFS-compatible storage.
-6. Confirm the transaction.
-7. The companion NFT receives an ERC-8004 identity and agent wallet data.
+If token or liquidity creation fails, the entire transaction reverts.
 
-Companion metadata is published through the storage path configured in the app, such as IPFS pinning.
+## After minting
 
-## After Minting
-
-Your companion can:
-
-- Keep roleplaying locally with persistent identity.
-- Register for skill co-ownership if eligible.
-- Launch a companion token.
-- Receive or use an agent wallet.
-- Post through social/orchestration flows.
-- Deploy an optional LUKSO Universal Profile.
-
-## Companion Token Launch
-
-The companion owner can launch a companion ERC-20 token. The factory flow creates token supply, initializes Uniswap V4 liquidity, sends a share to the companion wallet, and lets hook fees route to the companion wallet, owner, treasury, and MintPool.
-
-## Troubleshooting
-
-| Error | Meaning |
-| --- | --- |
-| Max companions reached | The wallet already has the maximum allowed companions |
-| Insufficient ETH | The wallet needs gas and/or mint fee unless unlocked |
-| Metadata upload failed | Check IPFS/Pinata configuration |
-| Not companion owner | Only the current owner can perform owner-gated actions |
+The companion can keep local memory, use its agent wallet, participate in skills and jobs, build verified reputation, and appear in Earn → Markets. The onchain identity does not publish private conversations or team memories.

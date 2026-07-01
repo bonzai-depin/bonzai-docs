@@ -1,44 +1,29 @@
-# Provider Guide
+# Become a Provider
 
-Provider mode lets you share your local machine with the BonzAI network and become eligible for provider-side rewards.
+## Prepare
 
-## Start Provider Mode
+- Use a stable computer and network connection.
+- Download every model you plan to advertise.
+- Test each pipeline locally.
+- Connect the wallet used for registry/payment/reward actions.
+- Understand electricity, bandwidth, model-license, and privacy responsibilities.
 
-1. Open BonzAI Desktop.
-2. Go to the P2P or Network settings.
-3. Select **Provider** mode.
-4. Choose which pipelines your machine can serve.
-5. Start advertising locally and/or through the configured provider registry.
+## Start
 
-## What Providers Advertise
+1. Open Network settings.
+2. Choose Provider mode.
+3. Select only pipelines your machine can serve reliably.
+4. Review provider identity, network, price/reward configuration, and availability.
+5. Register where required and start advertising.
 
-Provider records can include:
+## Operate reliably
 
-- Peer ID.
-- Multiaddresses.
-- Supported pipelines.
-- Relay information.
-- Shard/private inference capabilities.
-- Optional pricing or legacy payment metadata where enabled.
+- Keep BonzAI and required local services running.
+- Do not advertise a model that is still downloading.
+- Monitor memory, GPU load, temperature, queue, and failures.
+- Stop accepting work before maintenance or shutdown.
+- Treat incoming prompts/files as potentially sensitive data.
 
 ## Earnings
 
-The current default earning path is provider-side MintPool rewards:
-
-```text
-your service seconds / total provider service seconds * provider-side pool amount
-```
-
-Claiming requires the epoch to finalize and the configured provider eligibility checks to pass.
-
-## Operational Tips
-
-- Keep the app running while serving.
-- Only advertise pipelines your machine can actually handle.
-- Monitor model downloads and backend status before accepting heavy workloads.
-- Use LAN provider mode for trusted local setups.
-- Use remote provider mode when you want broader discovery through the registry.
-
-## Relationship To x402
-
-Direct ETH/USDC payment rails may exist as infrastructure, but current provider docs should not promise per-request payment as the default user path. The product economy is centered on service time and pool rewards.
+The active release may expose direct paid jobs, service-time epoch rewards, contribution routes, or a combination. The Provider/Rewards views and deployed contracts are authoritative for claimable value.

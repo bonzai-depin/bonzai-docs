@@ -1,6 +1,6 @@
 # Private Inference
 
-BonzAI private inference is the direction for routing work across multiple peers without giving one provider the full prompt/output. It is based on pipeline parallelism and tensor/RPC routing rather than a normal single-provider request.
+BonzAI private inference routes compatible work across multiple peers without giving one provider the complete prompt/output. It uses pipeline parallelism and tensor/RPC routing rather than a normal single-provider request.
 
 ## Why It Exists
 
@@ -43,10 +43,10 @@ Private inference is more complex than local or single-provider inference:
 
 ## Provider Rewards
 
-Private/sharded providers should be documented under the same provider reward model as other providers unless a product UI explicitly enables a different payment path:
+Private/sharded providers use the active provider reward/payment mode exposed by the product:
 
 ```text
 provider seconds / total provider seconds * provider-side pool amount
 ```
 
-Do not describe private inference as automatically earning ETH/USDC per session unless that payment mode is active in the product.
+Direct payment requires an explicitly presented priced provider flow.

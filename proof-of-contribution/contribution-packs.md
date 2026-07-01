@@ -32,7 +32,18 @@ Without a pack, a dataset is just loose text and images. With a pack, Desktop ca
 | Privacy status | Private, exportable, publishable, trainable, commercial, or royalty-bearing |
 | Evidence files | Image data, thumbnails, transcripts, or other attached proof |
 | Signature | Optional proof that the creator approved the record |
+| Contribution role | Data owner, curator, evaluator, voter, trainer, provider, publisher, companion, or company |
+| Contribution weight | Local or onchain score used to estimate how much this record helped |
+| Derivation parents | Earlier records, datasets, models, skills, or companions this record depends on |
+| Royalty route | Optional payout route if the record becomes part of a monetized asset |
+| BONZAI utility snapshot | Optional local record of stake, lock, contribution score, tier, and utility weight at packaging time; live contracts remain authoritative |
 
 ## Local Until The User Acts
 
 Contribution Packs stay local until the user exports, shares, publishes, or mints something from them.
+
+## Why Parent Records Matter
+
+The important part is inheritance. If an image dataset trains an adapter, and that adapter helps a company create a sellable output, the final output should still know which records, curators, evaluators, and model builders helped.
+
+That does not mean everything must go onchain immediately. It means Desktop should preserve the local graph first, then publish compact hashes, licenses, ownership, and reward routes only when the user chooses to enter the shared economy.

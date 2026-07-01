@@ -1,77 +1,37 @@
 # BonzAI+ Browser Assistant
 
-BonzAI+ is the BonzAI browser extension.
+BonzAI+ turns the current webpage into useful private AI context. It lives in the browser side panel and separates four clear activities: Chat, Dataset, Live, and Imagine.
 
-It lives in the browser side panel and helps users work with whatever is on the current page: text, images, videos, comments, articles, product pages, research, references, and prompts.
+## The four modes
 
-## What Problem It Solves
-
-The web is full of useful material, but normal AI chat tools make it awkward to collect, describe, clean, and reuse that material.
-
-BonzAI+ turns browsing into structured AI work:
-
-- Ask questions about a page.
-- Capture text or images with a BonzAI+ overlay.
-- Follow a video and create a live transcript.
-- Generate images locally in the browser when supported.
-- Turn captured material into dataset records for BonzAI Desktop.
-
-## Modes
-
-| Mode | What the user does |
+| Mode | Use it when |
 | --- | --- |
-| **Chat** | Ask BonzAI+ questions, with or without a captured target. |
-| **Live** | Follow what is happening on screen or in a video and save useful transcript cues. |
-| **Imagine** | Generate images privately in the browser. |
-| **Dataset** | Capture text/images and turn them into training-ready records. |
+| **Chat** | You want a normal conversation or want to ask about captured text/image content |
+| **Dataset** | You want to turn a text or image target into a well-described training record |
+| **Live** | You want a timestamped account of a video or shared screen as its story unfolds |
+| **Imagine** | You want to generate and download images locally in the browser |
 
-## Capture
+Each mode has its own interface. Chat does not show dataset fields, and Dataset does not show free-chat messages.
 
-BonzAI+ can place a **BonzAI+** button over page content. Clicking it sets that text or image as the current target.
+## Local models and caching
 
-From there, the user can:
+BonzAI+ downloads models when a feature first needs them. Downloads are cached in browser storage. The interface shows stable progress without exposing internal model names.
 
-- Ask questions about the target in Chat.
-- Run Smart Analysis in Dataset mode.
-- Save tags, captions, source links, ratings, and metadata.
-- Export the records to Desktop.
+The browser may remove cached data under storage pressure, after site/extension data is cleared, or in temporary browsing sessions.
 
-Image records can include base64 image data when available.
+## Capture overlay
 
-## Live
+When Overlay is enabled, a **BonzAI+** button appears over capturable page text and images. It is centered over the target. Click it to make that content the active target.
 
-Live mode is for understanding what is happening on screen.
+Turn Overlay off from the extension header when you do not want capture controls on webpages.
 
-It should not stay silent forever waiting for a perfect OCR event. It should describe the story as it unfolds: scene changes, actions, quotes, score changes, catches, knockouts, goals, product demos, tutorials, gameplay, interviews, and other moments that matter for that video type.
+## Private by design
 
-## Imagine
+Chat, analysis, generation, and curation use local browser models. Prompts and images are not sent to a remote AI service. Normal page access and explicitly configured external links still behave like normal internet activity.
 
-Imagine mode adds browser-local image generation when the device supports it.
+Continue with:
 
-It includes:
-
-- Resolution choices.
-- Speed/quality choices.
-- Progress.
-- Image history.
-- Clear and download actions.
-- Cached models so the user does not download the same model every launch.
-
-## Dataset
-
-Dataset mode is how BonzAI+ becomes useful for training.
-
-A record can include:
-
-- The captured text or image.
-- Source URL.
-- Page context.
-- Title.
-- Caption.
-- Tags.
-- Notes.
-- Rating.
-- Image data.
-- Permission and contribution metadata.
-
-The goal is simple: make it easy to collect high-quality material from the web and bring it into BonzAI Desktop.
+- [Chat Mode](../bonzai-plus/chat.md)
+- [Dataset Mode](../bonzai-plus/dataset.md)
+- [Live Mode](../bonzai-plus/live.md)
+- [Imagine Mode](../bonzai-plus/imagine.md)

@@ -171,7 +171,7 @@ Each messaging channel maintains its own session:
 - **Selected scenario**: per channel
 - **Generation settings**: per channel
 
-Sessions persist across restarts (stored in Electron Store).
+Sessions persist across restarts in BonzAI's local persistent data layer.
 
 ---
 
@@ -196,7 +196,7 @@ The LLM model isn't loaded. Either:
 
 ### Generation returns nothing
 
-Check that the Flask server is running (port 65000). In the desktop app, any generative tab will show if the server is responsive.
+Check the local AI service status shown in Desktop. Any generative view reports whether the service is ready or recovering.
 
 ### Webhook not received
 

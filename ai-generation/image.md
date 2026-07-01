@@ -1,63 +1,24 @@
 # Image Generation
 
-BonzAI offers four image generation pipelines, each optimized for different use cases. All run locally via the Flask server on port 65000.
+Desktop offers several local image families for speed, standard workflows, higher fidelity, editing, and training.
 
-## Pipelines
+## Current choices
 
-| Pipeline | Model | Speed | Quality | VRAM |
-|----------|-------|-------|---------|------|
-| **Turbo** | FLUX Klein | Fast | Good | 8 GB |
-| **Standard** | SDXL + LoRA | Medium | High (uncensored) | 6 GB |
-| **Quality** | FLUX Krea | Slow | Best | 12 GB |
-| **Advanced** | Z-Image Turbo | Fast | High | 8 GB |
+- FLUX-family fast generation.
+- SDXL-compatible standard generation.
+- Krea 2 Turbo as Standard+.
+- Krea 2 Raw as a training-oriented base where supported.
+- Z-Image and other quality/advanced pipelines.
+- DiffusionGemma support where the local runtime and model package are compatible.
 
-## API Endpoints
+Krea is a Standard+ workflow. Krea 2 Turbo uses its official eight-step, guidance-zero behavior. Small output presets are generated at a useful native internal scale before high-quality downsampling to avoid blurred SD results.
 
-### Turbo
-```
-POST http://localhost:65000/image/turbo
-```
+## Resolution
 
-### Standard
-```
-POST http://localhost:65000/image/standard
-```
+Resolution changes output size, memory use, and speed. It is independent from the chosen model/mode unless a model imposes a hardware limit.
 
-### Quality
-```
-POST http://localhost:65000/image/quality
-```
+## Provenance
 
-### Advanced
-```
-POST http://localhost:65000/image/advanced
-```
+History records prompt, model/pipeline, dimensions, time, and output. A minted or training-eligible image can inherit contribution origins and licensing metadata.
 
-## Request Format
-
-```json
-{
-  "prompt": "A cyberpunk cityscape at sunset",
-  "negative_prompt": "blurry, low quality",
-  "width": 1024,
-  "height": 1024,
-  "num_inference_steps": 30,
-  "guidance_scale": 7.5
-}
-```
-
-## Companion Portraits
-
-When generating images for companions, BonzAI uses a multi-step pipeline:
-
-1. **GLM Flash** (primary) or **LLaMA** (fallback) enhances the text prompt with visual details
-2. The enhanced prompt is sent to the selected image pipeline
-3. Generated images stay local unless the user mints, publishes, or explicitly uploads metadata/media
-
-## Minting as NFTs
-
-Generated images can be minted as content NFTs through the configured Desktop minting path. Requires **LVL3** (10,000 BONZAI held) or permanent unlock.
-
-- Image mint fee: 0.0015 ETH unless unlocked
-- Metadata/media: IPFS/Pinata or configured IPFS-compatible storage
-- LUKSO: Universal Profiles only unless a content contract is explicitly configured
+Public marketplace discovery is optional for minted generations and excludes NSFW generations.

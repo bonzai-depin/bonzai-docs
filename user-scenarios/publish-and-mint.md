@@ -2,42 +2,51 @@
 
 Minting is the path from local output to an ownable onchain asset.
 
+Publishing is broader: it can mean making a dataset, model, skill, companion, provider, or company asset visible in the BonzAI economy.
+
 ## Scenario
 
-A user generates an image, audio clip, video, text, 3D scene, or training artifact in BonzAI Desktop and wants to mint it.
+A user generates an image, audio clip, video, text, 3D scene, dataset, or training artifact in BonzAI Desktop and wants to make it ownable or reusable.
 
 ## What Happens
 
 1. The user generates or imports the asset locally.
-2. Desktop prepares metadata: title, description, media reference, content type, creator, and optional contribution references.
-3. The app checks wallet connection and BONZAI level or permanent unlock.
-4. Metadata/media is uploaded to IPFS through Pinata or a configured IPFS path.
-5. The user confirms the mint transaction.
-6. The content NFT is minted.
-7. Mint fees are routed through the configured fee split.
+2. Desktop prepares metadata: title, description, media reference, content type, creator, and contribution references.
+3. Desktop attaches provenance, training-material policy, marketplace policy, and optional revenue routes.
+4. The app checks wallet connection and the configured minting/staking rules.
+5. Metadata/media is uploaded through the configured storage path.
+6. The user confirms the transaction.
+7. The content NFT, registry record, or tokenized model is created.
+8. Future revenue can route through the contribution graph.
 
-## Content-Type Levels
+## Staked BONZAI In Publishing
 
-| Type | Level | BONZAI threshold |
-| --- | --- | --- |
-| Text | LVL1 | 1,000 |
-| Audio | LVL2 | 5,000 |
-| Image | LVL3 | 10,000 |
-| Video | LVL4 | 25,000 |
-| 3D | LVL5 | 33,000 |
-| Training | LVL6 | 50,000 |
+Where v4 publishing gates are configured, staked `$BONZAI` affects:
 
-The one-time unlock grants all levels and makes content and companion mints free where supported by the contracts.
+- which assets can be published,
+- how much trust a published asset receives,
+- whether a dataset/model can enter higher-value markets,
+- whether a fine-tune/model token can launch,
+- utility and the separate staking bonus.
 
-## Fee Routing
+Legacy level/unlock rules still apply to compatible content NFT contracts. v4 staking is the new shared-economy commitment layer.
 
-Content NFT mint fees route:
+## Fee And Revenue Routing
 
-- 80% to treasury.
-- 20% to the matching MintPool content bucket.
+Existing content NFT mint fees may route:
 
-The MintPool deposit is split between holder rewards and provider rewards according to the contract configuration, defaulting to 50/50.
+- 80% to treasury,
+- 20% to the matching legacy MintPool content bucket.
+
+Contribution-aware flows route asset revenue through registered routes:
+
+```text
+asset revenue
+-> treasury share
+-> immutable base contributor shares
+-> separate staking bonus weighted by utility
+```
 
 ## Royalties
 
-Content NFTs use ERC-2981 royalties where configured. The royalty splitter routes secondary royalties according to the protocol setup, including treasury and pool allocations.
+Content NFTs use ERC-2981 royalties where configured. The richer BonzAI model is to preserve provenance so royalties, derivative training revenue, or model-token revenue can include the data/model/skill contributors behind the final asset.

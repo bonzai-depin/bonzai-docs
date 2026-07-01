@@ -1,68 +1,50 @@
-# System Requirements
+# Hardware & Model Choices
 
-BonzAI runs AI models locally on your hardware. The requirements depend on which models you want to use.
+BonzAI runs AI on your device. A more powerful computer can use larger models or finish media generation faster, but modest computers can still use smaller models and browser features.
 
-## Minimum Requirements
+## The simple rule
 
-- **OS**: macOS 12+ (Apple Silicon or Intel)
-- **RAM**: 8 GB
-- **Storage**: 5 GB for app + models (varies by model)
-- **Node.js**: v20 LTS (for development builds)
-- **Python**: 3.10+ (for ML inference server)
+- **8 GB memory:** start with small chat models and lighter browser workflows.
+- **16 GB memory:** comfortable everyday chat, lighter image/audio work, and more model choice.
+- **24–32 GB memory:** larger language models, stronger image workflows, and better multitasking.
+- **High-end Apple Silicon or a dedicated NVIDIA GPU:** best for large models, video, training, and high-resolution media.
 
-## Recommended for Full Experience
+## Storage
 
-- **RAM**: 16 GB+
-- **GPU**: Apple Silicon (M1/M2/M3/M4) with unified memory, or NVIDIA GPU with 6+ GB VRAM
-- **Storage**: 50 GB+ (for multiple models)
+Models can be much larger than the application.
 
-## Model VRAM Requirements
+- Keep at least 10 GB free for a basic setup.
+- Keep 50 GB or more free if you want several language and media models.
+- Video, training checkpoints, and generation history can use additional space.
 
-### LLM Models (via OpenClaw)
+BonzAI shows download size before or during model installation. You can remove models you no longer use.
 
-| Model | Size | VRAM Required |
-|-------|------|---------------|
-| DeepSeek R1 1.5B | 1.1 GB | 2 GB |
-| Gemma 3 1B | 0.8 GB | 2 GB |
-| Phi-3 Mini | 2.4 GB | 4 GB |
-| Phi-4 Mini | 2.5 GB | 4 GB |
-| Qwen 2.5 3B | 2 GB | 4 GB |
-| LLaMA 2 7B | 4 GB | 6 GB |
-| LLaMA 3.1 8B | 5 GB | 6 GB |
-| Mistral 7B | 4.4 GB | 6 GB |
-| DeepSeek R1 7B | 4.7 GB | 6 GB |
-| GLM-4 7B Flash | 4.7 GB | 6 GB |
-| Qwen Coder 7B | 4.7 GB | 6 GB |
-| Yi Coder 9B | 5.5 GB | 8 GB |
-| MythoMax 13B | 7.9 GB | 10 GB |
-| Hermes 4 14B | 9 GB | 10 GB |
-| Qwen Coder 14B | 9 GB | 12 GB |
-| Codestral 22B | 13 GB | 16 GB |
-| GPT-OSS 20B | 12 GB | 14 GB |
-| DeepSeek R1 32B | 19 GB | 24 GB |
-| Qwen Coder 32B | 19 GB | 24 GB |
-| Qwen3 Coder 30B | 18 GB | 24 GB |
+## Choosing a language model
 
-### Image, Audio, Video Pipelines (via Flask)
+| Your priority | Choose |
+| --- | --- |
+| Fast answers and low memory use | Small model |
+| Everyday quality | Medium model |
+| Difficult reasoning or long writing | Larger model that fits your hardware |
+| Programming | A coder-focused model |
+| Unrestricted local experimentation | A compatible abliterated model, where lawful |
 
-| Pipeline | Approx. VRAM |
-|----------|-------------|
-| Image Turbo (FLUX Klein) | 8 GB |
-| Image Standard (SDXL) | 6 GB |
-| Image Quality (FLUX Krea) | 12 GB |
-| Image Advanced (Z-Image) | 8 GB |
-| Audio Turbo (Kokoro TTS) | 2 GB |
-| Audio Quality (Qwen3-TTS) | 4 GB |
-| Music (ACE-Step) | 6 GB |
-| Video (LTX-2) | 10 GB |
-| Vision (Qwen3-VL) | 6 GB |
+Quantization reduces model size. Lower-bit versions use less memory and usually run faster, but may lose some accuracy. BonzAI's recommendations are designed to make this tradeoff understandable.
 
-## Port Configuration
+## Choosing media settings
 
-BonzAI uses the following local ports:
+- Begin with SD or HD image resolution.
+- Use Turbo/Fast while exploring ideas.
+- Switch to higher quality once the prompt is working.
+- Generate shorter videos before committing to long clips.
+- Close unused large models before training or video generation.
 
-| Service | Port | Environment Variable |
-|---------|------|---------------------|
-| Flask ML Server | 65000 | `BONZAI_SERVER_PORT` |
-| OpenClaw LLM | 3002 | `OPENCLAW_API_PORT` |
-| OpenClaw Gateway | 18789 | — |
+## Apple, NVIDIA, and CPU-only devices
+
+BonzAI selects compatible acceleration when available:
+
+- Apple Silicon uses unified memory and Apple GPU acceleration.
+- NVIDIA systems use CUDA-capable paths where supported.
+- Other systems can use CPU or available fallback acceleration, but large media models may be slow.
+
+The app's hardware information helps you choose; you do not need to configure acceleration manually.

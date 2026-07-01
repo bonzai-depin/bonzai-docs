@@ -11,10 +11,9 @@ This section explains BonzAI through user scenarios. The goal is to make the sys
 | Build a training dataset | BonzAI+ export -> Desktop Contribution Studio | Optional contribution/dataset registry publish |
 | Generate images/audio/video | BonzAI Desktop or BonzAI+ Imagine | None required unless minting |
 | Mint generated content | Desktop -> Content NFT flow | Level/unlock check, IPFS metadata, mint fee split |
-| Create a companion | Desktop Roleplay/Browse Agents | Companion NFT mint, ERC-8004 metadata |
-| Launch a companion token | Desktop companion card | Companion token factory + Uniswap V4 hook revenue |
+| Create a companion | Desktop Roleplay/Browse Agents | Optional atomic companion NFT + token + liquidity mint |
 | Co-own skill revenue | Desktop skill ownership flows | Skill registry + skill ownership contract |
-| Run an AI company | Desktop Company mode | Optional later publishing, minting, or reward routing |
+| Run business teams | Desktop Company mode | Optional publishing, job escrow, minting, or contribution routing |
 | Earn as a provider | Desktop Provider mode | Provider registry + service-time reward claim |
 
 ## What Stays Local

@@ -16,7 +16,7 @@ Messages from external platforms are forwarded to the BonzAI renderer via IPC, p
 
 ## OpenClaw
 
-OpenClaw runs on port 3002 and provides:
+The local language-model service provides:
 
 - **OpenAI-compatible LLM API** at `/v1/chat/completions`
 - **Multi-channel webhook gateway** on port 18789
@@ -44,7 +44,7 @@ This means any LLM request through OpenClaw (from any channel) routes to your lo
 | **Discord** | Bot token + server invite |
 | **Mattermost** | Plugin installation |
 
-Each channel connects through the gateway at `localhost:18789`. Messages are routed to BonzAI's webhook handler for processing.
+Each connected channel routes messages through BonzAI's local gateway and companion handler.
 
 ## Hermes Agent
 
@@ -115,7 +115,7 @@ Once a companion is selected, any unprefixed message triggers a companion respon
 ### Companion Minting
 
 ```
-!mint bare                   — Mint a bare companion NFT instantly (0.25 ETH)
+!mint bare                   — Mint a bare companion at the current onchain price
 !mint bare female            — Mint bare with specified gender
 !mint companion <name>       — Mint with full AI-generated personality + portrait
 !mint status                 — Show your owned companions and token IDs
