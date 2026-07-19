@@ -32,9 +32,9 @@ The left sidebar organizes BonzAI by outcome.
 - **Memory:** explore the connected notes that support user and companion recall.
 - **Licenses:** read and sort the licenses of models used in BonzAI.
 
-## Wallet and level display
+## Wallet display
 
-The sidebar shows the connected wallet, `$BONZAI` balance, and current utility level when applicable. Connecting a wallet does not upload private histories or make local generations public.
+The sidebar can show the connected wallet, `$BONZAI` balance, and current utility level. Connecting a wallet does not upload private histories or make local generations public.
 
 ## Model and server status
 

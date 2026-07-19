@@ -9,7 +9,7 @@
 * [Install BonzAI Desktop](getting-started/install-desktop.md)
 * [Install BonzAI+](getting-started/install-bonzai-plus.md)
 * [Hardware & Model Choices](getting-started/system-requirements.md)
-* [Privacy, Wallets & Downloads](getting-started/privacy-wallets.md)
+* [Privacy & Downloads](getting-started/privacy-wallets.md)
 
 ## Product Manuals
 
@@ -24,7 +24,6 @@
   * [Datasets, Tune & Uncensor](desktop/training.md)
   * [Companions & Agents](desktop/companions-agents.md)
   * [Company Teams & Jobs](desktop/company-jobs.md)
-  * [Ownership, Staking & Markets](desktop/ownership-markets.md)
   * [Settings & Troubleshooting](desktop/settings-troubleshooting.md)
 * [BonzAI Web](products/bonzai-web.md)
 * [BonzAI+ Browser Assistant](products/bonzai-plus.md)
@@ -48,22 +47,14 @@
 * [Choose a Workflow](user-scenarios/README.md)
 * [Private Local Creation](user-scenarios/private-local-creation.md)
 * [Capture → Dataset → Training](user-scenarios/dataset-to-training.md)
-* [Publish and Mint Assets](user-scenarios/publish-and-mint.md)
-* [Companion Economy](user-scenarios/companion-economy.md)
 * [Hire a Companion](user-scenarios/hire-companion.md)
 * [Run Business Teams](user-scenarios/zero-human-company.md)
-* [Provide Compute](user-scenarios/provider-rewards.md)
 
 ## Companions & Memory
 
 * [Companions Explained](companions/README.md)
 * [Companion Memory](companions/memory.md)
-* [Create & Mint a Companion](companions/minting-guide.md)
-* [Bare Companions](companions/bare-companions.md)
 * [Spending Profiles](companions/spending-profiles.md)
-* [Agent Wallets](companions/agent-wallets.md)
-* [ERC-8004 Identity](companions/erc-8004-metadata.md)
-* [Universal Profiles](companions/universal-profiles.md)
 
 ## Business Automation
 
@@ -81,7 +72,16 @@
 * [Desktop Contribution Studio](proof-of-contribution/desktop-studio.md)
 * [Registries & Provenance](proof-of-contribution/registries.md)
 
-## Ownership & Economy
+## Ownership & Network
+
+* [Ownership, Staking & Markets](desktop/ownership-markets.md)
+* [Publish and Mint Assets](user-scenarios/publish-and-mint.md)
+* [Companion Economy](user-scenarios/companion-economy.md)
+* [Create & Mint a Companion](companions/minting-guide.md)
+* [Bare Companions](companions/bare-companions.md)
+* [Agent Wallets](companions/agent-wallets.md)
+* [ERC-8004 Identity](companions/erc-8004-metadata.md)
+* [Universal Profiles](companions/universal-profiles.md)
 
 * [Onchain Economy Overview](web3/README.md)
 * [Why $BONZAI Exists](web3/bonzai-utility.md)
@@ -93,13 +93,12 @@
 * [Smart Contracts](web3/smart-contracts.md)
 * [Uniswap Markets](web3/uniswap-hooks.md)
 
-## Provider Network
-
 * [P2P Network](p2p-network/README.md)
 * [Inference Modes](p2p-network/inference-modes.md)
 * [Become a Provider](p2p-network/provider-guide.md)
 * [Payments & Rewards](p2p-network/payment-flow.md)
 * [Private Inference](p2p-network/private-inference.md)
+* [Provide Compute](user-scenarios/provider-rewards.md)
 
 ## Advanced Skills & Channels
 

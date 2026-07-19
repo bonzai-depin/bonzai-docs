@@ -21,7 +21,7 @@ The suggested questions explain:
 - generation and training;
 - companions and agentic teams;
 - Proof of Contribution;
-- `$BONZAI` staking, revenue share, and markets.
+- `$BONZAI`, Proof of Contribution, ownership, wallets, and network economics.
 
 Answers may include rich media such as diagrams and product flywheels.
 
@@ -42,4 +42,6 @@ BonzAI does not silently replace unsupported local inference with a remote AI se
 ## When to move to another product
 
 - Install **BonzAI+** for page capture, Live video understanding, browser datasets, and Imagine.
-- Install **BonzAI Desktop** for larger models, full multimodal generation, memory, training, companions, agentic teams, staking, minting, and markets.
+- Install **BonzAI Desktop** for larger models, full multimodal generation, memory, training, companions, and agentic teams.
+
+BonzAI Web links directly to supported `$BONZAI` liquidity routes and wallet controls. Always verify the selected network and contract address before signing.

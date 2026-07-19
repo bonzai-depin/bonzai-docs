@@ -8,6 +8,10 @@ Use model controls to see what is installed, download a missing model, or remove
 
 Choose the light or dark theme and use full-screen modes where available. Interface controls should remain usable at normal desktop scaling; report clipping with the affected view and display scaling.
 
+## Network settings
+
+The network control at the bottom of the sidebar opens peer-to-peer mode, provider, wallet, payment, and appearance settings. Review the network, amount, recipient, and permission before signing any transaction.
+
 ## Server status
 
 BonzAI starts local AI services with the app. Status notifications show starting, ready, crashed, and restarting states. Automatic recovery uses limited retries rather than restarting forever.

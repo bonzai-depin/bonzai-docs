@@ -29,6 +29,8 @@ Turn Overlay off from the extension header when you do not want capture controls
 
 Chat, analysis, generation, and curation use local browser models. Prompts and images are not sent to a remote AI service. Normal page access and explicitly configured external links still behave like normal internet activity.
 
+The Contribution Passport can include an optional wallet address alongside source, quality, visibility, license, and permissions. This preserves attribution when a curated sample enters Desktop training or onchain publishing workflows.
+
 Continue with:
 
 - [Chat Mode](../bonzai-plus/chat.md)

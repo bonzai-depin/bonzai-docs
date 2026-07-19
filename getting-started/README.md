@@ -36,13 +36,12 @@ Choose this when you want to:
 - train or uncensor compatible models;
 - build persistent companion memory;
 - run agentic business teams;
-- mint, stake, publish, provide compute, or participate in BonzAI markets.
+
+Ownership, publishing, and provider features are available alongside the creative workflow when you are ready to use them.
 
 ## Do I need a wallet?
 
-No. A wallet is not needed for normal private creation.
-
-Connect one only when you choose an onchain action such as staking, minting, publishing an economic asset, launching a token, registering as a provider, buying an asset, or claiming revenue.
+No. A wallet is not needed for normal private creation. It is used when you choose an onchain action such as publishing, minting, staking, paying a provider, or claiming revenue.
 
 ## Do I need to download a model?
 
@@ -54,7 +53,7 @@ Think of this like downloading an offline map: the first use takes longer, but l
 
 1. Visit BonzAI Web and ask one question.
 2. Install BonzAI+ if you spend time researching, watching videos, or collecting examples online.
-3. Install BonzAI Desktop when you want stronger models, media generation, memory, training, companions, business teams, or ownership features.
-4. Connect a wallet later, only when the onchain economy becomes useful to you.
+3. Install BonzAI Desktop when you want stronger models, media generation, memory, training, companions, or business teams.
+4. Connect a wallet when you want to publish, mint, stake, use paid peer compute, or participate in the contributor economy.
 
 Continue with [Your First 10 Minutes](first-10-minutes.md).

@@ -1,4 +1,4 @@
-# Privacy, Wallets & Downloads
+# Privacy & Downloads
 
 ## What “local” means
 
@@ -12,9 +12,9 @@ Your work leaves the private device boundary only when you deliberately use a fe
 - minting or sending a blockchain transaction;
 - sharing or exporting a file.
 
-## What a wallet does
+## Wallet functions
 
-A wallet is your optional economic identity. It can connect your contributions, published assets, stake, rewards, companions, model tokens, jobs, and provider activity across BonzAI products.
+Wallets provide economic identity, publishing, settlement, rewards, companion permissions, and provider activity across BonzAI.
 
 BonzAI never needs your seed phrase. Your wallet asks you to approve transactions.
 

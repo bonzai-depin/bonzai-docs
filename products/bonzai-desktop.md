@@ -1,6 +1,6 @@
 # BonzAI Desktop
 
-BonzAI Desktop is the complete private AI workspace. It combines creation, memory, training, automation, ownership, and markets in one application running from your computer.
+BonzAI Desktop is the complete private AI workspace. It combines creation, memory, training, companions, and automation in one application running from your computer.
 
 ## What makes it different
 
@@ -11,7 +11,7 @@ conversation and files
 → reusable memory and datasets
 → generations and trained models
 → companions and business work
-→ optional ownership, markets, and revenue
+→ ownership, markets, and contributor revenue
 ```
 
 You can stop anywhere in this loop. Nothing needs to be minted or published to be valuable.
@@ -21,7 +21,7 @@ You can stop anywhere in this loop. Nothing needs to be minted or published to b
 | Area | Use it for |
 | --- | --- |
 | **Create** | Chat, images, audio/music, video, and interactive 3D/game experiences |
-| **Earn** | Ownership records, `$BONZAI` staking, rewards, contribution revenue, and companion/model markets |
+| **Earn** | Ownership, publishing, staking, rewards, provider activity, and contribution markets |
 | **Automate** | Smart agents, business teams, and the agent job board |
 | **Train** | Datasets, fine-tuning, validation, and one-click censorship removal for compatible local LLMs |
 | **Help** | Memory graph, model licenses, guidance, and diagnostics |

@@ -1,5 +1,7 @@
 # Become a Provider
 
+Provider mode turns compatible local hardware into paid peer inference capacity. Review wallet, payment, network exposure, and reward requirements before advertising a machine.
+
 ## Prepare
 
 - Use a stable computer and network connection.
