@@ -1,59 +1,29 @@
-# Choose Your BonzAI
+# Choose your BonzAI
 
-You do not need to understand AI models, blockchains, or computer hardware to begin. Start with what you want to do.
+You do not need to learn AI or Web3 terminology before getting a useful result. Choose one task and the smallest setup that supports it.
 
-## I want to try BonzAI now
+## Try a conversation in the browser
 
-Open **BonzAI Web** at [bonzai.sh](https://bonzai.sh). It is the quickest introduction and can run private browser chat on supported desktop browsers.
+Open [BonzAI Web](https://bonzai.sh), choose **Chat Now**, and complete first-time model setup. Ask for a draft, an explanation or a summary of text you provide. The first download takes time; subsequent use can reuse the browser’s cached model.
 
-Choose this when you want to:
+Web is focused on text chat. Its image, audio, video, 3D, Roleplay and Smart Workflows entries introduce Desktop features and open the Desktop download panel. They do not run those Desktop tools inside the browser.
 
-- ask a question without installing the full studio;
-- understand what BonzAI can do;
-- find the correct Desktop download;
-- install the BonzAI+ browser assistant.
+[Read the Web manual](../products/bonzai-web.md).
 
-## I want BonzAI beside every website
+## Use the complete studio on your computer
 
-Install **BonzAI+** in a Chromium-based desktop browser. It opens in the browser side panel.
+[Install BonzAI Desktop](install-desktop.md) for larger model choices, images, voices, music, video, 3D worlds, persistent agents, training and Smart Workflows.
 
-Choose this when you want to:
+Start with one local chat or a small image. Choose a model that fits your available memory, then download it. You can explore other tools later without connecting a wallet.
 
-- chat normally or ask about a selected image or piece of text;
-- save useful material from webpages;
-- understand a video while it plays;
-- generate images inside the browser;
-- prepare clean datasets for BonzAI Desktop.
+## Work beside webpages
 
-## I want the complete private AI studio
+BonzAI+ is the browser assistant for page chat, capture, Live, Imagine and datasets. Web currently marks its extension installation as **Coming Soon**. Check the [installation guide](install-bonzai-plus.md) for availability rather than installing an unofficial copy.
 
-Install **BonzAI Desktop**.
+## Decide what stays private
 
-Choose this when you want to:
+Downloading a model is different from sending it a prompt. In local mode, the downloaded model processes prompts on your device. Online connectors, remote providers and public storage have separate data-sharing boundaries.
 
-- chat with a wider choice of local models;
-- generate images, speech, music, video, and interactive 3D scenes;
-- train or uncensor compatible models;
-- build persistent companion memory;
-- run agentic business teams;
+You only need a wallet for optional onchain actions. A storage upload can be public without involving a wallet at all. Read the [Web3 Guide](../web3/guide.md) when you want to publish or participate in the economy.
 
-Ownership, publishing, and provider features are available alongside the creative workflow when you are ready to use them.
-
-## Do I need a wallet?
-
-No. A wallet is not needed for normal private creation. It is used when you choose an onchain action such as publishing, minting, staking, paying a provider, or claiming revenue.
-
-## Do I need to download a model?
-
-Usually, yes. A model is the part that performs the AI work. BonzAI downloads it to your device the first time you select it, then reuses the cached copy.
-
-Think of this like downloading an offline map: the first use takes longer, but later use does not need to fetch the same map again.
-
-## Recommended path for a new user
-
-1. Visit BonzAI Web and ask one question.
-2. Install BonzAI+ if you spend time researching, watching videos, or collecting examples online.
-3. Install BonzAI Desktop when you want stronger models, media generation, memory, training, companions, or business teams.
-4. Connect a wallet when you want to publish, mint, stake, use paid peer compute, or participate in the contributor economy.
-
-Continue with [Your First 10 Minutes](first-10-minutes.md).
+**Next:** [Your first 10 minutes](first-10-minutes.md) · [What’s new](whats-new.md)

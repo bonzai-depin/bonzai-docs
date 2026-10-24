@@ -1,42 +1,32 @@
-# Uniswap Markets
+# Trading fees and locked liquidity
 
-BonzAI uses Uniswap V4 liquidity and a one-percent contribution hook for companion and validated model tokens.
+This page describes the current Desktop guide’s agent, model and game token flows. Historical factories and pools can follow other rules. Inspect the selected token’s actual pool and contracts before applying these percentages.
 
-## Companion tokens
+## What is locked?
 
-The companion factory creates one billion tokens:
+The current issuance flows use a permanently locked liquidity principal. Collecting trading fees does not withdraw that principal. Locked liquidity does not eliminate market, contract or price risk, or guarantee a liquid exit.
 
-- 96% enters permanent liquidity;
-- 4% seeds the companion economy;
-- the liquidity position is locked at the dead address.
+## Where the 1% trading fee goes
 
-The one-percent hook contribution is divided:
+| Beneficiary | Agent pool fee income | Model/game pool fee income |
+| --- | ---: | ---: |
+| Agent execution wallet | 35% | — |
+| Agent NFT owner | 35% | — |
+| Creator | — | 70% |
+| Treasury | 20% | 20% |
+| Staking rewards | 10% | 10% |
 
-| Recipient | Share of hook contribution |
-| --- | ---: |
-| Companion wallet | 40% |
-| Companion owner | 40% |
-| Treasury | 10% |
-| Contribution/Mint pools | 10% |
+These are shares of collected fees, not of liquidity principal. A registered contributor allocation can direct the model creator portion to contributors; metadata alone does not establish a payout.
 
-Companion minting is atomic when the production factory is configured: the `0.30 ETH` default mint includes `0.05 ETH` for initial liquidity, and the NFT/token/liquidity operation succeeds or fails together.
+## Collect and claim
 
-## Fine-tuned and abliterated model tokens
+1. Open **Markets**, choose the issued token and open **Trading fees**.
+2. Collect pool fees to credit their beneficiaries. Anyone may trigger collection; that does not entitle the caller to every share.
+3. Use **Claim my fees** for each currency you are eligible to receive.
+4. **Deposit rewards** forwards the reward allocation to the staking basket.
 
-The model factory also creates one billion tokens with 96% permanent liquidity and 4% creator allocation.
+Previously credited balances remain with the original recipient. A later ownership transfer does not rewrite those credits.
 
-The one-percent hook contribution is divided:
+Pool deployment and a compatible exchange are prerequisites for trading. A quote can include pool fees, slippage and gas, and the final wallet confirmation governs the transaction.
 
-| Destination | Share |
-| --- | ---: |
-| Model beneficiary or contribution route | 80% |
-| Treasury | 10% |
-| Training/Mint pool | 10% |
-
-When the Revenue Router is configured, the model's beneficiary amount can be flushed into its provenance route for downstream contributor revenue.
-
-## Markets view
-
-Desktop reads issued factory assets, locates their Uniswap pools, and shows price, liquidity, volume, movement, locally accumulated chart history, and tokenomics. External indexing can take time after launch.
-
-Token markets are risky. Permanent liquidity prevents the creator from withdrawing the LP position, but it does not guarantee price, demand, accuracy, or profit.
+[Trading-fee walkthrough](guide.md#collect-trading-fees) · [Markets](token-markets.md) · [Rewards](reward-structure.md)

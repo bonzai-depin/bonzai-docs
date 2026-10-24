@@ -1,49 +1,28 @@
-# Rewards & Revenue Share
+# Understand rewards before claiming
 
-BonzAI rewards useful activity through several independent channels. There is no single “stake and wait” reward promise.
+BonzAI has several independent sources of potential earnings. Neither staking, owning a token nor running a provider guarantees income. A claim requires the relevant deployed contracts, funded balances and eligibility.
 
-## Contribution revenue
+| Source | Where to look | What creates a claim |
+| --- | --- | --- |
+| Staking basket | Rewards → Your share of the activity | Eligible shares of funded, closed periods, separately for each currency |
+| Epoch pools | Rewards → Epoch Pool Rewards | Registered eligible stake and a finalized funded epoch, with its claim steps |
+| Token trading fees | Markets → Trading fees | Collected pool fees credited to the beneficiary |
+| Remote workflow jobs | The job/escrow flow | Accepted delivery or the applicable dispute/refund outcome, followed by withdrawal |
+| Provider pool | Network and provider-related rewards | Independently verified service receipts, finalized periods and enabled claims |
+| Contribution allocations | The specific model/job revenue flow | Explicitly registered allocations and actual revenue; attribution alone is not a payout |
 
-An asset route names contributor wallets, roles, scores, and immutable base shares. At the current default router settings, 80% of deposited revenue follows those shares, 10% funds an additive staking bonus, and 10% goes to treasury.
+## Trading fees in the current issuance flow
 
-Examples of contributors include data owners, curators, trainers, evaluators, publishers, companion workers, and providers.
+The current guide describes a **1% pool trading fee**. Agent fee income is allocated 35% to the execution wallet, 35% to the NFT owner, 20% to treasury and 10% to rewards. Model and game fee income is allocated 70% to the creator, 20% to treasury and 10% to rewards. These describe fee income, not the liquidity principal or a share of every token holder’s balance.
 
-## Companion revenue
+Collecting fees and claiming your credited share are distinct actions. The collector does not receive everyone’s fees. Credited balances remain with their original recipients; liquidity principal stays locked. Historical contracts can differ.
 
-Companion value can reach:
+## Staking rewards
 
-- the companion wallet;
-- the companion owner;
-- skill co-owners;
-- contributors behind models/data used for paid work;
-- the protocol and contribution pools.
+Refresh the claimable balance for each closed period and currency. Claim each currency separately; no automatic conversion is implied. Leaving the stake does not erase already accrued claims. Withdrawal notice and any lock still apply to the principal.
 
-Companion token swaps use the current hook split documented under [Uniswap Markets](uniswap-hooks.md). Paid jobs can use milestone evidence and job escrow.
+## Provider limits
 
-## Model revenue
+A local service-time ledger is not proof of onchain earnings. The current application guide says independently verified receipts and funded end-to-end settlement must be validated before provider rewards can launch. Do not interpret elapsed processing time as an hourly wage or a withdrawable balance.
 
-A validated fine-tuned or abliterated model can issue a token after it has complete metadata and provenance. When the configured hook uses the Revenue Router, the model beneficiary share can enter its contribution route rather than paying only the person who clicked Train.
-
-## Content revenue
-
-Mint fees, secondary royalties, marketplace sales, and derivative training use can create creator/contributor revenue according to the deployed content contracts and route metadata.
-
-## Provider revenue
-
-Providers earn for completed paid inference. Reliability, service time, price, capability, and configured stake-backed trust can affect eligibility and routing.
-
-## Legacy MintPool epochs
-
-MintPool is a separate transitional mechanism with six content pools and weekly epochs:
-
-1. An eligible wallet registers during the epoch.
-2. Revenue enters one or more pools.
-3. The epoch finalizes.
-4. The required block gap prevents same-block/flash-loan claims.
-5. The wallet claims its eligible share.
-
-Unclaimed legacy funds may be swept after the contract's configured later epoch. MintPool does not replace asset-level provenance routes.
-
-## Claiming safely
-
-The Ownership/Rewards views show the source and asset before a claim. Verify network, contract, claimable amount, and gas. BonzAI never needs your seed phrase to claim.
+[All claim walkthroughs](guide.md#claim-staking-rewards) · [Trading fees](uniswap-hooks.md) · [Staking](staking-architecture.md)

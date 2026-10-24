@@ -1,54 +1,38 @@
 # Welcome to BonzAI
 
-BonzAI is a private AI workspace for creating, training, and automating without surrendering your work to a centralized platform.
+BonzAI helps you write, create media and put AI agents to work on your own computer. Start with a useful result—a clearer email, an illustration, a narrated story or a repeatable business task—and build from there.
 
-Most AI products ask you to send prompts, files, images, business ideas, and training data to someone else's servers. BonzAI takes the opposite path: useful AI begins on your device and remains under your control.
+**New here?** [Choose your starting point](getting-started/README.md), or follow [your first 10 minutes](getting-started/first-10-minutes.md). **Coming back?** See [what’s new](getting-started/whats-new.md).
 
-## The Problem BonzAI Solves
+## Choose the tool for your task
 
-Cloud AI is convenient, but it separates users from their data, models, and operating context. Traditional local model tools protect privacy but often stop at a prompt box.
-
-BonzAI connects the work around the model:
-
-```text
-private context -> structured data -> generation -> training -> automation
-```
-
-Captured context can become a reusable dataset. A dataset can improve a model. A model can support a companion or an agentic business team. Useful work accumulates instead of disappearing into isolated chats.
-
-| Option | What you get | What is missing |
+| I want to… | Start here | What to expect |
 | --- | --- | --- |
-| Cloud AI apps | Powerful models and polished UX | Local control, privacy, and inspectable infrastructure |
-| Local model runners | Private local inference | Connected capture, memory, training, agents, and business workflows |
-| BonzAI | One private loop where work can accumulate, improve, and ship | Hardware still matters, so BonzAI spans browser and desktop workflows |
+| Try private text chat without installing an app | [BonzAI Web](products/bonzai-web.md) | A model download in a compatible browser; prompts run on your device |
+| Make images, voices, music, video or a game | [BonzAI Desktop](products/bonzai-desktop.md) | A local studio with models selected for the task and your hardware |
+| Give an agent a character and memory | [Roleplay and companions](desktop/roleplay.md) | Local conversations and reusable context |
+| Turn a recurring task into a workflow | [Smart Workflows](desktop/company-jobs.md) | Teams, inputs, tools, activity and reviewable deliverables |
+| Collect examples from webpages | [BonzAI+](products/bonzai-plus.md) | A browser assistant with capture and dataset tools; check distribution availability |
+| Publish work or understand the token economy | [Web3 Guide](web3/guide.md) | Optional wallet actions, with prerequisites, costs and limitations explained |
 
-## The Three Products
+[Download BonzAI Desktop 4.1.0](getting-started/install-desktop.md) for Apple Silicon macOS, Windows x64, or Linux amd64 with CUDA or ROCm.
 
-| Product | Plain-English purpose |
-| --- | --- |
-| **BonzAI Web** | Try private browser AI and find the right BonzAI workflow. |
-| **BonzAI+** | Chat about pages, capture text and images, follow video, generate images, and build datasets in the browser. |
-| **BonzAI Desktop** | Generate across modalities, train models, run companions, and deploy agentic business teams from a local workspace. |
+## Start free, keep control
 
-## What You Can Do
+Local chat, generation and local Smart Workflows do not require a wallet, a token balance or a subscription. You supply the hardware, storage and electricity. Models download separately, and larger models need more memory and time.
 
-- Chat privately with local AI.
-- Generate images, audio, music, video, and interactive 3D scenes.
-- Capture useful text and images while browsing.
-- Turn captured material into structured datasets.
-- Import datasets into Desktop for local training and fine-tuning.
-- Create companions with persistent identity and memory.
-- Operate agentic business teams that prepare, execute, review, and remember real work.
+Local inference processes your prompts on your device. Internet access is still needed for downloads, updates and any online features you choose. Remote inference and connected tools send the inputs needed for that service; publishing can make selected files and metadata public. See [privacy and downloads](getting-started/privacy-wallets.md).
 
-## Sovereign Ownership Layer
+## Build on your work
 
-Wallets, `$BONZAI`, minting, staking, markets, rewards, and provider economics are part of the BonzAI architecture. They connect private creation to portable identity, public settlement, contributor attribution, and programmable revenue.
+A conversation can help shape an idea. Generation turns it into text or media. Datasets organize examples for training, while memory carries useful context into later tasks. Smart Workflows organize agents around a result you can inspect.
 
-Local inference remains private. Onchain actions remain explicit: users choose when to publish, mint, stake, pay, claim, or grant an agent permission.
+Saving locally is enough to use the output. Minting, staking, markets and paid remote services are optional next steps, not requirements for creation. An available screen does not prove a contract or market is live: use the [Web3 Guide](web3/guide.md) to understand the boundary before proceeding.
 
-## Start Here
+## Find your next step
 
-- New users: [Choose Your BonzAI](getting-started/README.md)
-- First session: [Your First 10 Minutes](getting-started/first-10-minutes.md)
-- Business automation: [Agentic Teams for Business](products/zero-human-company.md)
-- Ownership and network economy: [Web3 & Onchain Economy](web3/README.md)
+- [Hardware and model choices](getting-started/system-requirements.md): choose something your computer can run comfortably.
+- [Desktop navigation](desktop/navigation.md): find creation, agents, training and settings.
+- [Themes](desktop/themes.md): choose a comfortable light or dark workspace.
+- [Everyday workflows](user-scenarios/README.md): turn a capability into a useful outcome.
+- [Troubleshooting](reference/troubleshooting.md): recover when downloads, models or generation fail.

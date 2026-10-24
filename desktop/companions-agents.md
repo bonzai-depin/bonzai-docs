@@ -1,23 +1,11 @@
-# Companions & Agents
+# Companions and agents in Desktop
 
-## Companions
+Use **Roleplay** for a character conversation and **Smart Agents** to configure agent identity and capabilities. Use **Smart Workflows** for repeatable tasks with inputs, tools and deliverables.
 
-A companion is a persistent AI identity with personality, memory, voice, media abilities, skills, and optional onchain identity.
+Create a local agent, choose its model and define its purpose. Start with a small task and inspect the result. Local agents do not require a wallet, NFT, social token or workspace license.
 
-Create one by choosing a character, personality, scenario, content boundary, and appearance. Over time, conversations and useful outcomes can enrich that companion's own memory.
+Memory supplies reusable context; training changes a model or adapter. A persona does not create integrations or grant access to other teams’ private data. Connect only the tools the task needs and review external actions separately.
 
-## Memory boundaries
+Optional public-agent flows acquire a slot, personalize and publish its identity, then issue a social token through configured contracts. Remote hiring uses a separately reviewed quote and escrow workflow. Neither minting nor discovering a peer means a job is running or has been paid out.
 
-A companion has an identity memory plus separate contexts for each business team or job. A fact learned for one client should not automatically leak into another engagement.
-
-Open **Help → Memory** to browse connected notes, inspect relationships, focus a node, and navigate between related memories.
-
-## Agents
-
-Agents are goal-oriented workflows using models, skills, files, and connectors. Use Agents when you need a repeatable task rather than an ongoing character relationship.
-
-## Minting a companion
-
-The current default companion mint is **0.30 ETH**. When the production token factory is configured, the transaction also issues the companion token and uses **0.05 ETH** for initial permanent liquidity. The remaining protocol proceeds follow the configured split.
-
-Minting is optional. Local companions remain useful without an NFT or token.
+[Roleplay](roleplay.md) · [Smart Workflows](company-jobs.md) · [Create and mint](../companions/minting-guide.md) · [Web3 Guide](../web3/guide.md)

@@ -18,7 +18,7 @@ Starting with a real task makes model choices much easier to understand.
 
 When BonzAI asks to download a model:
 
-1. Read the model's purpose and hardware estimate.
+1. Review the download category and size; model choices are available separately.
 2. Choose a smaller or faster model for your first attempt.
 3. Keep BonzAI open while the progress bar completes.
 
@@ -28,7 +28,7 @@ The download is stored locally. It should not repeat every time you launch the p
 
 ### In BonzAI Web
 
-Type a question and send it. If local browser AI is unavailable on your device, BonzAI explains which product can complete the task.
+Choose **Chat Now**, complete **First-time setup**, and wait for the downloaded model to be ready. Then type a question and send it. If local browser AI is unavailable, use the Desktop route. Copy important answers before closing the tab: the current Web conversation is kept in memory.
 
 ### In BonzAI+
 
@@ -67,3 +67,7 @@ Example:
 - Let an active generation finish before starting another large one.
 
 Slower hardware does not prevent you from using BonzAI. It changes which model and quality setting will feel comfortable.
+
+## Next: try a Smart Agent
+
+Try [Roleplay](../desktop/roleplay.md) without a wallet, or give a team a bounded task in [Smart Workflows](../desktop/company-jobs.md). Read the [Web3 Guide](../web3/guide.md) only when you want to explore optional public identity or paid remote work.

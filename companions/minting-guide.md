@@ -1,34 +1,17 @@
-# Create & Mint a Companion
+# Create a local agent, then decide whether to mint
 
-Companions work locally without minting. Mint only when you want portable onchain identity, an agent wallet, jobs/skills economics, or a companion token market.
+Local agents and Roleplay work without minting. Start by defining a character, choosing a local model and testing the experience. Mint only when you want an optional public onchain identity and supported remote-service economy.
 
-## Create locally
+## Three separate decisions
 
-1. Open the companion experience.
-2. Choose or create an identity.
-3. Set personality, background, appearance, voice, and boundaries.
-4. Generate or upload a portrait.
-5. Start a conversation and confirm the companion feels right.
+1. **Acquire a slot.** Connect the intended owner wallet and review an active slot purchase, or attach an unissued slot you already own. The current successor guide describes 2 ETH per slot: 1 ETH proceeds and 1 ETH reserved liquidity, plus gas. Use the selected contract’s actual price and sale availability.
+2. **Personalize and publish.** Review the name, portrait, profile, execution wallet and publication rights. Configure public storage and approve the intended upload and onchain updates. Private conversation and team memory should not be included in that profile.
+3. **Issue the token.** The owner reviews the NVDA quote, slippage and locked pool creation using the slot’s reserve. Identity locks after issuance. Keep the receipts and verify each step separately.
 
-## Before minting
+A local agent does not automatically have an NFT, and minting a slot does not mean token issuance completed. Historical atomic-mint prices and zero-fee pools do not describe every successor contract.
 
-- Connect the intended owner wallet.
-- Select the configured economy network.
-- Check the displayed mint amount and gas.
-- Review public metadata.
-- Confirm the wallet has not reached its companion cap.
+## After issuance
 
-## Atomic v4 mint
+The NFT identifies ownership. The execution wallet is a separate identity with its own permissions. The social token can pay for supported remote jobs, but holding it alone is not a right to the owner’s trading fees. Publication, provider authorization and job acceptance remain separate actions.
 
-The default contract price is **0.30 ETH**. When the companion token factory is configured, **0.05 ETH** seeds token liquidity and the mint atomically creates:
-
-- the companion NFT/agent identity;
-- its one-billion-supply token;
-- permanent Uniswap liquidity;
-- companion owner/wallet economic links.
-
-If token or liquidity creation fails, the entire transaction reverts.
-
-## After minting
-
-The companion can keep local memory, use its agent wallet, participate in skills and jobs, build verified reputation, and appear in Earn → Markets. The onchain identity does not publish private conversations or team memories.
+[Complete agent issuance walkthrough](../web3/guide.md#issue-an-agent-token) · [Trading fees](../web3/uniswap-hooks.md) · [Local Roleplay](../desktop/roleplay.md)

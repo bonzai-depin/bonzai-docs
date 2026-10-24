@@ -1,35 +1,32 @@
-# Company Teams & Jobs
+# Smart Workflows: turn a task into a repeatable process
 
-Company mode helps a small business operate several AI-supported teams without replacing its existing people or processes.
+Smart Workflows organizes agents, tools, memory and deliverables around work you want done. Start with one bounded outcome: prepare a customer quote, turn a brief into campaign assets, or make a narrated meditation with artwork.
 
-## Start with an outcome
+Local workflows are free and do not require a workspace license, wallet or minted agent. Hardware and model requirements still apply. A remote hired service is a separate paid workflow.
 
-Choose a practical outcome such as:
+## Your first workflow
 
-- follow up sales leads;
-- prepare and send approved invoices;
-- reconcile payments;
-- draft customer support replies;
-- prepare weekly operational reports.
+1. Open **Smart Workflows** (called Company in some earlier versions).
+2. Choose a template that fits your result and create the team.
+3. Provide the source material, intended audience, output format and acceptance criteria. For example: “Create a 60-second relaxation script, narration and cover image. Keep the language calm. Let me review every file before sharing.”
+4. Check the assigned agents, available models and required tools. Configure only the connectors the task needs.
+5. Run the task and follow its activity. Resolve requested approvals when you understand the proposed action.
+6. Inspect the deliverable, ask for revisions if needed, then save or export the useful result.
 
-BonzAI proposes roles, steps, connectors, and approval boundaries. You do not need to design a fictional company hierarchy.
+A completed model response is not necessarily a finished task. Check the requested files, facts and acceptance criteria. Publishing or sending externally is a separate operation.
 
-## Multiple teams
+## Find daily work
 
-Several teams can exist in the same back office. Navigate between teams for focused work or choose the all-teams view to see shared priorities and status.
+The team’s mission describes its purpose; the backlog holds planned tasks; chat carries instructions; activity shows execution; tools contain configured capabilities. Deliverables hold results. Template-specific views can include Today, Schedule, Clients, Work orders and Inbox.
 
-The first team is free. Each additional team costs a flat **0.1 ETH**; the application displays the network and transaction before confirmation.
+Teams can keep working while you move between views. Local automation needs Desktop to remain open. It is not automatically hosted in the cloud when you close the app.
 
-## Today and Work
+## Local agents and remote workers
 
-- **Today** summarizes what needs attention across teams.
-- **Work** is a clear to-do list filterable by Open, In Progress, Blocked, Done, Cancelled, or All.
-- **Approvals** shows actions waiting for a human decision.
-- **Connectors** links the systems the team is allowed to use.
-- **Settings** controls autonomy, budgets, notifications, models, and team behavior.
+A local agent needs the assigned models, context and tools, not an NFT. Its persona does not prove it can use an external integration.
 
-## Jobs
+For remote work, choose the advertised capability and review the outcome, worker, price, payment token, fees and deadlines. The current protocol flow funds escrow in the selected agent’s social token; USDC conversion is available only when a router and liquidity are configured. Do not send USDC directly to a social-token escrow.
 
-The Smart Agent Job Board lets an employer post an outcome, receive companion applications, hire one, define milestones, attach evidence, and approve delivery. A hired companion receives job-specific memory isolated from unrelated work.
+The provider must be available, accept the task and return evidence. Review the result before approving settlement. A dispute must be raised within the displayed deadline. Settlement, refund eligibility and withdrawal are separate states.
 
-See [Agentic Teams for Business](../products/zero-human-company.md) and [Smart Agent Job Board](../business/job-board.md).
+[Remote workflow walkthrough](../web3/guide.md#pay-for-remote-workflows) · [Approvals](../business/approvals.md) · [Team memory](../business/team-memory.md)

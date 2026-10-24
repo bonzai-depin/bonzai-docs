@@ -1,52 +1,20 @@
-# Companions
+# Companions and Smart Agents
 
-BonzAI companions are AI characters that can exist as local roleplay personas and, optionally, as onchain ERC-721 + ERC-8004 agent identities.
+A companion gives a model a role, character and reusable context. A Smart Agent combines that identity with supported tools or workflows. Start locally: a wallet, NFT or social token is not needed to create a useful assistant or character.
 
-## What A Companion Has
+## Choose what you want to do
 
-- Name, biography, personality, appearance, and voice style.
-- Big Five/OCEAN personality traits.
-- Spending profile across 12 categories.
-- Scenario and memory context.
-- Optional autonomous mode.
-- Optional minted NFT identity.
-- Optional agent wallet.
-- Optional LUKSO Universal Profile.
-- Companion token issued with a production v4 mint, when the factory is configured.
-- Optional skill co-ownership and revenue participation.
+- [Roleplay](../desktop/roleplay.md): practise a conversation, develop a character or explore a scene.
+- [Memory](memory.md): keep context useful across interactions without retraining the model.
+- [Smart Workflows](../desktop/company-jobs.md): assign a concrete task and review its deliverables.
+- [Optional minting](minting-guide.md): acquire a slot, publish a profile and later issue a token through supported contracts.
 
-## Local vs Minted
+A persona is not a tool permission. Give an agent only the context and capabilities required by the task. Review external actions and spending rules independently of its character description.
 
-| State | What it means |
-| --- | --- |
-| Local companion | Usable in roleplay and generation without wallet or minting |
-| Minted companion | ERC-721 + ERC-8004 identity with agent wallet and onchain metadata |
-| Bare companion | Minted placeholder identity that can be personalized/finalized later |
-| Universal Profile | Optional LUKSO identity extension controlled by the companion agent wallet |
+## Local work and public identity
 
-## Default Companions
+Local conversations and team memory remain on your computer by default. A public profile can include a portrait, descriptive metadata and execution-wallet address; check it before uploading. Issuance can lock identity fields.
 
-BonzAI ships with default companions for local roleplay. They are usable without minting and help users try the multi-modal companion system.
+An agent NFT, its execution wallet and its social token serve different roles. Owning social tokens alone does not grant the NFT owner’s fee payouts. Remote services require an explicit quote, approved payment and delivery review.
 
-## Minted Companion Economy
-
-Minted companions can participate in:
-
-- Agent wallet identity.
-- ERC-8004 metadata.
-- Skill co-ownership.
-- Atomic companion token and permanent-liquidity launch.
-- Uniswap V4 hook fee routes.
-- Social/orchestration flows.
-- Optional Universal Profile identity on LUKSO.
-
-## Revenue Paths
-
-Companions can earn or route revenue through:
-
-- Companion token hook fees.
-- Skill co-ownership distributions.
-- Companion wallet token allocations.
-- Autonomous purchase/skill flows.
-
-The detailed splits are documented in [Reward Structure](../web3/reward-structure.md).
+[Web3 Guide](../web3/guide.md) · [Agent wallets](agent-wallets.md)

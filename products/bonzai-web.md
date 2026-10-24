@@ -1,47 +1,45 @@
 # BonzAI Web
 
-BonzAI Web is the browser entrance to the BonzAI experience. It offers private local chat where the browser supports it and uses an interactive conversation to explain the complete suite.
+[BonzAI Web](https://bonzai.sh) lets you try local text AI in your browser and discover the rest of the BonzAI workspace. It is useful for writing, explaining, brainstorming and summarizing text you provide.
 
-## Start chatting
+## Your first conversation
 
-1. Visit [bonzai.sh](https://bonzai.sh) in a supported desktop browser.
-2. Choose or download the browser model when prompted.
-3. Wait for the model status to become ready.
-4. Type a message and press Enter.
+1. Open Web in a compatible desktop browser.
+2. Close the introduction with **Chat Now**.
+3. Complete **First-time setup** and download the recommended model. Keep the tab open until it finishes.
+4. Wait for the model to be ready, then type your request and send it.
+5. Refine the result with a follow-up instruction.
 
-The model is cached by the browser so it does not need to be downloaded for every session. Browser storage policies, private-browsing mode, or clearing site data can remove that cache.
+Try: “Turn these notes into a short email. Keep the facts, remove repetition, and end with the next step: …”
 
-## Conversation guide
+The current Web chat flow does not require a wallet or a minimum BONZAI balance. Buying tokens is separate from running the model on your device.
 
-The suggested questions explain:
+## Models and storage
 
-- the problem BonzAI solves;
-- Desktop, Web, and BonzAI+;
-- local privacy and memory;
-- generation and training;
-- companions and agentic teams;
-- Proof of Contribution;
-- `$BONZAI`, Proof of Contribution, ownership, wallets, and network economics.
+The model picker shows available models, download controls and an estimated device memory budget. A larger model may be slower or fail to fit. Start with the recommended model, and move down in size if loading or generation fails.
 
-Answers may include rich media such as diagrams and product flywheels.
+Models are cached in browser storage. Clearing site data, private browsing or browser eviction can remove them. Saved setup preferences are not a backup of your model files.
 
-## Model status
+The sidebar includes prepared product questions as well as conversations created during the session. The current Web implementation keeps live conversation content in memory: do not rely on a reload to preserve it. Copy important answers before closing the page. The history export control currently directs you to Desktop rather than exporting a Web archive.
 
-During the first use, BonzAI Web may show model download and loading progress. Keep the page open. If loading fails, confirm that the browser supports the required local AI technology and that sufficient memory/storage is available.
+## Themes and language
 
-## Desktop downloads
+Click the theme name in the sidebar to open the gallery. Search by name or filter light/dark palettes, then click a preview. Arrow controls cycle themes. The choice stays in this browser when local storage is available.
 
-Desktop download buttons appear only where downloading a desktop installer makes sense. On mobile, BonzAI Web offers ways to share the download link through X, Telegram, or Discord so you can open it later on a computer.
+Web supports English, French, Spanish, Japanese, Korean, Chinese and Russian. Language and theme preferences are local to this browser; they do not automatically synchronize with Desktop.
 
-## Mobile browsers
+## Which tools run here?
 
-Browsers on iPhone and iPad share Apple's underlying browser engine, including Chrome and Brave. Some local chat capabilities available on desktop Chromium are therefore unavailable on iOS. This is a browser-engine limitation, not an indication that your conversation was sent to a cloud fallback.
+Text chat runs in the browser. Image, audio, video, 3D, Roleplay, Smart Workflows and training navigation entries open the Desktop download panel. They describe what Desktop can do; selecting one does not install or run a Desktop model in Web.
 
-BonzAI does not silently replace unsupported local inference with a remote AI service.
+The download panel lists Desktop 4.1.0 for Apple Silicon macOS, Windows x64 and Linux amd64 CUDA/ROCm, with sizes and checksum links. You can also share the installation-guide link to another device. [Choose an installer](../getting-started/install-desktop.md).
 
-## When to move to another product
+BonzAI+ is presented separately and its installation is currently marked Coming Soon in Web. Check the [extension guide](../getting-started/install-bonzai-plus.md) for distribution details.
 
-- Install **BonzAI+** for page capture, Live video understanding, browser datasets, and Imagine.
-- Install **BonzAI Desktop** for larger models, full multimodal generation, memory, training, companions, and agentic teams.
+## Privacy and compatibility
 
-BonzAI Web links directly to supported `$BONZAI` liquidity routes and wallet controls. Always verify the selected network and contract address before signing.
+Local inference processes prompts on your device. Model downloads and optional wallet, exchange or external documentation links still contact their respective services. Choosing a local model does not grant access to your other tabs or local files.
+
+Browser capabilities, memory and available storage determine whether a model can run. When local inference is unavailable, Web shows an explanation and a route to Desktop; it does not silently send the conversation to a cloud fallback. On mobile, use the download/share links to continue on a supported computer.
+
+**Next:** [Desktop manual](bonzai-desktop.md) · [Web3 Guide](../web3/guide.md) · [Troubleshooting](../reference/troubleshooting.md)

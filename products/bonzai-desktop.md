@@ -1,43 +1,38 @@
 # BonzAI Desktop
 
-BonzAI Desktop is the complete private AI workspace. It combines creation, memory, training, companions, and automation in one application running from your computer.
+BonzAI Desktop is a local AI workspace for creating text and media, giving agents persistent context and organizing repeatable work. Use your own computer and downloaded models; local creation and Smart Workflows do not require a wallet or subscription.
 
-## What makes it different
+[Install Desktop 4.1.0](../getting-started/install-desktop.md) · [Your first 10 minutes](../getting-started/first-10-minutes.md)
 
-A normal local model runner gives you a prompt box. BonzAI Desktop keeps the work around that prompt useful:
+## Start with an outcome
 
-```text
-conversation and files
-→ reusable memory and datasets
-→ generations and trained models
-→ companions and business work
-→ ownership, markets, and contributor revenue
-```
+| Your goal | Open | A useful first task |
+| --- | --- | --- |
+| Write or understand something | [Chat](../desktop/chat.md) | Turn notes into a clear customer reply |
+| Make a visual | [Images](../desktop/image.md) | Create one illustration before increasing resolution |
+| Add a voice or soundtrack | [Audio & Music](../desktop/audio.md) | Narrate a short paragraph or make a short music sample |
+| Make moving images | [Video](../desktop/video.md) | Generate a short clip with a compatible model |
+| Build something playable | [World Forge](../desktop/world-forge.md) | Generate an object and a level, then assemble and playtest |
+| Talk to a persistent character | [Roleplay](../desktop/roleplay.md) | Create a local persona and define its role |
+| Repeat a process | [Smart Workflows](../desktop/company-jobs.md) | Give a team a brief and review its deliverable |
+| Adapt a model | [Datasets and training](../desktop/training.md) | Prepare a small, reviewed dataset and validate the result |
 
-You can stop anywhere in this loop. Nothing needs to be minted or published to be valuable.
+## Choose a model you can run
 
-## Main areas
+Each kind of generation has its own model requirements. Downloads, storage, GPU support and available memory matter. A successful text model does not imply that a large video model will fit the same computer. Follow [hardware and model choices](../getting-started/system-requirements.md), and scale up after a small successful run.
 
-| Area | Use it for |
-| --- | --- |
-| **Create** | Chat, images, audio/music, video, and interactive 3D/game experiences |
-| **Earn** | Ownership, publishing, staking, rewards, provider activity, and contribution markets |
-| **Automate** | Smart agents, business teams, and the agent job board |
-| **Train** | Datasets, fine-tuning, validation, and one-click censorship removal for compatible local LLMs |
-| **Help** | Memory graph, model licenses, guidance, and diagnostics |
+## Keep useful work
 
-## Local-first by default
+Generation history, agent memory, team records, datasets and model artifacts live on your computer by default. Use the relevant save/export controls and keep backups of important local data. Memory supplies context at use time; training changes a model or creates an adapter. They are different ways to reuse your work.
 
-Generation history, companion memory, company records, datasets, and model artifacts are stored locally. BonzAI uses a structured local database rather than treating every feature as an unrelated file or chat.
+## Personalize the workspace
 
-External actions are explicit. A connector may contact the service you configured. A wallet transaction may publish or move value. P2P inference may involve another provider. The interface identifies those boundaries.
+Use the theme name in the sidebar to browse the palette collection, or the arrows to cycle it. [Themes](../desktop/themes.md) includes the 18 newer light and dark palettes also available on Web. Language and appearance can be changed without altering the underlying work.
 
-## Start with these manuals
+## Use online features deliberately
 
-- [Desktop Navigation](../desktop/navigation.md)
-- [Chat](../desktop/chat.md)
-- [Image Generation](../desktop/image.md)
-- [Datasets, Tune & Uncensor](../desktop/training.md)
-- [Companions & Agents](../desktop/companions-agents.md)
-- [Company Teams & Jobs](../desktop/company-jobs.md)
-- [Ownership, Staking & Markets](../desktop/ownership-markets.md)
+A configured connector contacts its service. Remote inference or a hired agent receives the agreed inputs. Uploading to public storage exposes selected content; minting records ownership and metadata onchain. These actions are separate from saving and generating locally.
+
+The [Web3 Guide](../web3/guide.md) explains prerequisites and current limitations. A configured address is not proof of a live deployment, a funded reward pool or a liquid market.
+
+**Find your way:** [Navigation](../desktop/navigation.md) · [Settings and troubleshooting](../desktop/settings-troubleshooting.md) · [What’s new](../getting-started/whats-new.md)

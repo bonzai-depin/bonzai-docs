@@ -1,43 +1,20 @@
-# Levels & Utility
+# Publishing levels
 
-BonzAI currently contains two related level systems during the v4 transition. They must not be confused.
+BonzAI levels govern supported publication actions. They do not gate local chat, image generation or local workflows.
 
-## Legacy holding/mint levels
-
-These existing application thresholds gate content mint categories, not local generation:
-
-| Level | Wallet balance | Mint category |
-| ---: | ---: | --- |
-| 1 | 1,000 | Text |
-| 2 | 5,000 | Audio |
-| 3 | 10,000 | Image |
-| 4 | 25,000 | Video |
-| 5 | 33,000 | 3D |
-| 6 | 50,000 | Training/model issuance |
-
-The legacy one-time unlock may bypass compatible mint-level checks where deployed. It does not replace staking utility.
-
-## v4 staking tiers
-
-The deployment script currently initializes these staking thresholds:
-
-| Tier | Staked `$BONZAI` |
-| ---: | ---: |
-| 1 | 1,000 |
-| 2 | 5,000 |
-| 3 | 10,000 |
-| 4 | 25,000 |
-| 5 | 50,000 |
-| 6 | 100,000 |
-
-Contract ownership can update thresholds. The deployed vault is the source of truth.
-
-## Token addresses
-
-| Network | `$BONZAI` |
+| Level | Publishing category |
 | --- | --- |
-| Ethereum | `0xDdA9Ff241C7160be8295EF9Eca2e782361467666` |
-| Arbitrum | `0x0a84edf70f30325151631ce7a61307d1f4d619a3` |
-| Base | `0xc4d137def384ee0f8857887f5950669ba04984ec` |
+| LVL1 | Text |
+| LVL2 | Audio |
+| LVL3 | Images |
+| LVL4 | Video |
+| LVL5 | 3D |
+| LVL6 | Training manifests and model issuance flow |
 
-Always use the address shown by an official BonzAI source and verify the selected network.
+Open **Rewards** to see the staking amount required by the selected deployment. Review your new total and the withdrawal notice before approving or staking. Owning BONZAI in a wallet is not the same as staking it in the required vault.
+
+Older releases and contracts include holding-level and one-time-unlock mechanisms. Do not use their thresholds to infer eligibility for a successor staking-based flow. The deployed contract and the current transaction determine eligibility and fees.
+
+Publication also needs supported contracts, storage, rights to the content and a separate mint fee and gas. Meeting a level does not automatically publish anything.
+
+[Content tokenization](guide.md#tokenize-content) · [Staking and withdrawal](staking-architecture.md)

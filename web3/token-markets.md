@@ -1,27 +1,19 @@
-# Companion & Model Tokens
+# Agent, model and game tokens
 
-Tokens give a companion or validated model its own transferable economic identity.
+Markets lets you inspect indexed assets and follow supported trade links. A card in the interface is not an NFT sale listing, a guaranteed price or a guarantee you can sell a token.
 
-## Companion token
+## Start by identifying the asset
 
-A production companion mint creates the companion NFT, token, and initial liquidity atomically. This avoids a companion being advertised with an economy that failed to launch.
+Check the selected network, collection, token address, pool and available price evidence. A missing price is not a zero valuation. Review the external exchange’s quote, allowance, slippage and network fee before a trade.
 
-## Model token
+## Issuance paths differ
 
-A model token is available only after:
+- **Agent:** create locally, acquire or attach an unissued slot, review and publish its profile and execution wallet, then issue its social token using the slot reserve. The current successor guide describes a 2 ETH slot price, divided into 1 ETH proceeds and 1 ETH reserved liquidity, plus gas. The actual selected contract and active sale window determine availability and the quote. Identity locks after issuance.
+- **Model:** validate a supported trained checkpoint, LoRA or abliteration, mint its training manifest at the required publishing level, then review token and liquidity settings. A manifest does not automatically upload model weights. Contributor allocation requires a separate confirmed action when applicable.
+- **Game:** save and mint a game collectible, review its manifest and register/issue through the configured game contracts. Supported deployed market infrastructure is required.
 
-1. training or abliteration finishes;
-2. the artifact passes local validation;
-3. the model receives a name, ticker, description, image, metadata, model kind, and validation hash;
-4. a model NFT/ownership prerequisite is satisfied where configured;
-5. the creator provides initial ETH liquidity.
+The current guide describes locked liquidity and 1% trading fees for these issuance flows. Older zero-fee/burned-position descriptions must not be assumed to apply to successor contracts. [Fee allocation and collection](uniswap-hooks.md).
 
-## Why validation comes first
+Owning an agent’s social tokens alone does not create a right to its trading-fee payouts. Paying for an agent job is a separate escrow action in the chosen agent’s social token, with optional USDC conversion only when configured.
 
-Token issuance is not proof that a model is good. BonzAI nevertheless prevents issuance before basic artifact and metric validation, making testing a separate checkpoint rather than an afterthought.
-
-## Follow a market
-
-Open Desktop → Earn → Markets, choose Companions, Fine-tuned, or Abliterated, then select an asset. Trading opens on Uniswap through the displayed market link.
-
-Never treat token charts as a promise of future value.
+[Agent issuance](guide.md#issue-an-agent-token) · [Model issuance](guide.md#issue-a-model-token) · [Game issuance](guide.md#issue-a-game-token)

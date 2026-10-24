@@ -2,7 +2,7 @@
 
 ## Is BonzAI free to use?
 
-Local generation does not require a subscription or wallet. You provide the computer, storage, and electricity. Optional onchain actions, provider usage, marketplace purchases, companion/team creation beyond included allowances, minting, and liquidity can involve displayed fees.
+Local generation does not require a subscription or wallet. You provide the computer, storage, and electricity. Remote services, public storage plans, minting, market transactions and other optional onchain actions can involve displayed fees. Local Smart Workflows need no workspace license.
 
 ## Do I need `$BONZAI` to chat or generate?
 
@@ -63,3 +63,19 @@ Export important datasets, contribution packs, companion identities, memories, a
 ## Does BonzAI use Irys?
 
 No. Public metadata/media uses the configured IPFS/Pinata-compatible path.
+
+## Does Web still have a five-message or 99-BONZAI gate?
+
+The current local Web chat flow does not enforce that earlier gate. Complete model setup to chat locally. Buying tokens is separate from browser inference.
+
+## Will Web remember my conversation after a reload?
+
+The current Web implementation keeps live conversations in memory. Copy important answers before closing or reloading; browser-cached models and saved theme preferences are separate from conversation persistence.
+
+## Where is the Web3 guide outside the app?
+
+Read the [public Web3 Guide](../web3/guide.md), covering all 15 in-app activities and their prerequisites, costs and limits.
+
+## Which Desktop installer should I choose?
+
+Use the [4.1.0 installation table](../getting-started/install-desktop.md). The Mac package is for Apple Silicon; Windows is x64; Linux amd64 has separate NVIDIA CUDA and AMD ROCm packages.

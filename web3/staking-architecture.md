@@ -1,47 +1,23 @@
-# Staking
+# Stake BONZAI and understand withdrawals
 
-Staking locks `$BONZAI` in the configured BonzAI Staking Vault and creates utility weight.
+Staking commits BONZAI to the selected vault for publishing access and participation in eligible reward allocations. It is optional: local inference and local Smart Workflows do not need it.
 
-## Before staking
+## Before committing funds
 
-Check the selected network, vault address, token approval, amount, and lock duration. A locked position cannot be withdrawn before its lock expires.
+Open **Rewards**, choose a level or enter an amount, and review the resulting total. Check the network, token, vault, allowance and withdrawal conditions. An approval authorizes token spending; the stake transaction is a separate action.
 
-## Lock choices
+Publishing categories use levels: text LVL1, audio LVL2, image LVL3, video LVL4, 3D LVL5 and training LVL6. Read the amount required from the selected deployment rather than an old holding-level table.
 
-| Lock | Weight multiplier |
-| --- | ---: |
-| Flexible | 1.00× |
-| 30 days | 1.10× |
-| 90 days | 1.25× |
-| 180 days | 1.45× |
-| 365 days | 1.70× |
+## Leaving membership
 
-You can extend an active lock. Extending does not require withdrawing first.
+Use **Manage membership** to request withdrawal. Under the current guide, future rewards stop when you request it. Principal can be withdrawn after both the required notice and any existing lock have expired. The guide describes a 90-day default notice, but the contract’s displayed value is authoritative.
 
-## Contribution multiplier
+Requesting withdrawal is not the same as receiving the tokens. Return after eligibility opens and complete the withdrawal. Already accrued reward claims remain separate from the principal.
 
-The vault stores a score from 0 to 10,000, set by the owner or an authorized attestor. The multiplier is:
+## Rewards and other mechanisms
 
-```text
-1.00× + contribution score / 10,000
-```
+Rewards depend on actual deposited fees and eligible stake. Claim closed periods and currencies separately in **Your share of the activity**. The epoch pool has a separate registration and claim flow. Do not assume joining one enrolls you in the other.
 
-The maximum contribution multiplier is therefore 2.00×.
+Historical vaults can have lock-weight, contribution-score or revenue-route mechanics. They are not a substitute for the active contract’s membership notice and claim rules. A configured address alone does not establish a live deployment.
 
-## Revenue Router
-
-The current default split for revenue deposited into a contribution route is:
-
-| Portion | Default |
-| --- | ---: |
-| Protocol treasury | 10% |
-| Immutable base contribution pool | 80% |
-| Separate staking bonus | 10% |
-
-The 80% contribution pool follows the route's fixed base shares. The 10% bonus is distributed using active utility weight and contribution score. If no recipient has bonus weight, that unused bonus goes to treasury.
-
-Once a route has received revenue, its recipients and base shares cannot be replaced. This prevents a publisher from removing data owners after an asset starts earning.
-
-## Deployment state
-
-The application and contracts are implemented, tested, and address-configurable. A production transaction is available only after the relevant v4 contracts have been deployed and their addresses added to the released application. The UI should treat a missing address as unavailable, not as a simulated stake.
+[Stake walkthrough](guide.md#stake-bonzai) · [Claim rewards](guide.md#claim-staking-rewards) · [Levels](token-levels.md)

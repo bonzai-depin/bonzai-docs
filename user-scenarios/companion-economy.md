@@ -1,57 +1,21 @@
-# Companion Economy
+# From a local companion to a public agent
 
-Companions are AI characters with local personality, optional onchain identity, autonomous wallets, tokenization, skills, and revenue paths.
+Start with an agent you find useful: a character for rehearsal, an assistant with relevant memory, or a worker in a local workflow. No wallet is required for that first step.
 
-## Scenario
+## A practical progression
 
-A user creates a companion in Desktop, uses it locally, then optionally mints its identity and economy in one transaction.
+1. Create the local profile and test a bounded task.
+2. Save useful context in the appropriate memory scope and keep backups.
+3. If you want a public identity, review the separate slot purchase, profile publication and token issuance flow.
+4. If you want to offer remote work, configure the supported provider authorization and service, then review each job’s inputs, price and deadlines.
+5. Deliver evidence, resolve review or disputes, and withdraw settled earnings through the relevant job flow.
 
-## Companion Creation
+## Keep the roles separate
 
-1. The user opens the companion/roleplay experience.
-2. They create or select a companion profile.
-3. The companion has personality traits, appearance, voice style, scenario context, memory, and optional content level.
-4. The user can roleplay locally without minting.
+The NFT represents ownership; the execution wallet performs authorized actions; the social token can fund that agent’s remote jobs. Trading fees and job revenue are different balances. Social-token ownership alone does not grant a right to the owner’s fee income.
 
-## Companion Minting
+The current guide describes locked liquidity with 1% trading fees, allocated 35% to the execution wallet, 35% to the NFT owner, 20% to treasury and 10% to rewards. Actual contracts determine the selected pool’s rules; old atomic-mint and zero-fee descriptions may refer to different versions.
 
-When minted, the companion becomes an ERC-721 + ERC-8004 agent identity. The mint can be:
+A public profile need not include private conversation or team memory. Upload only what you intend to share.
 
-- **Complete**: profile and metadata are ready before mint.
-- **Bare**: minted first with placeholder metadata, finalized later.
-
-Companion mints have a per-wallet cap and are free for permanently unlocked users where supported by the contract.
-
-## Agent Wallet
-
-Each minted companion gets an agent wallet. It can be backed by OWS, Privy server wallets, or legacy deterministic fallback for older flows. The agent wallet is used for autonomous identity and economic actions.
-
-## Skill Co-Ownership
-
-Companions can register as co-owners of skills. Skill purchase revenue routes:
-
-- 80% to the skill co-owner distribution system.
-- 20% to treasury.
-
-Inside the co-owner distribution, each eligible companion's weight is:
-
-```text
-BONZAI balance of companion wallet * spending profile score
-```
-
-If no valid co-owner can receive a share, the amount falls back to treasury.
-
-## Companion Token
-
-When the v4 production factory is configured, companion minting atomically launches its ERC-20 token and liquidity. The factory flow uses:
-
-- 1 billion token supply.
-- 96% paired into Uniswap V4 liquidity.
-- 4% allocated to the companion economy.
-- LP effectively locked/burned at the dead address.
-
-The one-percent Uniswap V4 hook contribution routes 40% to the companion wallet, 40% to the NFT owner, 10% to treasury, and 10% to contribution/Mint pools.
-
-## Universal Profiles
-
-LUKSO Universal Profiles are optional identity extensions. They do not replace companion NFTs and do not mean BonzAI mints companions on LUKSO.
+[Agent issuance](../web3/guide.md#issue-an-agent-token) · [Remote jobs](../web3/guide.md#pay-for-remote-workflows) · [Fee claims](../web3/guide.md#collect-trading-fees)

@@ -1,65 +1,32 @@
-# Web3 & Onchain Economy
+# Ownership and the optional Web3 economy
 
-BonzAI's Web3 layer turns local AI work into ownable, reusable, and rewardable assets.
+BonzAI’s local tools work without a wallet. Web3 becomes relevant when you want to publish selected work, represent ownership onchain, issue a token, pay a remote agent or claim an eligible reward.
 
-The important point: `$BONZAI` is not there to charge users for every prompt. It is there when private work becomes something shared, published, minted, served, sold, hired, or rewarded.
+**Start with the [Web3 Guide](guide.md).** It mirrors Desktop’s activity walkthroughs and explains prerequisites, costs, results and limitations before you act.
 
-Start with [$BONZAI Utility](bonzai-utility.md), then read [Staking Architecture](staking-architecture.md).
+## Choose the action you need
 
-## Core Assets
+| Your goal | Start with | Distinction to understand |
+| --- | --- | --- |
+| Share a file publicly | [Decentralized Storage](guide.md#decentralized-storage) | Uploading is not minting; public copies can persist |
+| Create a collectible from a generation | [Tokenize Content](guide.md#tokenize-content) | Local saving is free; public minting has separate requirements |
+| Participate in publishing levels and funded rewards | [Stake BONZAI](guide.md#stake-bonzai) | Withdrawal notice and locks apply; income is not guaranteed |
+| Issue an agent, model or game token | [Issuance walkthroughs](guide.md#issue-an-agent-token) | Identity, ownership and liquidity rules differ by asset |
+| Pay an agent to deliver work remotely | [Remote Workflows](guide.md#pay-for-remote-workflows) | Funding, delivery, approval and withdrawal are separate |
+| Understand earnings | [Rewards and revenue](reward-structure.md) | Trading fees, job settlement, basket rewards and provider pools are separate |
 
-| Asset | Purpose |
-| --- | --- |
-| BONZAI token | Staked utility weight for publishing, routing, curation, provider trust, companion/company reputation, and rewards |
-| Staking position | The user's committed network weight: amount, lock, contribution score, utility tier |
-| Revenue routes | Immutable provenance-based shares plus a separate staking bonus |
-| Content NFTs | Minted text, audio, image, video, 3D, and training assets |
-| Companion NFTs | ERC-721 + ERC-8004 AI companion identity |
-| Companion tokens | ERC-20 tokens launched for companions with Uniswap V4 liquidity |
-| Fine-tune/model tokens | ERC-20 tokens launched around training/model assets |
-| Contribution records | Hashes, licenses, provenance, and attribution for useful AI work |
+## Availability comes from the selected deployment
 
-## Economy Loop
+Use the economy network shown in your installed app. Networks, contract versions, storage configuration, exchanges and provider services must all support the selected action. A source implementation or non-empty address does not demonstrate a live production deployment.
 
-```mermaid
-flowchart LR
-  Capture["Capture or generate locally"]
-  Stake["Stake BONZAI"]
-  Provenance["Contribution graph"]
-  Publish["Mint / publish / tokenize"]
-  Router["Revenue router"]
-  Companions["Companions and business teams"]
-  Providers["Providers serve inference"]
-  Contributors["Contributors claim"]
+Legacy contracts can have different thresholds, fees and claims from successor contracts. Do not apply an older guide’s rules to a newly selected asset. The wallet’s actual transaction and the deployed contract determine the final amount and eligibility.
 
-  Capture --> Provenance
-  Stake --> Publish
-  Stake --> Router
-  Provenance --> Publish
-  Publish --> Router
-  Companions --> Router
-  Providers --> Router
-  Router --> Contributors
-```
+## Learn more
 
-## Networks
-
-BonzAI is multi-chain and configuration-driven. The BONZAI token exists on Ethereum, Arbitrum, and Base. App contracts can be deployed/configured per environment. LUKSO is used for optional Universal Profiles, not as a blanket replacement for minting and payment flows.
-
-## Transitional Systems
-
-Older level, unlock, and MintPool mechanics may still exist in deployed contracts and product screens. They are compatibility rails. The strategic model is staking-centered:
-
-```text
-contribution + staked BONZAI + usage = ownership and rewards
-```
-
-## Read Next
-
-- [Levels & Utility](token-levels.md)
-- [$BONZAI Utility](bonzai-utility.md)
-- [Staking](staking-architecture.md)
-- [Rewards & Revenue Share](reward-structure.md)
-- [Content NFTs](content-nfts.md)
-- [Smart Contracts](smart-contracts.md)
-- [Uniswap Markets](uniswap-hooks.md)
+- [Web3 Guide](guide.md)
+- [Staking and withdrawals](staking-architecture.md)
+- [Levels and publishing](token-levels.md)
+- [Rewards and claims](reward-structure.md)
+- [Agent, model and game markets](token-markets.md)
+- [Trading fees and locked liquidity](uniswap-hooks.md)
+- [Networks and wallets](../reference/networks-wallets.md)

@@ -1,43 +1,56 @@
 # Install BonzAI Desktop
 
-## Before you begin
+## Download 4.1.0
 
-You need a supported desktop or laptop, enough free storage for the app and at least one model, and a stable connection for the first download.
+These are the four release files dated 23 October 2026. Installer and checksum links were checked on 24 October 2026. Sizes are approximate; downloaded models need additional space.
 
-## Install
+| Computer | Installer | Size | Checksum |
+| --- | --- | --- | --- |
+| macOS — Apple Silicon (ARM64) | [Download](https://pub-c63241af101045fb837462e5c4c67e33.r2.dev/releases/BonzAI-4.1.0-arm64.dmg) | 2.92 GB | [SHA-256](https://pub-c63241af101045fb837462e5c4c67e33.r2.dev/releases/BonzAI-4.1.0-arm64.dmg.SHA256SUMS) |
+| Windows — x64 | [Download](https://pub-c63241af101045fb837462e5c4c67e33.r2.dev/releases/BonzAI-4.1.0-windows-x64-setup.exe) | 4.17 GB | [SHA-256](https://pub-c63241af101045fb837462e5c4c67e33.r2.dev/releases/BonzAI-4.1.0-windows-x64-setup.exe.SHA256SUMS) |
+| Linux — amd64, NVIDIA CUDA | [Download](https://pub-c63241af101045fb837462e5c4c67e33.r2.dev/releases/BonzAI-4.1.0-linux-amd64-cuda.deb) | 5.09 GB | [SHA-256](https://pub-c63241af101045fb837462e5c4c67e33.r2.dev/releases/BonzAI-4.1.0-linux-amd64-cuda.deb.SHA256SUMS) |
+| Linux — amd64, AMD ROCm | [Download](https://pub-c63241af101045fb837462e5c4c67e33.r2.dev/releases/BonzAI-4.1.0-linux-amd64-rocm.deb) | 4.61 GB | [SHA-256](https://pub-c63241af101045fb837462e5c4c67e33.r2.dev/releases/BonzAI-4.1.0-linux-amd64-rocm.deb.SHA256SUMS) |
 
-1. Visit [bonzai.sh](https://bonzai.sh) on the computer where you want to use BonzAI.
-2. Choose the download for your operating system.
-3. Open the downloaded installer.
-4. Follow your operating system's normal installation prompts.
-5. Launch BonzAI Desktop.
+Choose **Apple Silicon** for an M-series Mac; this release list does not include an Intel Mac installer. Choose **CUDA** for a supported NVIDIA GPU on Linux, or **ROCm** for a supported AMD GPU. Both Linux packages are `.deb` files for amd64 systems. A package’s presence does not mean every GPU supports its backend; check [hardware and model choices](system-requirements.md).
 
-Only download BonzAI from an official BonzAI page or release link.
+## Install and start
 
-## First launch
+1. Download the matching installer and leave room for the application, temporary installation files and at least one model.
+2. On macOS, open the DMG and install the app. On Windows, run the setup executable. On a compatible Debian/Ubuntu Linux system, install the downloaded `.deb` through your package manager.
+3. Open BonzAI and allow its local AI services to start.
+4. Begin with **Chat**. Review the suggested model or choose a smaller model from the library.
+5. Confirm the model download and wait until it is ready. Ask for one useful result.
 
-BonzAI starts its private AI services in the background. During this short preparation period, the app may show a starting status.
+You do not need a wallet or token balance for local creation. The installer and model downloads are separate: installing the app does not install every model in its catalog.
 
-Then:
+## Check the download
 
-1. Open **Chat**.
-2. Choose a recommended model that fits your computer.
-3. Confirm the first model download.
-4. Wait for the download to finish.
-5. Send your first message.
+Download the matching `.SHA256SUMS` file. Compare its hash with the installer’s SHA-256 hash before opening the installer. For example:
 
-## Operating-system security messages
+macOS:
 
-Your operating system may ask you to confirm that you trust the application or allow local network access.
+```sh
+shasum -a 256 BonzAI-4.1.0-arm64.dmg
+```
 
-- Confirm only if you downloaded BonzAI from an official source.
-- Local network permission is useful for optional provider or device-to-device features.
-- BonzAI's normal local generation does not mean your prompts are being uploaded to a cloud AI service.
+Windows PowerShell:
 
-## Updating BonzAI
+```powershell
+Get-FileHash .\BonzAI-4.1.0-windows-x64-setup.exe -Algorithm SHA256
+```
 
-Install official updates when notified. Model files are stored separately from the application where possible, so an application update should not require every model to be downloaded again.
+Linux (CUDA example):
 
-## Uninstalling
+```sh
+sha256sum BonzAI-4.1.0-linux-amd64-cuda.deb
+```
 
-Removing the application and deleting model/data folders are different actions. Before deleting local data, export any conversations, contribution packs, companion identities, memories, or generated work you want to keep.
+The complete hash must match, ignoring letter case. A checksum detects a changed or incomplete download; it is not a substitute for using the official release source. If it differs, download the installer again.
+
+## Updating and keeping your work
+
+Before updating, finish active work, quit BonzAI and back up important local outputs, datasets and agent/team data. Install the matching newer package. Keep existing model and data folders unless you intend to remove them; replacing the application and deleting user data are different operations.
+
+If your operating system blocks installation, record the exact warning and use the [troubleshooting guide](../reference/troubleshooting.md). Do not disable system-wide protections to make an installer run.
+
+**Next:** [Your first 10 minutes](first-10-minutes.md) · [What’s new](whats-new.md)

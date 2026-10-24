@@ -6,7 +6,7 @@ Use model controls to see what is installed, download a missing model, or remove
 
 ## Theme and display
 
-Choose the light or dark theme and use full-screen modes where available. Interface controls should remain usable at normal desktop scaling; report clipping with the affected view and display scaling.
+Click the theme name in the sidebar to browse the collection, or use the arrows to cycle. The [theme guide](themes.md) lists the 18 newer shared palettes. Use full-screen modes where available. Interface controls should remain usable at normal desktop scaling; report clipping with the affected view and display scaling.
 
 ## Network settings
 
